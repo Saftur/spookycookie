@@ -1,0 +1,7 @@
+ContentLibrary = 
+{
+	string Name = "SpookyCookie",
+	uint64 LibraryId = 5961349dc01cc3ee,
+	string SourceControlType = "",
+	bool ReadOnly = false,
+},
