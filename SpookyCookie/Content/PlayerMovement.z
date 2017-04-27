@@ -1,5 +1,9 @@
 class PlayerMovement : ZilchComponent
 {
+    [Dependency]
+    var RBody : RigidBody = null;
+    
+    var Speed : Real3 = Real3(4,4,0);
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -7,9 +11,24 @@ class PlayerMovement : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsDown(Keys.Down))
+        var movement = Real3(0,0,0);
+        if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
         {
-            
+            movement += Real3(0,1,0);
         }
+        else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
+        {
+            movement += Real3(0,-1,0);
+        }
+        if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
+        {
+            movement += Real3(-1,0,0);
+        }
+        else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
+        {
+            movement += Real3(1,0,0);
+        }
+        
+        this.RBody.Velocity = movement * this.Speed;
     }
 }
