@@ -202,10 +202,6 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		FearBar = 
-		{
-			float MaxSize = 4,
-		},
 	},
 	Cog = 
 	{
@@ -215,7 +211,7 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "FearBar",
+			string Name = "BatteryLife",
 		},
 		Transform = 
 		{
