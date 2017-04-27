@@ -1,0 +1,34 @@
+// Authors: Charles duMars
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+class HUDCreator : ZilchComponent
+{
+    [Property]
+    var HUDLevel : Level = null;
+    
+    var SpaceArchetype : Archetype = Archetype.Find("Space");
+    
+    //References
+    
+    [Property]  //Player
+    var PlayerRef : CogPath = null;
+    
+    var HUDSpace : Space = null;        //reference the hud space to access its objects
+    var SpaceshipHealthUI : Cog = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Create space and load level into it
+        this.HUDSpace = this.GameSession.CreateNamedSpace("HUDSpace", this.SpaceArchetype);
+        this.HUDSpace.LoadLevel(this.HUDLevel);
+        this.HUDSpace.LevelSettings.HUDReferences.MainSpaceRef = this.Space;
+        this.SpaceshipHealthUI = this.HUDSpace.FindObjectByName("HealthBar");
+    }
+
+    function Destroyed()
+    {
+        if(this.HUDSpace != null)
+        {
+            this.HUDSpace.Destroy();
+        }
+    }
+}

@@ -1,0 +1,56 @@
+// Authors: Charles duMars
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+class Bar : ZilchComponent
+{
+    [Property]
+    var MaxSize : Real = 0;
+    var OriginalPos : Real3 = Real3(0,0,0);
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.OriginalPos = this.Owner.Transform.Translation + Real3(this.MaxSize/2,0,0);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        /*
+        if(Zero.Keyboard.KeyIsPressed(Keys.Down))
+        {
+            this.Decrease(0.1);
+        }
+        if(Zero.Keyboard.KeyIsPressed(Keys.Up))
+        {
+            this.Increase(0.1);
+        }*/
+    }
+    function Decrease(percent : Real)
+    {
+        if((this.Owner.Transform.Scale.X - this.MaxSize*percent) < 0)
+        {
+            this.Owner.Transform.Scale = Real3(0, this.Owner.Transform.Scale.Y, 1);
+            this.Owner.Transform.Translation = (this.OriginalPos - Real3(this.MaxSize/2,0,0));
+        }
+        else
+        {
+            this.Owner.Transform.Scale -= Real3((this.MaxSize*percent),0,0);
+            this.Owner.Transform.Translation -= Real3((this.MaxSize*percent)/2,0,0);
+        }
+    }
+    function Increase(percent : Real)
+    {
+        if((this.Owner.Transform.Scale.X + this.MaxSize*percent) > this.MaxSize)
+        {
+            this.Owner.Transform.Scale = Real3(this.MaxSize, this.Owner.Transform.Scale.Y, 1);
+            this.Owner.Transform.Translation = this.OriginalPos;
+        }
+        else
+        {
+            this.Owner.Transform.Scale += Real3((this.MaxSize*percent),0,0);
+            this.Owner.Transform.Translation += Real3((this.MaxSize*percent)/2,0,0);
+        }
+    }
+    function Set(percent : Real)
+    {
+        this.Owner.Transform.Scale = Real3(percent, this.Owner.Transform.Scale.YZ);
+    }
+}
