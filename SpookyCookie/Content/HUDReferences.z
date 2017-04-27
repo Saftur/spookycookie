@@ -1,0 +1,15 @@
+// Authors: Charles duMars
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+class HUDReferences : ZilchComponent
+{
+    var MainSpaceRef : Space = null;
+    var PlayerPos : Real3 = Real3();
+    var FearBar : Cog = null;
+    var BatteryLife : Cog = null;
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.FearBar = this.Space.FindObjectByName("FearBar");
+        this.BatteryLife = this.Space.FindObjectByName("BatteryLife");
+    }
+}

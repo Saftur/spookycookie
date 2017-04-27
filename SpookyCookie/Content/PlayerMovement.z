@@ -16,7 +16,7 @@ class PlayerMovement : ZilchComponent
         {
             movement += Real3(0,1,0);
         }
-        else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
+        if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
         {
             movement += Real3(0,-1,0);
         }
@@ -24,7 +24,7 @@ class PlayerMovement : ZilchComponent
         {
             movement += Real3(-1,0,0);
         }
-        else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
+        if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
         {
             movement += Real3(1,0,0);
         }
