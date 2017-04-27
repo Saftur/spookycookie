@@ -180,7 +180,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.04486704, -3.05771446, 0],
+			Vec3 Translation = [-6.04486704, -3.1698699, 0],
 			Vec3 Scale = [9.99999975e-05, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -201,6 +201,10 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+		Bar = 
+		{
+			float MaxSize = 4,
 		},
 	},
 	Cog = 
@@ -254,7 +258,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.69863319, -1.86301517, 0],
+			Vec3 Translation = [-5.69863319, -1.97517061, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
