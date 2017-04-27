@@ -1,0 +1,77 @@
+class Fade : ZilchComponent
+{
+    [Dependency]
+    var Sprite : Sprite = null;
+    
+    [Property]
+    var Time : Real = 1;
+    var StartFade : Boolean = false;
+    [Property]
+    var Invis : Boolean = false;
+    var Oppacity : Real = 1;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        if(this.Invis)
+            this.Oppacity = 0;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.F))
+            this.StartFade = true;
+        if(this.StartFade)
+        {
+            if(this.Invis)
+            {
+                this.Oppacity += (event.Dt/this.Time);
+                if(this.Oppacity >= 1)
+                {
+                    this.Oppacity = 1;
+                    this.Fade(this.Oppacity);
+                    this.StartFade = false;
+                    this.Invis = false;
+                }
+                else
+                    this.Fade(this.Oppacity);
+            }
+            else
+            {
+                this.Oppacity -= (event.Dt/this.Time);
+                if(this.Oppacity <= 0)
+                {
+                    this.Oppacity = 0;
+                    this.Fade(this.Oppacity);
+                    this.StartFade = false;
+                    this.Invis = true;
+                }
+                else
+                    this.Fade(this.Oppacity);
+            }
+        }
+    }
+    function Fade(fade : Real)
+    {
+        this.Sprite.Color = Real4(this.Sprite.Color.XYZ, fade);
+        this.FadeChildren(this.Owner, fade);
+    }
+    function FadeChildren(parent : Cog, fade : Real)
+    {
+        foreach(var child in parent.Children)
+        {
+            if(child.Sprite != null)
+            {
+                child.Sprite.Color = Real4(child.Sprite.Color.XYZ, fade);
+            }
+            else if(child.SpriteText != null)
+            {
+                child.SpriteText.Color = Real4(child.SpriteText.Color.XYZ, fade);
+            }
+            if(child.Children != null)
+            {
+                this.FadeChildren(child, fade);
+            }
+        }
+    }
+}

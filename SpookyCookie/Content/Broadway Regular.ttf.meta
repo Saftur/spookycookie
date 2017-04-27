@@ -1,0 +1,8 @@
+FontContent = 
+{
+	FontBuilder = 
+	{
+		string Name = "Broadway Regular",
+		uint64 ResourceId = 59627dc02da33093,
+	},
+},
