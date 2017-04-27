@@ -6,10 +6,11 @@ class MonsterAI : ZilchComponent
     [Property]
     var DetectDistance : Real;
     [Property]
-    var MoveSpeed : Real;
+    var ChaseSpeed: Real;
     
     var Detected : Boolean;
     var DistanceFromPlayer : Real;
+    var Movement : Real3;
     
     function Initialize(init : CogInitializer)
     {
@@ -20,10 +21,11 @@ class MonsterAI : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-    
+        this.DistanceFromPlayer = (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2 + (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y);
         if(!this.Detected && (this.DistanceFromPlayer < this.DetectDistance))
         {
+            this.Movement = this.Target.Transform.Translation - this.Owner.Transform.Translation;
         }
-        
+        this.Owner.RigidBody.Velocity = this.Movement * this.ChaseSpeed;
     }
 }
