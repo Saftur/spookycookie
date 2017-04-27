@@ -1,0 +1,61 @@
+// Authors: Julian Wong
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+// Custom event that notifies the UIMenuManager of state changes on its buttons
+class MenuLevelStart : ZilchComponent
+{
+    // This component requires a reactive component
+    [Dependency]
+    var Reactive : Reactive = null;
+
+    // Should this component be active?
+    [Property]
+    var Active : Boolean = true;
+
+    // Sprite Sources for Default, Hovered, and Clicked States
+    [Property]
+    var DefaultSprite : SpriteSource = null;
+
+    [Property]
+    var HoveredSprite : SpriteSource = null;
+
+    [Property]
+    var ClickedSprite : SpriteSource = null;
+
+    // Property to select which level this button should load when clicked
+    [Property]
+    var LevelToLoad : Level = null;
+
+    // Button that underwent a state change
+    var Button : Cog = null;
+
+    function Initialize(init : CogInitializer)
+    {
+      // Connections to the needed Mouse events (Enter, Exit, Up, Down)
+      //Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
+      //Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+      Zero.Connect(this.Owner, Events.MouseUp, this.OnMouseUp);
+      Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+
+    // Responds to the mouse releasing a button
+    function OnMouseUp(event : ViewportMouseEvent)
+    {
+      // Goes back to the hovered space, as mouse would most likely still
+      // be hovering over the button just clicked
+      //this.HoveredState();
+      //this.GameSession.GameVars.Score = 0;
+      this.Space.LoadLevel(this.LevelToLoad);
+    }
+
+    // Responds to the mouse clicking a button
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+      // Calls the function for the clicked state
+      this.ClickedState();
+    }
+    
+    function ClickedState()
+    {
+        this.Owner.Sprite.SpriteSource = this.ClickedSprite;
+    }
+}
