@@ -1,0 +1,29 @@
+class MonsterAI : ZilchComponent
+{
+    [Property]
+    var TargetPath : CogPath;
+    var Target : Cog;
+    [Property]
+    var DetectDistance : Real;
+    [Property]
+    var MoveSpeed : Real;
+    
+    var Detected : Boolean;
+    var DistanceFromPlayer : Real;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        if(this.TargetPath != null)
+            this.Target = this.TargetPath.Cog;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    
+        if(!this.Detected && (this.DistanceFromPlayer < this.DetectDistance))
+        {
+        }
+        
+    }
+}
