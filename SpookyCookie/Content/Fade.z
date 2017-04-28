@@ -8,46 +8,46 @@ class Fade : ZilchComponent
     var StartFade : Boolean = false;
     [Property]
     var Invis : Boolean = false;
-    var Oppacity : Real = 1;
+    var Opacity : Real = 1;
+    //var Start : Cog;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        //this.Start = this.Space.FindObjectByName("Start");
         if(this.Invis)
-            this.Oppacity = 0;
+            this.Opacity = 0;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(Keys.F))
-            this.StartFade = true;
         if(this.StartFade)
         {
             if(this.Invis)
             {
-                this.Oppacity += (event.Dt/this.Time);
-                if(this.Oppacity >= 1)
+                this.Opacity += (event.Dt/this.Time);
+                if(this.Opacity >= 1)
                 {
-                    this.Oppacity = 1;
-                    this.Fade(this.Oppacity);
+                    this.Opacity = 1;
+                    this.Fade(this.Opacity);
                     this.StartFade = false;
                     this.Invis = false;
                 }
                 else
-                    this.Fade(this.Oppacity);
+                    this.Fade(this.Opacity);
             }
             else
             {
-                this.Oppacity -= (event.Dt/this.Time);
-                if(this.Oppacity <= 0)
+                this.Opacity -= (event.Dt/this.Time);
+                if(this.Opacity <= 0)
                 {
-                    this.Oppacity = 0;
-                    this.Fade(this.Oppacity);
+                    this.Opacity = 0;
+                    this.Fade(this.Opacity);
                     this.StartFade = false;
                     this.Invis = true;
                 }
                 else
-                    this.Fade(this.Oppacity);
+                    this.Fade(this.Opacity);
             }
         }
     }
