@@ -22,10 +22,16 @@ class PickupController : ZilchComponent
         {
             this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.BatteryLife.Bar.Increase(0.1);
         }
-        /*if(this.Pickuptype == 3)
+        if(this.Pickuptype == 3)
         {
-            this.Space.Door.Locked = 0;
-        }*/
+            var door = this.Space.FindObjectByName("Door");
+            if(door != null)
+            {
+                door.Doors.Locked = 0;
+                door.Doors.CheckLockState();
+            }
+            
+        }
         this.Owner.Destroy();
         this.Space.SoundSpace.PlayCue(this.PickupSound);
     

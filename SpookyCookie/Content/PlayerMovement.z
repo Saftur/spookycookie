@@ -1,3 +1,5 @@
+enum Dir {Up, Right, Down, Left}
+
 class PlayerMovement : ZilchComponent
 {
     [Dependency]
@@ -9,7 +11,8 @@ class PlayerMovement : ZilchComponent
     var Dir : Integer = 1;
     var Walking : Boolean = false;
     
-    var Speed : Real3 = Real3(4,4,0);
+    [Property]
+    var Speed : Real = 1;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -17,46 +20,79 @@ class PlayerMovement : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var movement = Real3();
+        if(Zero.Keyboard.KeyIsPressed(Keys.Tab))
+        {
+            Console.WriteLine("`this.Owner.Transform.Translation` `this.Destination` `this.Walking`");
+        }
+        
         if(!this.Walking)
         {
             if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
             {
-                movement += Real3(0,1,0);
                 this.Destination = this.Owner.Transform.Translation + Real3(0,this.StepSize,0);
+                this.Dir = Dir.Up;
+                this.RBody.Velocity = Real3(0,this.Speed,0);
                 this.Walking = true;
             }
-            if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
+            else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
             {
-                movement += Real3(0,-1,0);
                 this.Destination = this.Owner.Transform.Translation + Real3(0,-this.StepSize,0);
+                this.RBody.Velocity = Real3(0,-this.Speed,0);
+                this.Dir = Dir.Down;
                 this.Walking = true;
             }
             if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
             {
-                movement += Real3(-1,0,0);
-                this.Destination = this.Owner.Transform.Translation + Real3(this.StepSize,0,0);
+                this.Destination = this.Owner.Transform.Translation + Real3(-this.StepSize,0,0);
+                this.RBody.Velocity = Real3(-this.Speed,0,0);
+                this.Dir = Dir.Left;
                 this.Walking = true;
             }
-            if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
+            else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsPressed(Keys.Right))
             {
-                movement += Real3(1,0,0);
-                this.Destination = this.Owner.Transform.Translation + Real3(-this.StepSize,0,0);
+                this.Destination = this.Owner.Transform.Translation + Real3(this.StepSize,0,0);
+                this.RBody.Velocity = Real3(this.Speed,0,0);
+                this.Dir = Dir.Right;
                 this.Walking = true;
             }
         }
-        /*
-        switch (this.Dir)
+        else
         {
-            case Dir.Up :
+            if(this.Dir == Dir.Up)
+            {
                 if(this.Owner.Transform.Translation.Y > this.Destination.Y)
                 {
-                    this.Walking = false;
-                    this.Owner.Transform.Translation = this.Destination;
+                    this.Stop();
                 }
+            }
+            if(this.Dir == Dir.Down)
+            {
+                if(this.Owner.Transform.Translation.Y < this.Destination.Y)
+                {
+                    this.Stop();
+                }
+            }
+            if(this.Dir == Dir.Right)
+            {
+                if(this.Owner.Transform.Translation.X > this.Destination.X)
+                {
+                    this.Stop();
+                }
+            }
+            if(this.Dir == Dir.Left)
+            {
+                if(this.Owner.Transform.Translation.X < this.Destination.X)
+                {
+                    this.Stop();
+                }
+            }
         }
-        */
-        this.RBody.Velocity = movement * this.Speed;
+    }
+    
+    function Stop()
+    {
+        this.Walking = false;
+        this.Owner.Transform.Translation = this.Destination;
+        this.RBody.Velocity = Real3(0,0,0);
     }
 }
-enum Dir {Up, Right, Down, Left}

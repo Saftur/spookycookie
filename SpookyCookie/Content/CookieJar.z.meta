@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "CookieJar",
+		uint64 ResourceId = 59629083b6b77c46,
+	},
+},
