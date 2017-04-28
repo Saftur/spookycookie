@@ -5,6 +5,7 @@ class FearManager : ZilchComponent
     
     [Property]
     var BatteryLife : Real = 120;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -16,6 +17,10 @@ class FearManager : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.BatteryBar.Bar.Decrease(event.Dt/this.BatteryLife);
+        if(this.BatteryLife <= 0 || this.FearBar.Transform.Scale.X >= this.FearBar.Bar.MaxSize)
+        {
+                this.Space.LoadLevel(Level.GameOver);
+        }    
     }
     function OnCollisionStarted(event : CollisionEvent)
     {

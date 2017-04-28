@@ -1,5 +1,3 @@
-enum Dir {Up, Right, Down, Left}
-
 class PlayerMovement : ZilchComponent
 {
     [Dependency]
@@ -8,7 +6,7 @@ class PlayerMovement : ZilchComponent
     [Property]
     var StepSize : Real = 1;
     var Destination : Real3 = Real3();
-    var Dir : Integer = 1;
+    var Dir : Integer2 = Integer2(0,0);
     var Walking : Boolean = false;
     
     [Property]
@@ -27,61 +25,48 @@ class PlayerMovement : ZilchComponent
         
         if(!this.Walking)
         {
+            this.Destination = this.Owner.Transform.Translation;
             if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
             {
-                this.Destination = this.Owner.Transform.Translation + Real3(0,this.StepSize,0);
-                this.Dir = Dir.Up;
-                this.RBody.Velocity = Real3(0,this.Speed,0);
+                this.Destination += Real3(0,this.StepSize,0);
+                this.RBody.Velocity += Real3(0,this.Speed,0);
+                this.Dir.Y = 1;
                 this.Walking = true;
             }
             else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
             {
-                this.Destination = this.Owner.Transform.Translation + Real3(0,-this.StepSize,0);
-                this.RBody.Velocity = Real3(0,-this.Speed,0);
-                this.Dir = Dir.Down;
+                this.Destination += Real3(0,-this.StepSize,0);
+                this.RBody.Velocity += Real3(0,-this.Speed,0);
+                this.Dir.Y = -1;
                 this.Walking = true;
             }
             if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
             {
-                this.Destination = this.Owner.Transform.Translation + Real3(-this.StepSize,0,0);
-                this.RBody.Velocity = Real3(-this.Speed,0,0);
-                this.Dir = Dir.Left;
+                this.Destination += Real3(-this.StepSize,0,0);
+                this.RBody.Velocity += Real3(-this.Speed,0,0);
+                this.Dir.X = -1;
                 this.Walking = true;
             }
-            else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsPressed(Keys.Right))
+            else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
             {
-                this.Destination = this.Owner.Transform.Translation + Real3(this.StepSize,0,0);
-                this.RBody.Velocity = Real3(this.Speed,0,0);
-                this.Dir = Dir.Right;
+                this.Destination += Real3(this.StepSize,0,0);
+                this.RBody.Velocity += Real3(this.Speed,0,0);
+                this.Dir.X = 1;
                 this.Walking = true;
             }
         }
         else
         {
-            if(this.Dir == Dir.Up)
+            if(this.Dir.Y != 0)
             {
-                if(this.Owner.Transform.Translation.Y > this.Destination.Y)
+                if(this.Owner.Transform.Translation.Y*this.Dir.Y >= this.Destination.Y*this.Dir.Y)
                 {
                     this.Stop();
                 }
             }
-            if(this.Dir == Dir.Down)
+            if(this.Dir.X != 0)
             {
-                if(this.Owner.Transform.Translation.Y < this.Destination.Y)
-                {
-                    this.Stop();
-                }
-            }
-            if(this.Dir == Dir.Right)
-            {
-                if(this.Owner.Transform.Translation.X > this.Destination.X)
-                {
-                    this.Stop();
-                }
-            }
-            if(this.Dir == Dir.Left)
-            {
-                if(this.Owner.Transform.Translation.X < this.Destination.X)
+                if(this.Owner.Transform.Translation.X*this.Dir.X >= this.Destination.X*this.Dir.X)
                 {
                     this.Stop();
                 }
@@ -93,6 +78,7 @@ class PlayerMovement : ZilchComponent
     {
         this.Walking = false;
         this.Owner.Transform.Translation = this.Destination;
+        this.Dir = Integer2(0,0);
         this.RBody.Velocity = Real3(0,0,0);
     }
 }
