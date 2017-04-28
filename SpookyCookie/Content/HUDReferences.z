@@ -10,6 +10,7 @@ class HUDReferences : ZilchComponent
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.FearBar = this.Space.FindObjectByName("FearBar");
+        Console.WriteLine("`this.FearBar`");
         this.BatteryLife = this.Space.FindObjectByName("BatteryLife");
     }
 }

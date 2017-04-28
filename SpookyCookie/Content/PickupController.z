@@ -1,0 +1,33 @@
+class PickupController : ZilchComponent
+{
+    [Property]
+    var PickupSound: SoundCue = SoundCue.DefaultCue;
+    [Property]
+    var Pickuptype : Integer = 1;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name != "Player")
+            return;
+        if(this.Pickuptype == 1)
+        {
+            Console.WriteLine("`this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.FearBar.Bar`");
+            this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.FearBar.Bar.Decrease(0.1);
+        }
+        if(this.Pickuptype == 2)
+        {
+            this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.BatteryLife.Bar.Increase(0.1);
+        }
+        /*if(this.Pickuptype == 3)
+        {
+            this.Space.Door.Locked = 0;
+        }*/
+        this.Owner.Destroy();
+        this.Space.SoundSpace.PlayCue(this.PickupSound);
+    
+    }
+}
