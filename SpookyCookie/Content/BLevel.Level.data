@@ -12,7 +12,7 @@ Level =
 		},
 		GravityEffect = 
 		{
-			bool Active = true,
+			bool Active = false,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
 			float Strength = 10,
@@ -135,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 22.1034164,
+			float Size = 24.428051,
 		},
 		EditorCameraController = 
 		{
@@ -199,7 +199,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.05653381, 0, 0],
+			Vec3 Translation = [-5.48043489, 3.05814362, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -235,6 +235,7 @@ Level =
 		},
 		PlayerMovement = 
 		{
+			float StepSize = 1,
 		},
 		BoxCollider = 
 		{
@@ -245,6 +246,9 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		TestMovement = 
+		{
 		},
 	},
 	Cog = 
@@ -259,7 +263,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.51152039, 0, 0],
+			Vec3 Translation = [3.54260588, 6.57046747, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -290,6 +294,11 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		PickupController = 
+		{
+			string PickupSound = "596281bc2f389f45:Pickup",
+			int Pickuptype = 1,
 		},
 	},
 	Cog = 
@@ -304,7 +313,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [7.660501, 0, 0],
+			Vec3 Translation = [13.5951176, 6.78241873, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -336,6 +345,11 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
+		PickupController = 
+		{
+			string PickupSound = "596281bc2f389f45:Pickup",
+			int Pickuptype = 2,
+		},
 	},
 	Cog = 
 	{
@@ -349,7 +363,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.51152039, 3.81511045, 0],
+			Vec3 Translation = [11.2939396, 6.570467, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -359,7 +373,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [1, 0, 0, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -383,7 +397,7 @@ Level =
 		},
 		TestScriptDonotadd = 
 		{
-			string PickupSound = "4e1bd44008b4dc2a:DefaultCue",
+			string PickupSound = "596281bc2f389f45:Pickup",
 			int Pickuptype = 2,
 		},
 	},
@@ -399,8 +413,58 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-2.3920126, 3.81511045, 0],
+			Vec3 Translation = [1.90755534, 6.57046747, 0],
 			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		TestScriptDonotadd = 
+		{
+			string PickupSound = "596281bc2f389f45:Pickup",
+			int Pickuptype = 1,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "Door",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.95643187, 6.35798597, 0],
+			Vec3 Scale = [9.64222336, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -430,11 +494,6 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
-		},
-		TestScriptDonotadd = 
-		{
-			string PickupSound = "4e1bd44008b4dc2a:DefaultCue",
-			int Pickuptype = 1,
 		},
 	},
 },
