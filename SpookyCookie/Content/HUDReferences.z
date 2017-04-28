@@ -6,11 +6,12 @@ class HUDReferences : ZilchComponent
     var PlayerPos : Real3 = Real3();
     var FearBar : Cog = null;
     var BatteryLife : Cog = null;
+    var VictoryText : Cog = null;
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.FearBar = this.Space.FindObjectByName("FearBar");
-        Console.WriteLine("`this.FearBar`");
         this.BatteryLife = this.Space.FindObjectByName("BatteryLife");
+        this.VictoryText = this.Space.FindObjectByName("Victory");
     }
 }
