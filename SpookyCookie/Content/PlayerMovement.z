@@ -47,7 +47,7 @@ class PlayerMovement : ZilchComponent
                 this.Dir.X = -1;
                 this.Walking = true;
             }
-            else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsPressed(Keys.Right))
+            else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
             {
                 this.Destination += Real3(this.StepSize,0,0);
                 this.RBody.Velocity += Real3(this.Speed,0,0);
