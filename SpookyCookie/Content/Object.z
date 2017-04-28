@@ -1,0 +1,32 @@
+class Object : ZilchComponent
+{
+    [Property]
+    var DistanceSpawn : Real;
+    [Property]
+    var TargetPath : CogPath;
+    var Target : Cog;
+    [Property]
+    var DetectDistance : Real;
+    
+    var DistanceFromPlayer : Real;
+    var HasSpawned : Boolean;
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        if(this.TargetPath != null)
+            this.Target = this.TargetPath.Cog;
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.DistanceFromPlayer = (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2 + (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y);
+        if(this.DistanceFromPlayer < this.DetectDistance && !this.HasSpawned)
+        {
+            this.Space.CreateAtPosition(Archetype.Ghost,this.Owner.Transform.Translation);
+            this.HasSpawned = true;
+        }
+    }
+}
