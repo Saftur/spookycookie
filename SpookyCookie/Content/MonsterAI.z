@@ -15,14 +15,9 @@ class MonsterAI : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var x = this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X;
+        /*var x = this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X;
         var y = this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y;
         
-        /*
-        if(Math.Abs(x) == Math.Abs(y))
-        {
-            
-        }*/
         if(Math.Abs(x) > Math.Abs(y))
         {
             var angle = Math.ATan(y/x);
@@ -45,7 +40,19 @@ class MonsterAI : ZilchComponent
         {
             this.Owner.Sprite.FlipX = false;
         }
-        this.Owner.RigidBody.Velocity = this.Movement * this.ChaseSpeed;
+        this.Owner.RigidBody.Velocity = this.Movement * this.ChaseSpeed;*/
+        var movement = this.Target.Transform.Translation - this.Owner.Transform.Translation;
+        movement /= Math.Sqrt(movement.X*movement.X+movement.Y*movement.Y);
+        
+        if(this.Movement.X < 0)
+        {
+            this.Owner.Sprite.FlipX = true;
+        }
+        else
+        {
+            this.Owner.Sprite.FlipX = false;
+        }
+        this.Owner.RigidBody.Velocity = movement;
     }
     
     function Destroy()
