@@ -91,6 +91,11 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		HudCreator = 
+		{
+			string HudLevel = "",
+			string SpaceArchetype = "554cea0f94af6dc4:Space",
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +109,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [1.44006109, 0, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -124,7 +129,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [1.44006109, 0, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -181,7 +186,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, 0, -1],
-			Vec3 Scale = [30, 30, 1],
+			Vec3 Scale = [40, 30, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -211,11 +216,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Start",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 3, 0],
+			Vec3 Translation = [8.02105236, 3.92631531, 0],
 			Vec3 Scale = [6, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -259,11 +264,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Controls",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -0.0105261803, 0],
+			Vec3 Translation = [8.02105236, -0.0105261803, 0],
 			Vec3 Scale = [6, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -307,11 +312,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sprite",
+			string Name = "Exit",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -2.97894764, 0],
+			Vec3 Translation = [8.02105236, -3.98947382, 0],
 			Vec3 Scale = [6, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -345,6 +350,108 @@ Level =
 			string HoveredSprite = "",
 			string ClickedSprite = "",
 			string LevelToLoad = "",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.22105265, 4.3789463, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "59627dc02da33093:Broadway Regular",
+			uint FontSize = 45,
+			string Text = "Start",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.22105265, 0.442104936, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "59627dc02da33093:Broadway Regular",
+			uint FontSize = 45,
+			string Text = "Controls",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Named = 
+		{
+			string Name = "SpriteText",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.22105265, -3.55789566, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		SpriteText = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string FontName = "59627dc02da33093:Broadway Regular",
+			uint FontSize = 45,
+			string Text = "Exit",
+			TextAlign Align = Left,
+			float PixelsPerUnit = 64,
+			bool Smoothing = true,
 		},
 	},
 },

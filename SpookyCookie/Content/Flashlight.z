@@ -1,9 +1,5 @@
 class Flashlight : ZilchComponent
 {
-    [Dependency]
-    var Orientation : Orientation = null;
-    
-    var OldMousePos : Real3 = Real3(0,0,0);    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -11,13 +7,5 @@ class Flashlight : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var mousePos = this.LevelSettings.CameraViewport.ScreenToWorldZPlane(Zero.Mouse.ScreenPosition, 0.0);
-        
-        if(mousePos != this.OldMousePos)
-        {
-            this.Orientation.LookAtPoint(mousePos);
-        }
-        
-        this.OldMousePos = mousePos;
     }
 }

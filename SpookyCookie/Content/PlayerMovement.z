@@ -3,6 +3,12 @@ class PlayerMovement : ZilchComponent
     [Dependency]
     var RBody : RigidBody = null;
     
+    [Property]
+    var StepSize : Real = 1;
+    var Destination : Real3 = Real3();
+    var Dir : Integer = 1;
+    var Walking : Boolean = false;
+    
     var Speed : Real3 = Real3(4,4,0);
     function Initialize(init : CogInitializer)
     {
@@ -11,24 +17,46 @@ class PlayerMovement : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var movement = Real3(0,0,0);
-        if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
+        var movement = Real3();
+        if(!this.Walking)
         {
-            movement += Real3(0,1,0);
+            if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
+            {
+                movement += Real3(0,1,0);
+                this.Destination = this.Owner.Transform.Translation + Real3(0,this.StepSize,0);
+                this.Walking = true;
+            }
+            if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
+            {
+                movement += Real3(0,-1,0);
+                this.Destination = this.Owner.Transform.Translation + Real3(0,-this.StepSize,0);
+                this.Walking = true;
+            }
+            if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
+            {
+                movement += Real3(-1,0,0);
+                this.Destination = this.Owner.Transform.Translation + Real3(this.StepSize,0,0);
+                this.Walking = true;
+            }
+            if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
+            {
+                movement += Real3(1,0,0);
+                this.Destination = this.Owner.Transform.Translation + Real3(-this.StepSize,0,0);
+                this.Walking = true;
+            }
         }
-        if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
+        /*
+        switch (this.Dir)
         {
-            movement += Real3(0,-1,0);
+            case Dir.Up :
+                if(this.Owner.Transform.Translation.Y > this.Destination.Y)
+                {
+                    this.Walking = false;
+                    this.Owner.Transform.Translation = this.Destination;
+                }
         }
-        if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
-        {
-            movement += Real3(-1,0,0);
-        }
-        if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
-        {
-            movement += Real3(1,0,0);
-        }
-        
+        */
         this.RBody.Velocity = movement * this.Speed;
     }
 }
+enum Dir {Up, Right, Down, Left}

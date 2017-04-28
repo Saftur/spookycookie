@@ -6,7 +6,7 @@ Cog =
 		string ProjectOwner = "",
 		string DefaultLevel = "Level",
 		string ProjectSpace = "Space",
-		uint ProjectEngineRevision = 15372,
+		uint ProjectEngineRevision = 16386,
 		bool AutoTakeProjectScreenshot = true,
 		uint64 Guid = 59613484c6816381,
 	},
