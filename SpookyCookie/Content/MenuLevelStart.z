@@ -24,27 +24,53 @@ class MenuLevelStart : ZilchComponent
     // Property to select which level this button should load when clicked
     [Property]
     var LevelToLoad : Level = null;
+    
+    [Property]
+    var StartButton : Boolean = false;
 
     // Button that underwent a state change
     var Button : Cog = null;
+    
+    var FadeScreen : Cog = null;
+    
+    var FadeStarting : Boolean = false;
+    
+    var Timer : Real = 0;
 
     function Initialize(init : CogInitializer)
     {
       // Connections to the needed Mouse events (Enter, Exit, Up, Down)
       //Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
       //Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+      this.FadeScreen = this.Space.FindObjectByName("LoadScreen");
       Zero.Connect(this.Owner, Events.MouseUp, this.OnMouseUp);
       Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+      Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.FadeStarting == true)
+        {
+            this.Timer += event.Dt;
+        }
     }
 
     // Responds to the mouse releasing a button
     function OnMouseUp(event : ViewportMouseEvent)
     {
-      // Goes back to the hovered space, as mouse would most likely still
-      // be hovering over the button just clicked
-      //this.HoveredState();
-      //this.GameSession.GameVars.Score = 0;
-      this.Space.LoadLevel(this.LevelToLoad);
+        if(this.StartButton)
+        {
+            this.FadeScreen.Transform.Translation = Real3(0, 0, 2);
+            this.FadeScreen.Fade.StartFade = true;
+            this.FadeStarting = true;
+        }
+        if(this.Timer >= 1.5)
+        {
+            Console.WriteLine("Changing Level");
+            this.FadeStarting = false;
+            this.Space.LoadLevel(this.LevelToLoad);
+        }
     }
 
     // Responds to the mouse clicking a button

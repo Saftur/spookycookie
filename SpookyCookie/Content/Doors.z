@@ -6,11 +6,11 @@ class Doors : ZilchComponent
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
-    function OnLogicUpdate(event : UpdateEvent)
+    function CheckLockState()
     {
-        /*if(this.Locked == 0)
+        if(this.Locked == 0)
         {
-            this.gh
-        }*/
+            this.Owner.BoxCollider.Ghost = true;
+        }
     }
 }

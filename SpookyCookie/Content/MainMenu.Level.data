@@ -109,7 +109,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.44006109, 0, 50],
+			Vec3 Translation = [-2.93477869, 5.67225933, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -121,7 +121,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20,
+			float Size = 30.1194572,
 		},
 		EditorCameraController = 
 		{
@@ -129,7 +129,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.44006109, 0, 0],
+			Vec3 LookTarget = [-2.93477869, 5.67225933, -1.28283943e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -253,7 +253,8 @@ Level =
 			string DefaultSprite = "",
 			string HoveredSprite = "",
 			string ClickedSprite = "",
-			string LevelToLoad = "",
+			string LevelToLoad = "596137fe4cde6487:JLevel",
+			bool StartButton = true,
 		},
 	},
 	Cog = 
@@ -302,6 +303,7 @@ Level =
 			string HoveredSprite = "",
 			string ClickedSprite = "",
 			string LevelToLoad = "",
+			bool StartButton = false,
 		},
 	},
 	Cog = 
@@ -452,6 +454,46 @@ Level =
 			TextAlign Align = Left,
 			float PixelsPerUnit = 64,
 			bool Smoothing = true,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "LoadScreen",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [75.0684891, 0, 2],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Fade = 
+		{
+			float Time = 1.5,
+			bool Invis = true,
 		},
 	},
 },

@@ -7,11 +7,13 @@ class Object : ZilchComponent
     var Target : Cog;
     [Property]
     var DetectDistance : Real;
+    [Property]
+    var RespawnTime : Real;
     
-    var DistanceFromPlayer : Real;
     var HasSpawned : Boolean;
+    var Ghost : Cog = null;
     
-    
+    var Time : Real;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -22,10 +24,25 @@ class Object : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.DistanceFromPlayer = (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2 + (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y);
-        if(this.DistanceFromPlayer < this.DetectDistance && !this.HasSpawned)
+        var dist = (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2 + (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y);
+        if(this.Time > 0)
         {
-            this.Space.CreateAtPosition(Archetype.Ghost,this.Owner.Transform.Translation);
+            this.Time -= event.Dt;
+            if (this.Time <= 0)
+                this.Time = 0;
+            else
+                return;
+        }
+        if(this.HasSpawned && this.Ghost == null)
+        {
+            this.HasSpawned = false;
+            this.Time = this.RespawnTime;
+            return;
+        }
+        if(dist < this.DetectDistance && !this.HasSpawned)
+        {
+            this.Ghost = this.Space.CreateAtPosition(Archetype.Ghost,this.Owner.Transform.Translation);
+            this.Ghost.MonsterAI.Target = this.Target;
             this.HasSpawned = true;
         }
     }

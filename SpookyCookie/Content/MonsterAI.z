@@ -1,7 +1,5 @@
 class MonsterAI : ZilchComponent
 {
-    [Property]
-    var TargetPath : CogPath;
     var Target : Cog;
     [Property]
     var DetectDistance : Real;
@@ -15,8 +13,6 @@ class MonsterAI : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        if(this.TargetPath != null)
-            this.Target = this.TargetPath.Cog;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
