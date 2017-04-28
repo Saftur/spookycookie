@@ -123,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.24806547, 1.34978127, 50],
+			Vec3 Translation = [4.84243536, 1.34978127, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -135,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3746223,
+			float Size = 22.1034164,
 		},
 		EditorCameraController = 
 		{
@@ -143,7 +143,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.24806547, 1.34978127, 0],
+			Vec3 LookTarget = [4.84243536, 1.34978127, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -277,7 +277,7 @@ Level =
 		},
 		IgnoreSpaceEffects = 
 		{
-			bool Drag = false,
+			bool Drag = true,
 			bool Flow = false,
 			bool Force = false,
 			bool Gravity = false,
@@ -401,7 +401,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0.950000048, 0.893807471, 0.517750025, 1],
+			Vec4 Color = [0.950000048, 0.89380753, 0.517750025, 0.100000001],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",

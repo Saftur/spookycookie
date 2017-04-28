@@ -3,7 +3,6 @@ class MonsterAI : ZilchComponent
     var Target : Cog;
     [Property]
     var ChaseSpeed: Real;
-    var Movement : Real3;
     
     var ArrayIndex : Integer;
     
@@ -15,36 +14,10 @@ class MonsterAI : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        /*var x = this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X;
-        var y = this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y;
-        
-        if(Math.Abs(x) > Math.Abs(y))
-        {
-            var angle = Math.ATan(y/x);
-            x = (x/Math.Abs(x)) * Math.Cos(angle);
-            y = (y/Math.Abs(y)) * Math.Sin(angle);
-        }
-        else
-        {
-            var angle = Math.ATan(x/y);
-            x = (x/Math.Abs(x)) * Math.Sin(angle);
-            y = (y/Math.Abs(y)) * Math.Cos(angle);
-        }
-        
-        this.Movement = Real3(x, y, 0);
-        if(this.Movement.X < 0)
-        {
-            this.Owner.Sprite.FlipX = true;
-        }
-        else
-        {
-            this.Owner.Sprite.FlipX = false;
-        }
-        this.Owner.RigidBody.Velocity = this.Movement * this.ChaseSpeed;*/
         var movement = this.Target.Transform.Translation - this.Owner.Transform.Translation;
         movement /= Math.Sqrt(movement.X*movement.X+movement.Y*movement.Y);
         
-        if(this.Movement.X < 0)
+        if(movement.X < 0)
         {
             this.Owner.Sprite.FlipX = true;
         }
