@@ -216,9 +216,27 @@ Level =
 		},
 		PlayerMovement = 
 		{
+			float StepSize = 1,
+			float Speed = 2,
 		},
 		Flashlight = 
 		{
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = false,
+			bool Flow = false,
+			bool Force = false,
+			bool Gravity = false,
+			bool Thrust = false,
+			bool Vortex = false,
+			bool Wind = false,
+			bool Invalid = false,
+			bool Torque = false,
+			bool PointGravity = false,
+			bool PointForce = false,
+			bool Buoyancy = false,
+			bool Custom = false,
 		},
 	},
 	Cog = 
