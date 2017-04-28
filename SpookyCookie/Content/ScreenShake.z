@@ -1,0 +1,56 @@
+class ScreenShake : ZilchComponent
+{
+    [Dependency]
+    var Cam : Camera = null;
+    
+    var StartShake : Boolean = false;
+    
+    [Property]
+    var ShakeTime : Real = 0.05;
+    var ShakeTimer : Real;
+    
+    var ShakeDuration : Real = 3;
+    var Dir : Integer = 1;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.ShakeTimer = this.ShakeTime;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.M))
+        {
+            this.StartShake = true;
+        }
+        if(this.StartShake)
+        {
+            this.ShakeDuration -= event.Dt;
+            if(this.ShakeDuration < 0)          //End of screen shake
+            {
+                this.StartShake = false;
+            }
+            else
+            {
+                this.ShakeTimer -= event.Dt;
+                this.Shake(event.Dt, this.Dir);
+                if(this.ShakeTimer < 0)
+                {
+                    this.ShakeTimer = this.ShakeTime;
+                    this.Dir *= -1;
+                }
+            }
+        }
+    }
+    function Shake(time : Real, dir : Integer)
+    {
+        var rand = Random();
+        
+        var shakeDist = rand.Range(2, 5);
+        
+        shakeDist *= time;
+        shakeDist *= dir;
+        
+        this.Owner.FollowObject.Displacement = Real3(shakeDist,0,40);
+    }
+}

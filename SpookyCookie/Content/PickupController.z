@@ -16,11 +16,11 @@ class PickupController : ZilchComponent
         if(this.Pickuptype == 1)
         {
             Console.WriteLine("`this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.FearBar.Bar`");
-            this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.FearBar.Bar.Decrease(0.1);
+            this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.FearBar.Bar.Decrease(0.7);
         }
         if(this.Pickuptype == 2)
         {
-            this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.BatteryLife.Bar.Increase(0.1);
+            this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.BatteryLife.Bar.Increase(0.5);
         }
         if(this.Pickuptype == 3)
         {
@@ -32,8 +32,8 @@ class PickupController : ZilchComponent
             }
             
         }
-        this.Owner.Destroy();
+        
         this.Space.SoundSpace.PlayCue(this.PickupSound);
-    
+        this.Owner.Destroy();
     }
 }

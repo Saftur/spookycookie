@@ -2,26 +2,55 @@ class MonsterAI : ZilchComponent
 {
     var Target : Cog;
     [Property]
-    var DetectDistance : Real;
-    [Property]
     var ChaseSpeed: Real;
-    
-    var Detected : Boolean;
-    var DistanceFromPlayer : Real;
     var Movement : Real3;
+    
+    var ArrayIndex : Integer;
     
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Target = this.Space.FindObjectByName("Player");
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.DistanceFromPlayer = (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2 + (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y);
-        if(!this.Detected && (this.DistanceFromPlayer < this.DetectDistance))
+        var x = this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X;
+        var y = this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y;
+        
+        /*
+        if(Math.Abs(x) == Math.Abs(y))
         {
-            this.Movement = this.Target.Transform.Translation - this.Owner.Transform.Translation;
+            
+        }*/
+        if(Math.Abs(x) > Math.Abs(y))
+        {
+            var angle = Math.ATan(y/x);
+            x = (x/Math.Abs(x)) * Math.Cos(angle);
+            y = (y/Math.Abs(y)) * Math.Sin(angle);
+        }
+        else
+        {
+            var angle = Math.ATan(x/y);
+            x = (x/Math.Abs(x)) * Math.Sin(angle);
+            y = (y/Math.Abs(y)) * Math.Cos(angle);
+        }
+        
+        this.Movement = Real3(x, y, 0);
+        if(this.Movement.X < 0)
+        {
+            this.Owner.Sprite.FlipX = true;
+        }
+        else
+        {
+            this.Owner.Sprite.FlipX = false;
         }
         this.Owner.RigidBody.Velocity = this.Movement * this.ChaseSpeed;
+    }
+    
+    function Destroy()
+    {
+        //this.Space.CreateAtPosition(Archetype.GhostDeath, this.Owner.Transform.Translation);
+        this.Owner.Destroy();
     }
 }

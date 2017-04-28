@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "FearManager",
+		uint64 ResourceId = 59de0dfeb0013d86,
+	},
+},

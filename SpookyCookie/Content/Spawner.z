@@ -1,4 +1,4 @@
-class Object : ZilchComponent
+class Spawner : ZilchComponent
 {
     [Property]
     var DistanceSpawn : Real;
@@ -10,7 +10,7 @@ class Object : ZilchComponent
     [Property]
     var RespawnTime : Real;
     
-    var HasSpawned : Boolean;
+    var HasSpawned : Boolean = false;
     var Ghost : Cog = null;
     
     var Time : Real;
@@ -24,7 +24,8 @@ class Object : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var dist = (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2 + (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y);
+        var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Target.Transform.Translation.XY);
+        //Console.WriteLine("`dist`-`this.DetectDistance`");
         if(this.Time > 0)
         {
             this.Time -= event.Dt;
@@ -35,12 +36,14 @@ class Object : ZilchComponent
         }
         if(this.HasSpawned && this.Ghost == null)
         {
+            Console.WriteLine("?");
             this.HasSpawned = false;
             this.Time = this.RespawnTime;
             return;
         }
         if(dist < this.DetectDistance && !this.HasSpawned)
         {
+            Console.WriteLine("!");
             this.Ghost = this.Space.CreateAtPosition(Archetype.Ghost,this.Owner.Transform.Translation);
             this.Ghost.MonsterAI.Target = this.Target;
             this.HasSpawned = true;

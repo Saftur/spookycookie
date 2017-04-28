@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-0.79931736, -2.25002313, 50],
+			Vec3 Translation = [0.318074882, -1.49161315, 90],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3746262,
+			float Size = 29.8364906,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-0.79931736, -2.25002313, 0],
+			Vec3 LookTarget = [0.318074882, -1.49161315, 40],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -183,7 +183,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-6.04486704, -3.1698699, 0],
+			Vec3 Translation = [-8.68860626, -9.44875145, 0],
 			Vec3 Scale = [9.99999975e-05, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -222,7 +222,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.69900751, -1.26323521, 0],
+			Vec3 Translation = [-7.484375, -7.44769764, 0],
 			Vec3 Scale = [2.5, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -257,11 +257,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Label",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.69863319, -1.97517061, 0],
+			Vec3 Translation = [-8.48400116, -8.15963364, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -291,11 +291,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "SpriteText",
+			string Name = "Label",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.72106409, -0.0909669399, 0],
+			Vec3 Translation = [-8.50643158, -6.27542973, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
