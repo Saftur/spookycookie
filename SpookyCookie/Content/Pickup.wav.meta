@@ -1,0 +1,11 @@
+AudioContent = 
+{
+	SoundBuilder = 
+	{
+		string Name = "Pickup",
+		uint64 ResourceId = 596281a0295fc05c,
+		bool Compressed = false,
+		bool Streamed = false,
+		SoundLoadType LoadType = Decompress,
+	},
+},
