@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "LightupTile",
+		uint64 ResourceId = 595d4912bb4c2435,
+	},
+},

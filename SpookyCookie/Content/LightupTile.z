@@ -1,0 +1,44 @@
+class LightupTile : ZilchComponent
+{
+    var Beam : Cog = null;
+    function Initialize(init : CogInitializer)
+    {
+        Console.WriteLine("`this.Owner.Name`");
+        this.Beam = this.Space.FindObjectByName("Beam");
+        if (this.Beam != null)
+            Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        //Zero.Connect(this.Space, Events.CollisionStarted, this.OnCollisionStarted);
+        //Zero.Connect(this.Space, Events.CollisionEnded, this.OnCollisionEnded);
+        //this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        var beamPos = this.Beam.Transform.Translation + this.Beam.Parent.Transform.Translation;
+        var beamScl = this.Beam.Transform.Scale;
+        Console.WriteLine("`beamPos.X`");
+        var tilePos = this.Owner.Transform.Translation;
+        var inBeam = tilePos.X > beamPos.X-beamScl.X/2 && tilePos.X < beamPos.X+beamScl.X/2 &&
+                     tilePos.Y > beamPos.Y-beamScl.Y/2 && tilePos.Y < beamPos.Y+beamScl.Y/2;
+        Console.WriteLine("`inBeam`");
+        if (inBeam)
+            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0);
+        else
+            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0.5);
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        Console.WriteLine("`event.OtherObject.Name`");
+        if (event.OtherObject.Name == "Beam") {
+            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0);
+        }
+    }
+
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        if (event.OtherObject.Name == "Beam") {
+            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0.5);
+        }
+    }
+}
