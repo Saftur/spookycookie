@@ -5,15 +5,32 @@ class Doors : ZilchComponent
     var Locked : Boolean = true;
     function Initialize(init : CogInitializer)
     {
-        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
     }
-
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(!this.Locked && event.OtherObject.PlayerMovement != null)
+        {
+            this.CheckLockState();
+        }
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(!this.Owner.Sprite.AnimationActive)
+            return;
+        
+        if(this.Owner.Sprite.CurrentFrame == 4)
+        {
+            this.Owner.Sprite.SpriteSource = SpriteSource.Open_Door;
+            this.Space.LoadLevel(Level.Kitchen);
+        }
+    }
     function CheckLockState()
     {
-        if(!this.Locked)
+        if(!this.Locked && this.Owner.Sprite.SpriteSource != SpriteSource.Open_Door)
         {
-            //this.Owner.BoxCollider.Ghost = true;
-            this.Owner.Sprite.SpriteSource = SpriteSource.Open_Door;
+            this.Owner.Sprite.AnimationActive = true;
         }
     }
 }

@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "vision",
+		uint64 ResourceId = 59d81a085ca3b5b3,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 160,
+		uint FrameSizeY = 160,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 80,
+		float OriginY = 80,
+		float PixelsPerUnit = 256,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

@@ -30,7 +30,6 @@ class PickupController : ZilchComponent
             if(door != null)
             {
                 door.Doors.Locked = false;
-                door.Doors.CheckLockState();
             }
             
         }
