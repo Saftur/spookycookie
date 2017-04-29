@@ -28,7 +28,7 @@ class PickupController : ZilchComponent
             var door = this.Space.FindObjectByName("Door");
             if(door != null)
             {
-                door.Doors.Locked = 0;
+                door.Doors.Locked = false;
                 door.Doors.CheckLockState();
             }
             

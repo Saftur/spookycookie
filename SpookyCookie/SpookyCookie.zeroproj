@@ -4,11 +4,11 @@ Cog =
 	{
 		string ProjectName = "SpookyCookie",
 		string ProjectOwner = "",
-		string DefaultLevel = "Level",
+		string DefaultLevel = "MainMenu",
 		string ProjectSpace = "Space",
 		uint ProjectEngineRevision = 15372,
 		bool AutoTakeProjectScreenshot = true,
-		uint64 Guid = 595c09e5911b9125,
+		uint64 Guid = 595beabbfc6bed1e,
 	},
 	EditorSettings = 
 	{

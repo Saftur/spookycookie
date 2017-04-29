@@ -1,6 +1,6 @@
 class Doors : ZilchComponent
 {
-    var Locked : Real = 1;
+    var Locked : Boolean = true;
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -8,9 +8,10 @@ class Doors : ZilchComponent
 
     function CheckLockState()
     {
-        if(this.Locked == 0)
+        if(!this.Locked)
         {
-            this.Owner.BoxCollider.Ghost = true;
+            //this.Owner.BoxCollider.Ghost = true;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Open_Door;
         }
     }
 }
