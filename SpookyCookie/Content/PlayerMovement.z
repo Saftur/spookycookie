@@ -31,6 +31,8 @@ class PlayerMovement : ZilchComponent
                 this.Destination += Real3(0,this.StepSize,0);
                 this.RBody.Velocity += Real3(0,this.Speed,0);
                 this.Dir.Y = 1;
+                if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Up)
+                    this.Owner.Sprite.SpriteSource = SpriteSource.Character_Up;
                 this.Walking = true;
             }
             else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
@@ -38,6 +40,8 @@ class PlayerMovement : ZilchComponent
                 this.Destination += Real3(0,-this.StepSize,0);
                 this.RBody.Velocity += Real3(0,-this.Speed,0);
                 this.Dir.Y = -1;
+                if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Front_2)
+                    this.Owner.Sprite.SpriteSource = SpriteSource.Character_Front_2;
                 this.Walking = true;
             }
             if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
@@ -45,6 +49,8 @@ class PlayerMovement : ZilchComponent
                 this.Destination += Real3(-this.StepSize,0,0);
                 this.RBody.Velocity += Real3(-this.Speed,0,0);
                 this.Dir.X = -1;
+                if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Left_Side)
+                    this.Owner.Sprite.SpriteSource = SpriteSource.Character_Left_Side;
                 this.Walking = true;
             }
             else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
@@ -52,7 +58,19 @@ class PlayerMovement : ZilchComponent
                 this.Destination += Real3(this.StepSize,0,0);
                 this.RBody.Velocity += Real3(this.Speed,0,0);
                 this.Dir.X = 1;
+                if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Right_Side_1)
+                    this.Owner.Sprite.SpriteSource = SpriteSource.Character_Right_Side_1;
                 this.Walking = true;
+            }
+            
+            if(this.Dir == Integer2(0,0))
+            {
+                this.Owner.Sprite.CurrentFrame = 0;
+                this.Owner.Sprite.AnimationActive = false;
+            }
+            else
+            {
+                this.Owner.Sprite.AnimationActive = true;
             }
         }
         else
