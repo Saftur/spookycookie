@@ -25,8 +25,8 @@ class MenuLevelStart : ZilchComponent
     [Property]
     var LevelToLoad : Level = null;
     
-    [Property]
-    var StartButton : Boolean = false;
+    //[Property]
+    //var StartButton : Boolean = false;
 
     // Button that underwent a state change
     var Button : Cog = null;
@@ -66,16 +66,17 @@ class MenuLevelStart : ZilchComponent
     function OnMouseUp(event : ViewportMouseEvent)
     {
         Console.WriteLine("Click");
-        if(this.StartButton)
-        {
+        //if(this.StartButton)
+        //{
             this.FadeScreen.Transform.Translation = Real3(0, 0, 2);
             this.FadeScreen.Fade.StartFade = true;
             this.FadeStarting = true;
-        }
-        else
+        //}
+        /*else
         {
             this.Space.LoadLevel(this.LevelToLoad);
-        }
+        }*/
+        //this.Owner.Sprite.SpriteSource = this.DefaultSprite;
     }
 
     // Responds to the mouse clicking a button

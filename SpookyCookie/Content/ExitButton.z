@@ -27,16 +27,38 @@ class ExitButton: ZilchComponent
 
     // Button that underwent a state change
     var Button : Cog = null;
+    
+    var FadeScreen : Cog = null;
+    
+    var FadeStarting : Boolean = false;
+    
+    var Timer : Real = 0;
 
     function Initialize(init : CogInitializer)
     {
       // Connections to the needed Mouse events (Enter, Exit, Up, Down)
       //Zero.Connect(this.Owner, Events.MouseEnter, this.OnMouseEnter);
       //Zero.Connect(this.Owner, Events.MouseExit, this.OnMouseExit);
+      this.FadeScreen = this.Space.FindObjectByName("LoadScreen");
       Zero.Connect(this.Owner, Events.MouseUp, this.OnMouseUp);
-      //Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+      Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+      Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
     }
 
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.FadeStarting == true)
+        {
+            this.Timer += event.Dt;
+        }
+        if(this.Timer >= 1.5)
+        {
+            Console.WriteLine("Quitting");
+            this.FadeStarting = false;
+            this.GameSession.Quit();
+        }
+    }
+    
     // Responds to the mouse entering the boundaries of the button
     function OnMouseEnter(event : ViewportMouseEvent)
     {
@@ -53,17 +75,25 @@ class ExitButton: ZilchComponent
     // Responds to the mouse releasing a button
     function OnMouseUp(event : ViewportMouseEvent)
     {
-      // Goes back to the hovered space, as mouse would most likely still
-      // be hovering over the button just clicked
-      //this.HoveredState();
-      this.Owner.Sprite.SpriteSource = this.ClickedSprite;
-      this.GameSession.Quit();
+        // Goes back to the hovered space, as mouse would most likely still
+        // be hovering over the button just clicked
+        //this.HoveredState();
+        this.FadeScreen.Transform.Translation = Real3(0, 0, 2);
+        this.FadeScreen.Fade.StartFade = true;
+        this.FadeStarting = true;
+        
+        //this.Owner.Sprite.SpriteSource = this.DefaultSprite;
     }
 
     // Responds to the mouse clicking a button
     function OnMouseDown(event : ViewportMouseEvent)
     {
       // Calls the function for the clicked state
-      //this.ClickedState();
+      this.ClickedState();
+    }
+    
+    function ClickedState()
+    {
+        this.Owner.Sprite.SpriteSource = this.ClickedSprite;
     }
 }
