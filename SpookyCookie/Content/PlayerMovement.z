@@ -1,3 +1,5 @@
+// Authors: Charles duMars, Arthur Bouvier
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 class PlayerMovement : ZilchComponent
 {
     [Dependency]

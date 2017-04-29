@@ -1,3 +1,5 @@
+// Authors: Brenan Bundy
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 class TestScriptDonotadd : ZilchComponent
 {
     [Property]
