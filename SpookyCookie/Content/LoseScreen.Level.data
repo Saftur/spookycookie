@@ -63,7 +63,7 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			ViewportScaling Scaling = Letterbox,
+			ViewportScaling Scaling = Exact,
 			Vec2 Resolution = [1280, 720],
 			Vec4 MarginColor = [0, 0, 0, 1],
 		},
@@ -107,7 +107,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [0.209933519, 0.306542933, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +119,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 27.2532139,
+			float Size = 27.2532272,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +127,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [0.209933519, 0.306542933, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -183,8 +183,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [50, 50, 1],
+			Vec3 Translation = [0, 0, -0.100000001],
+			Vec3 Scale = [2.5, 2.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -193,11 +193,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [0, 0, 0, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5275aa4d802dd6dc:Square",
+			string SpriteSource = "59d8f162d8c84102:victoryscreen",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -211,40 +211,6 @@ Level =
 		LinkId = 
 		{
 			uint Id = 5,
-		},
-		Named = 
-		{
-			string Name = "SpriteText",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.49497557, 5.81699562, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		SpriteText = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.605000019, 0.169399977, 0.169399977, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string FontName = "59627dc02da33093:Broadway Regular",
-			uint FontSize = 150,
-			string Text = "GAME OVER",
-			TextAlign Align = Left,
-			float PixelsPerUnit = 64,
-			bool Smoothing = true,
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 6,
 		},
 		Named = 
 		{
@@ -292,7 +258,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -333,14 +299,14 @@ Level =
 			string DefaultSprite = "",
 			string HoveredSprite = "",
 			string ClickedSprite = "5963c99435c7574a:PLAY001",
-			string LevelToLoad = "596137f64e545252:CLevel",
+			string LevelToLoad = "59df2ae304d16aa0:GameLevel",
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Named = 
 		{
@@ -389,7 +355,7 @@ Level =
 		string Name = "5963db5ac3780986:LoadScreen",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Transform = 
 		{
@@ -407,7 +373,7 @@ Level =
 		string Name = "5963e2025d14442a:LoadScreen2",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 9,
 		},
 		Transform = 
 		{

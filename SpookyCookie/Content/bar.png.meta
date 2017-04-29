@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "bar",
+		uint64 ResourceId = 59d8d52b9acb34ec,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 68,
+		uint FrameSizeY = 315,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 34,
+		float OriginY = 157.5,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

@@ -9,6 +9,8 @@ class Object : ZilchComponent
     var DetectDistance : Real;
     [Property]
     var RespawnTime : Real;
+    [Property]
+    var GhostType : Archetype;
     
     var Discovered : Boolean = false;
     
@@ -57,7 +59,7 @@ class Object : ZilchComponent
             }
             if(dist < this.DetectDistance && !this.HasSpawned)
             {
-                this.Ghost = this.Space.CreateAtPosition(Archetype.Ghost,this.Owner.Transform.Translation);
+                this.Ghost = this.Space.CreateAtPosition(this.GhostType,this.Owner.Transform.Translation);
                 this.Ghost.MonsterAI.Target = this.Target;
                 this.HasSpawned = true;
             }

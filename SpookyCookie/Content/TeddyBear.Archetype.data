@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [3.54260588, 8.30662251, 0],
+		Vec3 Translation = [11.5, -0.5, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -28,7 +28,7 @@ Cog =
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "59d8f5c374b131b2:stuffed_bear",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -50,5 +50,30 @@ Cog =
 	{
 		string PickupSound = "596281bc2f389f45:Pickup",
 		int Pickuptype = 1,
+	},
+	Object = 
+	{
+		float DistanceSpawn = 0,
+		CogPath TargetPath = 
+		{
+			string Path = ":/Player",
+			bool ErrorOnResolveToNull = false,
+			bool ErrorOnPathCantCompute = false,
+			bool ErrorOnDirectLinkFail = false,
+			bool UpdateCogOnPathChange = true,
+			bool UpdatePathOnCogChange = true,
+			bool UpdateCogOnInitialize = true,
+			bool ResolvedNullErrorOccurred = false,
+			uint ResolvedCog = 2,
+			CogPathPreference PathPreference0 = CogRelative,
+			CogPathPreference PathPreference1 = SpaceRelative,
+			CogPathPreference PathPreference2 = Absolute,
+		},
+		float DetectDistance = 8,
+		float RespawnTime = 4,
+		string GhostType = "",
+	},
+	Lightup = 
+	{
 	},
 },

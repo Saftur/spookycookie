@@ -20,6 +20,10 @@ class Sense : ZilchComponent
         //Console.WriteLine("`this.Ghosts.Capacity`");
         while(i < this.Ghosts.Count)
         {
+            if(this.Ghosts[i] == null)
+            {
+                break;
+            }
             this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 1);
             
             var trail = this.Ghosts[i].FindChildByName("GhostTrail");
@@ -72,6 +76,8 @@ class Sense : ZilchComponent
             var i = 0;
             while(i < this.Ghosts.Count)
             {
+                if(this.Ghosts[i] == null)
+                    break;
                 this.Ghosts[i].MonsterAI.ArrayIndex -= 1;
                 if(this.Ghosts[i].MonsterAI.ArrayIndex < 0)
                     this.Ghosts[i].MonsterAI.ArrayIndex = 0;

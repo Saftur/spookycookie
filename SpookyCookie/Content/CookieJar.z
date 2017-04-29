@@ -13,8 +13,8 @@ class CookieJar : ZilchComponent
     {
         if(event.OtherObject.PlayerMovement != null)
         {
-            Console.WriteLine("`this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.VictoryText`");
             this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.VictoryText.SpriteText.Visible = true;
+            this.Space.TimeSpace.TogglePause();
         }
     }
 }

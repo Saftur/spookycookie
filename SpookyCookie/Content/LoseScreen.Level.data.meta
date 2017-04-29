@@ -2,7 +2,7 @@ DataContent =
 {
 	DataBuilder = 
 	{
-		string Name = "GameOver",
+		string Name = "LoseScreen",
 		uint64 ResourceId = 5963c53f0d437c80,
 		string LoaderType = "Level",
 		uint Version = 0,

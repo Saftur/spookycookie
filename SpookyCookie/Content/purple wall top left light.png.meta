@@ -14,7 +14,7 @@ ImageContent =
 		float PixelsPerUnit = 256,
 		bool Smoothing = true,
 		bool Looping = true,
-		Vec4 Slices = [0, 0, 0, 0],
+		Vec4 Slices = [0, 0, 50, 0],
 		SpriteFill Fill = Stretch,
 	},
 },
