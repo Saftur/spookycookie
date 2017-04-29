@@ -2,14 +2,14 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "purple wall left light",
-		uint64 ResourceId = 5963c8ce76109ec5,
+		string Name = "purple wall right",
+		uint64 ResourceId = 5963e15f888d4100,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 44,
+		uint FrameSizeX = 256,
 		uint FrameSizeY = 256,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 22,
+		float OriginX = 128,
 		float OriginY = 128,
 		float PixelsPerUnit = 256,
 		bool Smoothing = true,
