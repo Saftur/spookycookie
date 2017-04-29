@@ -54,21 +54,26 @@ class MenuLevelStart : ZilchComponent
         {
             this.Timer += event.Dt;
         }
+        if(this.Timer >= 1.5)
+        {
+            Console.WriteLine("Changing Level");
+            this.FadeStarting = false;
+            this.Space.LoadLevel(this.LevelToLoad);
+        }
     }
 
     // Responds to the mouse releasing a button
     function OnMouseUp(event : ViewportMouseEvent)
     {
+        Console.WriteLine("Click");
         if(this.StartButton)
         {
             this.FadeScreen.Transform.Translation = Real3(0, 0, 2);
             this.FadeScreen.Fade.StartFade = true;
             this.FadeStarting = true;
         }
-        if(this.Timer >= 1.5)
+        else
         {
-            Console.WriteLine("Changing Level");
-            this.FadeStarting = false;
             this.Space.LoadLevel(this.LevelToLoad);
         }
     }
