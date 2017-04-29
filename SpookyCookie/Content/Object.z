@@ -1,0 +1,66 @@
+class Object : ZilchComponent
+{
+    [Property]
+    var DistanceSpawn : Real;
+    [Property]
+    var TargetPath : CogPath;
+    var Target : Cog;
+    [Property]
+    var DetectDistance : Real;
+    [Property]
+    var RespawnTime : Real;
+    
+    var Discovered : Boolean = false;
+    
+    var HasSpawned : Boolean = false;
+    var Ghost : Cog = null;
+    
+    var Beam : Cog = null;
+    
+    var Time : Real = 0;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        if(this.TargetPath != null)
+            this.Target = this.TargetPath.Cog;
+        this.Beam = this.Space.FindObjectByName("Beam");
+        
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Beam != null) {
+            var beamPos = this.Beam.Transform.Translation + this.Beam.Parent.Transform.Translation;
+            var beamScl = this.Beam.Transform.Scale;
+            var tilePos = this.Owner.Transform.Translation;
+            var inBeam = tilePos.X > beamPos.X-beamScl.X/2 && tilePos.X < beamPos.X+beamScl.X/2 &&
+                         tilePos.Y > beamPos.Y-beamScl.Y/2 && tilePos.Y < beamPos.Y+beamScl.Y/2;
+            if (inBeam)
+                this.Discovered = true;
+        }
+        if (!this.Discovered) {
+            var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Target.Transform.Translation.XY);
+            //Console.WriteLine("`dist`-`this.DetectDistance`");
+            if(this.Time > 0)
+            {
+                this.Time -= event.Dt;
+                if (this.Time <= 0)
+                    this.Time = 0;
+                else
+                    return;
+            }
+            if(this.HasSpawned && this.Ghost == null)
+            {
+                this.HasSpawned = false;
+                this.Time = this.RespawnTime;
+                return;
+            }
+            if(dist < this.DetectDistance && !this.HasSpawned)
+            {
+                this.Ghost = this.Space.CreateAtPosition(Archetype.Ghost,this.Owner.Transform.Translation);
+                this.Ghost.MonsterAI.Target = this.Target;
+                this.HasSpawned = true;
+            }
+        }
+    }
+}

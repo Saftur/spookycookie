@@ -1,3 +1,4 @@
+// Author: Brennan
 class PickupController : ZilchComponent
 {
     [Property]
