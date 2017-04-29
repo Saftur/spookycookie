@@ -18,18 +18,7 @@ Cog =
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
-	LightupTile = 
+	Lightup = 
 	{
-	},
-	MultiSprite = 
-	{
-		bool Visible = true,
-		bool VisibilityCulling = true,
-		bool VisibilityEvents = true,
-		bool CastShadows = false,
-		Vec4 Color = [0, 0, 0, 1],
-		BlendMode BlendMode = Alpha,
-		SpriteGeometryMode GeometryMode = ZPlane,
-		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
 	},
 },
