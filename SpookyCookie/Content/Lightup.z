@@ -52,7 +52,7 @@ class Lightup : ZilchComponent
 
     function OnCollisionStarted(event : CollisionEvent)
     {
-        Console.WriteLine("`event.OtherObject.Name`");
+        //Console.WriteLine("`event.OtherObject.Name`");
         if (event.OtherObject.Name == "Beam") {
             this.InBeam = true;
             this.Lighten(1);

@@ -27,7 +27,7 @@ class Sense : ZilchComponent
             if(this.Ghosts[i] == null)
             {
                 Console.WriteLine("hm `i` `this.Ghosts.Count`");
-                break;
+                //break;
                 this.RemoveGhost(this.Ghosts[i]);
                 i -= 1;
                 if(i < 0)
@@ -107,8 +107,10 @@ class Sense : ZilchComponent
         var i = 0;
         while(i < this.Ghosts.Count)
         {
+            //Console.WriteLine("`i`");
             if(this.Ghosts[i] == ghost)
-                return;
+                break;
+                //return;
             i += 1;
         }
         var index = ghost.MonsterAI.ArrayIndex;
