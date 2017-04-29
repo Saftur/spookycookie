@@ -4,26 +4,32 @@ class Lightup : ZilchComponent
 {
     var Beam : Cog = null;
     var Player : Cog = null;
+    
+    var InBeam : Boolean = false;
+    var FirstUpdate : Boolean = true;
+    
     function Initialize(init : CogInitializer)
     {
+        //Console.WriteLine("`this.Owner.Name`");
         this.Beam = this.Space.FindObjectByName("Beam");
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Player = this.Space.FindObjectByName("Player");
-        //Zero.Connect(this.Space, Events.CollisionStarted, this.OnCollisionStarted);
-        //Zero.Connect(this.Space, Events.CollisionEnded, this.OnCollisionEnded);
-        //this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        //this.Lighten(0.25);
+        //this.Opacity(0);
     }
     
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if (this.Player != null) {
+        if (!this.InBeam && this.Player != null) {
             var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Player.Transform.Translation.XY);
             if (dist < 2.5)
                 this.Opacity(1);
             else
                 this.Opacity(0);
         }
-        if (this.Beam != null) {
+        /*if (this.Beam != null) {
             var beamPos = this.Beam.Transform.Translation + this.Beam.Parent.Transform.Translation;
             var beamScl = this.Beam.Transform.Scale;
             var tilePos = this.Owner.Transform.Translation;
@@ -34,6 +40,13 @@ class Lightup : ZilchComponent
                 this.Opacity(1);
             } else
                 this.Lighten(0.25);
+        }*/
+        if (this.FirstUpdate) {
+            this.FirstUpdate = false;
+            if (!this.InBeam) {
+                this.Lighten(0.25);
+                this.Opacity(0);
+            }
         }
     }
 
@@ -41,14 +54,17 @@ class Lightup : ZilchComponent
     {
         Console.WriteLine("`event.OtherObject.Name`");
         if (event.OtherObject.Name == "Beam") {
-            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0);
+            this.InBeam = true;
+            this.Lighten(1);
+            this.Opacity(1);
         }
     }
 
     function OnCollisionEnded(event : CollisionEvent)
     {
         if (event.OtherObject.Name == "Beam") {
-            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0.5);
+            this.InBeam = false;
+            this.Lighten(0.25);
         }
     }
     
