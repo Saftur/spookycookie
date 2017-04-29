@@ -14,23 +14,24 @@ class Lightup : ZilchComponent
     
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if (this.Player != null) {
+            var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Player.Transform.Translation.XY);
+            if (dist < 2.5)
+                this.Opacity(1);
+            else
+                this.Opacity(0);
+        }
         if (this.Beam != null) {
             var beamPos = this.Beam.Transform.Translation + this.Beam.Parent.Transform.Translation;
             var beamScl = this.Beam.Transform.Scale;
             var tilePos = this.Owner.Transform.Translation;
             var inBeam = tilePos.X > beamPos.X-beamScl.X/2 && tilePos.X < beamPos.X+beamScl.X/2 &&
                          tilePos.Y > beamPos.Y-beamScl.Y/2 && tilePos.Y < beamPos.Y+beamScl.Y/2;
-            if (inBeam)
+            if (inBeam) {
                 this.Lighten(1);
-            else
+                this.Opacity(1);
+            } else
                 this.Lighten(0.25);
-        }
-        if (this.Player != null) {
-            var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Player.Transform.Translation.XY);
-            if (dist < 2.5)
-                this.Opacity(1);
-            else
-                this.Opacity(1);
         }
     }
 
@@ -51,9 +52,9 @@ class Lightup : ZilchComponent
     
     function Lighten(light : Real) {
         if (this.Owner.Sprite != null)
-            this.Owner.Sprite.Color = Real4(light, light, light, 1);
+            this.Owner.Sprite.Color = Real4(light, light, light, this.Owner.Sprite.Color.W);
         if (this.Owner.MultiSprite != null)
-            this.Owner.MultiSprite.Color = Real4(light, light, light, 1);
+            this.Owner.MultiSprite.Color = Real4(light, light, light, this.Owner.MultiSprite.Color.W);
     }
     
     function Opacity(op : Real) {

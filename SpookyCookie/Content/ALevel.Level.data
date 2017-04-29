@@ -104,7 +104,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.93119192, -1.27824485, 50],
+			Vec3 Translation = [3.42597318, -1.27824485, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +116,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.8364906,
+			float Size = 54.3656006,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +124,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.93119192, -1.27824485, 1.71837826e-07],
+			Vec3 LookTarget = [3.42597318, -1.27824485, 1.71837826e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -180,7 +180,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.31025696, -4.66777754, 0],
+			Vec3 Translation = [3.5, -4.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -224,8 +224,10 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
-		TestMovement = 
+		PlayerMovement = 
 		{
+			float StepSize = 1,
+			float Speed = 5,
 		},
 		Hierarchy = 
 		{
@@ -247,7 +249,7 @@ Level =
 				},
 				Sprite = 
 				{
-					bool Visible = true,
+					bool Visible = false,
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
@@ -273,6 +275,9 @@ Level =
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
+				Beam = 
+				{
+				},
 			},
 		},
 	},
@@ -288,7 +293,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4.81199646, -2.87469816, 1.69363872e-07],
+			Vec3 Translation = [13.8000059, 4.44543505, 1.69363872e-07],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
