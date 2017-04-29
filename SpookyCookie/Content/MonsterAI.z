@@ -4,18 +4,30 @@ class MonsterAI : ZilchComponent
 {
     var Target : Cog = null;
     var Beam : Cog = null;
+    var Sense : Cog = null;
     [Property]
     var ChaseSpeed: Real;
     
     var ArrayIndex : Integer;
     
+    var CreatePoof : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         this.Target = this.Space.FindObjectByName("Player");
-        this.Beam = this.Space.FindObjectByName("Beam");
+        this.Sense = this.Space.FindObjectByName("Sense");
+        //this.Beam = this.Space.FindObjectByName("Beam");
     }
-
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == "Beam")
+        {
+            //this.Sense.Sense.RemoveGhost(this.Owner);
+            this.Destroy();
+        }
+    }
     function OnLogicUpdate(event : UpdateEvent)
     {
         var movement = this.Target.Transform.Translation - this.Owner.Transform.Translation;
@@ -31,7 +43,7 @@ class MonsterAI : ZilchComponent
         }
         this.Owner.RigidBody.Velocity = movement;
         
-        
+        /*
         if (this.Beam != null) {
             var beamPos = this.Beam.Transform.Translation + this.Beam.Parent.Transform.Translation;
             var beamScl = this.Beam.Transform.Scale;
@@ -41,11 +53,13 @@ class MonsterAI : ZilchComponent
             if (inBeam)
                 this.Destroy();
         }
+        */
     }
     
     function Destroy()
     {
-        //this.Space.CreateAtPosition(Archetype.GhostDeath, this.Owner.Transform.Translation);
+        if(this.CreatePoof)
+            this.Space.CreateAtPosition(Archetype.GhostDeath, this.Owner.Transform.Translation);
         this.Owner.Destroy();
     }
 }
