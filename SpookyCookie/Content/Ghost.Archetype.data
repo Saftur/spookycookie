@@ -6,7 +6,7 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Ghost",
+		string Name = "Ghost1",
 	},
 	Archetyped = 
 	{
@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-8.88460064, 4.30865765, 0],
+		Vec3 Translation = [-5.27725983, 2.27134895, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [1, 1, 1, 0],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -50,10 +50,9 @@ Cog =
 	},
 	MonsterAI = 
 	{
-		float DetectDistance = 8,
 		float ChaseSpeed = 1,
 	},
-	BoxCollider = 
+	MultiConvexMeshCollider = 
 	{
 		bool Ghost = true,
 		bool SendsMessages = true,
@@ -61,7 +60,7 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [1, 1, 0.5],
+		string MeshName = "5963d815f80887ec:BearGhost",
 	},
 	Hierarchy = 
 	{
@@ -90,7 +89,7 @@ Cog =
 				SystemChildMode ChildMode = Independent,
 				SystemSpace SystemSpace = WorldSpace,
 				uint DrawOrder = 0,
-				Vec4 Tint = [1, 1, 1, 1],
+				Vec4 Tint = [1, 1, 1, 0],
 				float WarmUpTime = 0,
 				ParticleGeometry GeometryMode = Billboarded,
 				ParticleRenderMode RenderMode = Additive,

@@ -1,0 +1,66 @@
+class Lightup : ZilchComponent
+{
+    var Beam : Cog = null;
+    var Player : Cog = null;
+    function Initialize(init : CogInitializer)
+    {
+        this.Beam = this.Space.FindObjectByName("Beam");
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.Player = this.Space.FindObjectByName("Player");
+        //Zero.Connect(this.Space, Events.CollisionStarted, this.OnCollisionStarted);
+        //Zero.Connect(this.Space, Events.CollisionEnded, this.OnCollisionEnded);
+        //this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0);
+    }
+    
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if (this.Player != null) {
+            var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Player.Transform.Translation.XY);
+            if (dist < 2.5)
+                this.Opacity(1);
+            else
+                this.Opacity(0);
+        }
+        if (this.Beam != null) {
+            var beamPos = this.Beam.Transform.Translation + this.Beam.Parent.Transform.Translation;
+            var beamScl = this.Beam.Transform.Scale;
+            var tilePos = this.Owner.Transform.Translation;
+            var inBeam = tilePos.X > beamPos.X-beamScl.X/2 && tilePos.X < beamPos.X+beamScl.X/2 &&
+                         tilePos.Y > beamPos.Y-beamScl.Y/2 && tilePos.Y < beamPos.Y+beamScl.Y/2;
+            if (inBeam) {
+                this.Lighten(1);
+                this.Opacity(1);
+            } else
+                this.Lighten(0.25);
+        }
+    }
+
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        Console.WriteLine("`event.OtherObject.Name`");
+        if (event.OtherObject.Name == "Beam") {
+            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0);
+        }
+    }
+
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        if (event.OtherObject.Name == "Beam") {
+            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, 0.5);
+        }
+    }
+    
+    function Lighten(light : Real) {
+        if (this.Owner.Sprite != null)
+            this.Owner.Sprite.Color = Real4(light, light, light, this.Owner.Sprite.Color.W);
+        if (this.Owner.MultiSprite != null)
+            this.Owner.MultiSprite.Color = Real4(light, light, light, this.Owner.MultiSprite.Color.W);
+    }
+    
+    function Opacity(op : Real) {
+        if (this.Owner.Sprite != null)
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.XYZ, op);
+        if (this.Owner.MultiSprite != null)
+            this.Owner.MultiSprite.Color = Real4(this.Owner.MultiSprite.Color.XYZ, op);
+    }
+}

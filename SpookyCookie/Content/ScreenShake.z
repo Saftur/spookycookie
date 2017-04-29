@@ -25,13 +25,15 @@ class ScreenShake : ZilchComponent
         }
         if(this.StartShake)
         {
+            /*
             this.ShakeDuration -= event.Dt;
             if(this.ShakeDuration < 0)          //End of screen shake
             {
                 this.StartShake = false;
+                this.ShakeDuration = 3;
             }
             else
-            {
+            {*/
                 this.ShakeTimer -= event.Dt;
                 this.Shake(event.Dt, this.Dir);
                 if(this.ShakeTimer < 0)
@@ -39,7 +41,7 @@ class ScreenShake : ZilchComponent
                     this.ShakeTimer = this.ShakeTime;
                     this.Dir *= -1;
                 }
-            }
+            //}
         }
     }
     function Shake(time : Real, dir : Integer)

@@ -3,24 +3,53 @@ class Sense : ZilchComponent
     [Dependency]
     var Dad : FollowObject = null;
     
+    var Camera : Cog = null;
     var Ghosts : Array[Cog] = Array[Cog]();
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        this.Camera = this.Space.FindObjectByName("Camera");
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
         var i = 0;
+        var shake = false;
         //Console.WriteLine("`this.Ghosts.Capacity`");
         while(i < this.Ghosts.Count)
         {
+            this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 1);
+            
+            var trail = this.Ghosts[i].FindChildByName("GhostTrail");
             var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Ghosts[i].Transform.Translation.XY);
-            this.Dad.ObjectToFollow.Cog.FearManager.FearBar.Bar.Increase(0.1*event.Dt/dist);
+            this.Dad.ObjectToFollow.Cog.FearManager.FearBar.Bar.Increase(0.01*event.Dt/(dist*2));
+            
+            //Console.WriteLine("`dist` `event.Dt`");
+            
+            if(dist <= 3 && dist >= 2.9)
+            {
+                this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, (3-dist)*(1/0.1));
+                trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, (3-dist)*(1/0.1));
+            }
+            else if(dist <= 2.9)
+            {
+                this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 1);
+                trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, 1);
+            }
+            else
+            {
+                this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 0);
+                trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, 0);
+            }
+            if(dist <= 3 && !shake)
+            {
+                shake = true;
+            }
             i += 1;
         }
+        this.Camera.ScreenShake.StartShake = shake;
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
@@ -45,7 +74,7 @@ class Sense : ZilchComponent
             {
                 this.Ghosts[i].MonsterAI.ArrayIndex -= 1;
                 if(this.Ghosts[i].MonsterAI.ArrayIndex < 0)
-                this.Ghosts[i].MonsterAI.ArrayIndex = 0;
+                    this.Ghosts[i].MonsterAI.ArrayIndex = 0;
                 Console.WriteLine("Removed `this.Ghosts.Count` `event.OtherObject.Name` `event.OtherObject.MonsterAI.ArrayIndex`");
                 i += 1;
             }

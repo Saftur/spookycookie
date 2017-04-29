@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "Beam",
+		uint64 ResourceId = 595c0ea4181b4fe9,
+	},
+},

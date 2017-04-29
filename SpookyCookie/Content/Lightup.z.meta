@@ -2,7 +2,7 @@ TextContent =
 {
 	ZilchScriptBuilder = 
 	{
-		string Name = "LightupTile",
+		string Name = "Lightup",
 		uint64 ResourceId = 595d4912bb4c2435,
 	},
 },
