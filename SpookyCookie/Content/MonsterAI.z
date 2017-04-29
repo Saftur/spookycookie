@@ -1,6 +1,7 @@
 class MonsterAI : ZilchComponent
 {
-    var Target : Cog;
+    var Target : Cog = null;
+    var Beam : Cog = null;
     [Property]
     var ChaseSpeed: Real;
     
@@ -10,6 +11,7 @@ class MonsterAI : ZilchComponent
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.Target = this.Space.FindObjectByName("Player");
+        this.Beam = this.Space.FindObjectByName("Beam");
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -26,6 +28,17 @@ class MonsterAI : ZilchComponent
             this.Owner.Sprite.FlipX = false;
         }
         this.Owner.RigidBody.Velocity = movement;
+        
+        
+        if (this.Beam != null) {
+            var beamPos = this.Beam.Transform.Translation + this.Beam.Parent.Transform.Translation;
+            var beamScl = this.Beam.Transform.Scale;
+            var tilePos = this.Owner.Transform.Translation;
+            var inBeam = tilePos.X > beamPos.X-beamScl.X/2 && tilePos.X < beamPos.X+beamScl.X/2 &&
+                         tilePos.Y > beamPos.Y-beamScl.Y/2 && tilePos.Y < beamPos.Y+beamScl.Y/2;
+            if (inBeam)
+                this.Destroy();
+        }
     }
     
     function Destroy()
