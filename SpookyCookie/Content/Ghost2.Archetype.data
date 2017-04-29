@@ -6,15 +6,15 @@ Cog =
 	},
 	Named = 
 	{
-		string Name = "Ghost",
+		string Name = "Ghost2",
 	},
 	Archetyped = 
 	{
-		string Name = "596280dc86e44d40:Ghost",
+		string Name = "59d80a68fb185d9a:Ghost2",
 	},
 	Transform = 
 	{
-		Vec3 Translation = [-13.5447721, 2.35122776, 0],
+		Vec3 Translation = [-18.1855469, 4.1896925, 0],
 		Vec3 Scale = [1, 1, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 0],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "59de05d66f387d40:bear_clone_shadow",
+		string SpriteSource = "59d80a2bf4ce297f:ghost_xs_clone",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -52,15 +52,15 @@ Cog =
 	{
 		float ChaseSpeed = 1,
 	},
-	MultiConvexMeshCollider = 
+	BoxCollider = 
 	{
-		bool Ghost = true,
+		bool Ghost = false,
 		bool SendsMessages = true,
 		bool Seamless = true,
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		string MeshName = "5963d815f80887ec:BearGhost",
+		Vec3 Size = [1, 1, 0.5],
 	},
 	Hierarchy = 
 	{
@@ -76,7 +76,7 @@ Cog =
 			},
 			Transform = 
 			{
-				Vec3 Translation = [-0.30822134, -1.17295408, -1],
+				Vec3 Translation = [0.0707726479, -1.1003809, -1],
 				Vec3 Scale = [1, 1, 1],
 				Quat Rotation = [0, 0, 0, 1],
 			},

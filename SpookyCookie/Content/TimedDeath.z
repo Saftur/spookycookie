@@ -1,0 +1,19 @@
+// Authors: Charles duMars
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+class TimedDeath : ZilchComponent
+{
+    var Timer : Real = 0;
+    [Property]
+    var Lifespan : Real = 1;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        this.Timer += event.Dt;
+        if(this.Timer > this.Lifespan)
+            this.Owner.Destroy();
+    }
+}

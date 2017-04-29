@@ -7,6 +7,8 @@ class Sense : ZilchComponent
     
     var Camera : Cog = null;
     var Ghosts : Array[Cog] = Array[Cog]();
+    var ScareRange : Real = 5;
+    var DebugNum : Integer = 0;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -24,22 +26,28 @@ class Sense : ZilchComponent
         {
             if(this.Ghosts[i] == null)
             {
+                Console.WriteLine("hm `i` `this.Ghosts.Count`");
                 break;
+                this.RemoveGhost(this.Ghosts[i]);
+                i -= 1;
+                if(i < 0)
+                    i = 0;
+                continue;
             }
             this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 1);
             
             var trail = this.Ghosts[i].FindChildByName("GhostTrail");
             var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Ghosts[i].Transform.Translation.XY);
-            this.Dad.ObjectToFollow.Cog.FearManager.FearBar.Bar.Increase(0.01*event.Dt/(dist*2));
+            this.Dad.ObjectToFollow.Cog.FearManager.FearBar.Bar.Increase(event.Dt/(dist*10));
             
             //Console.WriteLine("`dist` `event.Dt`");
             
-            if(dist <= 3 && dist >= 2.9)
+            if(dist <= this.ScareRange && dist >= (this.ScareRange - 0.1))
             {
-                this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, (3-dist)*(1/0.1));
-                trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, (3-dist)*(1/0.1));
+                this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, (this.ScareRange-dist)*(1/0.1));
+                trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, (this.ScareRange-dist)*(1/0.1));
             }
-            else if(dist <= 2.9)
+            else if(dist <= (this.ScareRange - 0.1))
             {
                 this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 1);
                 trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, 1);
@@ -49,9 +57,15 @@ class Sense : ZilchComponent
                 this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 0);
                 trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, 0);
             }
-            if(dist <= 3 && !shake)
+            if(dist <= this.ScareRange)
             {
-                shake = true;
+                if(!shake)
+                    shake = true;
+                this.Ghosts[i].MonsterAI.CreatePoof = true;
+            }
+            else
+            {
+                this.Ghosts[i].MonsterAI.CreatePoof = false;
             }
             i += 1;
         }
@@ -59,7 +73,7 @@ class Sense : ZilchComponent
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.MonsterAI != null && Math.Distance(this.Dad.ObjectToFollow.Cog.Transform.Translation, event.OtherObject.Transform.Translation) <= this.Owner.Transform.Scale.X/2)
+        if(event.OtherObject.MonsterAI != null)
         {
             this.AddGhost(event.OtherObject);
             //this.Ghosts.Add(event.OtherObject);
@@ -69,29 +83,13 @@ class Sense : ZilchComponent
     }
     function OnCollisionEnded(event : CollisionEvent)
     {
-        if (event.OtherObject.MonsterAI != null && 
-            this.Dad.ObjectToFollow.Cog != null &&
-            Math.Distance(this.Dad.ObjectToFollow.Cog.Transform.Translation, event.OtherObject.Transform.Translation) > this.Owner.Transform.Scale.X/2)
+        if (event.OtherObject.MonsterAI != null)
         {
-            if(event.OtherObject.MonsterAI.ArrayIndex < this.Ghosts.Count)
-            {
-                Console.WriteLine("`this.Ghosts.Count` `event.OtherObject.MonsterAI.ArrayIndex`");
-                this.Ghosts.RemoveAt(event.OtherObject.MonsterAI.ArrayIndex);
-            }
-            var i = 0;
-            while(i < this.Ghosts.Count)
-            {
-                if(this.Ghosts[i] == null)
-                    break;
-                this.Ghosts[i].MonsterAI.ArrayIndex -= 1;
-                if(this.Ghosts[i].MonsterAI.ArrayIndex < 0)
-                    this.Ghosts[i].MonsterAI.ArrayIndex = 0;
-                Console.WriteLine("Removed `this.Ghosts.Count` `event.OtherObject.Name` `event.OtherObject.MonsterAI.ArrayIndex`");
-                i += 1;
-            }
+            this.RemoveGhost(event.OtherObject);
         }
     }
-    function AddGhost(ghost : Cog) {
+    function AddGhost(ghost : Cog)
+    {
         var i = 0;
         while(i < this.Ghosts.Count)
         {
@@ -101,6 +99,34 @@ class Sense : ZilchComponent
         }
         this.Ghosts.Add(ghost);
         ghost.MonsterAI.ArrayIndex = this.Ghosts.Count - 1;
-        Console.WriteLine("Added `this.Ghosts.Count` `ghost.Name` `ghost.MonsterAI.ArrayIndex`");
+        Console.WriteLine("`this.DebugNum` Added `this.Ghosts.Count` `ghost.Name` `ghost.MonsterAI.ArrayIndex`");
+        this.DebugNum += 1;
+    }
+    function RemoveGhost(ghost : Cog)
+    {
+        var i = 0;
+        while(i < this.Ghosts.Count)
+        {
+            if(this.Ghosts[i] == ghost)
+                return;
+            i += 1;
+        }
+        var index = ghost.MonsterAI.ArrayIndex;
+        if(index < this.Ghosts.Count)
+        {
+            Console.WriteLine("`this.DebugNum` Removed `this.Ghosts.Count` `ghost.Name` `ghost.MonsterAI.ArrayIndex`");
+            this.Ghosts.RemoveAt(ghost.MonsterAI.ArrayIndex);
+            i = 0;
+            while(i < index)
+            {
+                if(this.Ghosts[i] == null)
+                    break;
+                this.Ghosts[i].MonsterAI.ArrayIndex -= 1;
+                if(this.Ghosts[i].MonsterAI.ArrayIndex < 0)
+                    this.Ghosts[i].MonsterAI.ArrayIndex = 0;
+                i += 1;
+            }
+            Console.WriteLine("`this.DebugNum` Removed `this.Ghosts.Count` `ghost.Name` `ghost.MonsterAI.ArrayIndex`");
+        }
     }
 }
