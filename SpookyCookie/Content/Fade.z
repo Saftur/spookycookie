@@ -1,3 +1,5 @@
+// Authors: Charles duMars
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 class Fade : ZilchComponent
 {
     [Dependency]

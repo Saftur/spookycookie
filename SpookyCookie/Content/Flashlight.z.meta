@@ -1,8 +1,0 @@
-TextContent = 
-{
-	ZilchScriptBuilder = 
-	{
-		string Name = "Flashlight",
-		uint64 ResourceId = 59613e7b35236580,
-	},
-},
