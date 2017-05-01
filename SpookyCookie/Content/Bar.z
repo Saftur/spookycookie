@@ -4,16 +4,30 @@ class Bar : ZilchComponent
 {
     [Property]
     var MaxSize : Real = 0;
+    [Property]
+    var Vertical : Boolean = false;
+    [Property]
+    var Empty : Boolean = false;
+    
     var OriginalPos : Real3 = Real3(0,0,0);
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        this.OriginalPos = this.Owner.Transform.Translation + Real3(this.MaxSize/2,0,0);
+        
+        if(this.Empty)
+        {
+            if(this.Vertical)
+                this.OriginalPos = this.Owner.Transform.Translation + Real3(0,this.MaxSize/2,0);
+            else
+                this.OriginalPos = this.Owner.Transform.Translation + Real3(this.MaxSize/2,0,0);
+        }
+        else
+            this.OriginalPos = this.Owner.Transform.Translation;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        /*
+        
         if(Zero.Keyboard.KeyIsPressed(Keys.Down))
         {
             this.Decrease(0.1);
@@ -21,32 +35,72 @@ class Bar : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.Up))
         {
             this.Increase(0.1);
-        }*/
+        }
     }
     function Decrease(percent : Real)
     {
-        if((this.Owner.Transform.Scale.X - this.MaxSize*percent) < 0)
+        if(this.Vertical)
         {
-            this.Owner.Transform.Scale = Real3(0, this.Owner.Transform.Scale.Y, 1);
-            this.Owner.Transform.Translation = (this.OriginalPos - Real3(this.MaxSize/2,0,0));
+            if((this.Owner.Transform.Scale.Y - this.MaxSize*percent) < 0)
+            {
+                this.Owner.Transform.Scale = Real3(this.Owner.Transform.Scale.X, 0, 1);
+                this.Owner.Transform.Translation = this.OriginalPos - Real3(0,this.MaxSize/2,0);
+                //////////////////////////////////ONLY FOR BAR BUT BAR IS ONLY ONE THAT USES VERTICAL
+                this.Owner.Shake.OriginalPos = this.OriginalPos - Real3(0,this.MaxSize/2,0);
+            }
+            else
+            {
+                this.Owner.Transform.Scale -= Real3(0,(this.MaxSize*percent),0);
+                this.Owner.Transform.Translation -= Real3(0,(this.MaxSize*percent)/2,0);
+                //////////////////////////////////ONLY FOR BAR BUT BAR IS ONLY ONE THAT USES VERTICAL
+                this.Owner.Shake.OriginalPos -= Real3(0,(this.MaxSize*percent)/2,0);
+            }
         }
         else
         {
-            this.Owner.Transform.Scale -= Real3((this.MaxSize*percent),0,0);
-            this.Owner.Transform.Translation -= Real3((this.MaxSize*percent)/2,0,0);
+            if((this.Owner.Transform.Scale.X - this.MaxSize*percent) < 0)
+            {
+                this.Owner.Transform.Scale = Real3(0, this.Owner.Transform.Scale.Y, 1);
+                this.Owner.Transform.Translation = this.OriginalPos - Real3(this.MaxSize/2,0,0);
+            }
+            else
+            {
+                this.Owner.Transform.Scale -= Real3((this.MaxSize*percent),0,0);
+                this.Owner.Transform.Translation -= Real3((this.MaxSize*percent)/2,0,0);
+            }
         }
     }
     function Increase(percent : Real)
     {
-        if((this.Owner.Transform.Scale.X + this.MaxSize*percent) > this.MaxSize)
+        if(this.Vertical)
         {
-            this.Owner.Transform.Scale = Real3(this.MaxSize, this.Owner.Transform.Scale.Y, 1);
-            this.Owner.Transform.Translation = this.OriginalPos;
+            if((this.Owner.Transform.Scale.Y + this.MaxSize*percent) > this.MaxSize)
+            {
+                this.Owner.Transform.Scale = Real3(this.Owner.Transform.Scale.X, this.MaxSize, 1);
+                this.Owner.Transform.Translation = this.OriginalPos;
+                //////////////////////////////////ONLY FOR BAR BUT BAR IS ONLY ONE THAT USES VERTICAL
+                this.Owner.Shake.OriginalPos = this.OriginalPos;
+            }
+            else
+            {
+                this.Owner.Transform.Scale += Real3(0,(this.MaxSize*percent),0);
+                this.Owner.Transform.Translation += Real3(0,(this.MaxSize*percent)/2,0);
+                //////////////////////////////////ONLY FOR BAR BUT BAR IS ONLY ONE THAT USES VERTICAL
+                this.Owner.Shake.OriginalPos += Real3(0,(this.MaxSize*percent)/2,0);
+            }
         }
         else
         {
-            this.Owner.Transform.Scale += Real3((this.MaxSize*percent),0,0);
-            this.Owner.Transform.Translation += Real3((this.MaxSize*percent)/2,0,0);
+            if((this.Owner.Transform.Scale.X + this.MaxSize*percent) > this.MaxSize)
+            {
+                this.Owner.Transform.Scale = Real3(this.MaxSize, this.Owner.Transform.Scale.Y, 1);
+                this.Owner.Transform.Translation = this.OriginalPos;
+            }
+            else
+            {
+                this.Owner.Transform.Scale += Real3((this.MaxSize*percent),0,0);
+                this.Owner.Transform.Translation += Real3((this.MaxSize*percent)/2,0,0);
+            }
         }
     }
     function Set(percent : Real)

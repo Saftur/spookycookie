@@ -1,11 +1,8 @@
-// Authors: Charles duMars
-// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
-class ScreenShake : ZilchComponent
+class Shake : ZilchComponent
 {
-    [Dependency]
-    var Cam : Camera = null;
-    
     var StartShake : Boolean = false;
+    
+    var Border : Cog = null;
     
     [Property]
     var ShakeTime : Real = 0.05;
@@ -13,10 +10,18 @@ class ScreenShake : ZilchComponent
     
     var ShakeDuration : Real = 3;
     var Dir : Integer = 1;
+    
+    var OriginalPos : Real3 = Real3();
+    var BorderPos : Real3 = Real3();
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.ShakeTimer = this.ShakeTime;
+        this.OriginalPos = this.Owner.Transform.Translation;
+        
+        this.Border = this.Space.FindObjectByName("Fear");
+        this.BorderPos = this.Border.Transform.Translation;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
@@ -25,7 +30,8 @@ class ScreenShake : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.M))
         {
             this.StartShake = true;
-        }*/
+        }
+        */
         if(this.StartShake)
         {
             /*
@@ -46,6 +52,11 @@ class ScreenShake : ZilchComponent
                 }
             //}
         }
+        else if(this.Border.Transform.Translation != this.BorderPos)
+        {
+            this.Owner.Transform.Translation = this.OriginalPos;
+            this.Border.Transform.Translation = this.BorderPos;
+        }
     }
     function Shake(time : Real, dir : Integer)
     {
@@ -56,6 +67,7 @@ class ScreenShake : ZilchComponent
         shakeDist *= time;
         shakeDist *= dir;
         
-        this.Owner.FollowObject.Displacement = Real3(shakeDist,0,40);
+        this.Owner.Transform.Translation = Real3(this.OriginalPos.X + shakeDist, this.OriginalPos.Y + shakeDist,0);
+        this.Border.Transform.Translation = Real3(this.BorderPos.X + shakeDist, this.BorderPos.Y + shakeDist,0);
     }
 }

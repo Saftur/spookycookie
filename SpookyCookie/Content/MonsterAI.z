@@ -24,7 +24,6 @@ class MonsterAI : ZilchComponent
     {
         if(event.OtherObject.Name == "Beam")
         {
-            //this.Sense.Sense.RemoveGhost(this.Owner);
             this.Destroy();
         }
     }
@@ -60,6 +59,7 @@ class MonsterAI : ZilchComponent
     {
         if(this.CreatePoof)
             this.Space.CreateAtPosition(Archetype.GhostDeath, this.Owner.Transform.Translation);
+        //this.Sense.Sense.RemoveGhost(this.Owner);
         this.Owner.Destroy();
     }
 }

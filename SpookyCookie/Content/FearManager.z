@@ -3,6 +3,7 @@
 class FearManager : ZilchComponent
 {
     var FearBar : Cog = null;
+    
     var BatteryBar : Cog = null;
     
     [Property]
@@ -19,16 +20,44 @@ class FearManager : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.BatteryBar.Bar.Decrease(event.Dt/this.BatteryLife);
-        if(this.BatteryBar.Transform.Scale.X == 0.0001 || this.FearBar.Transform.Scale.X >= this.FearBar.Bar.MaxSize)
+        if(this.BatteryBar.Transform.Scale.X == 0.0001 || this.FearBar.Transform.Scale.Y >= this.FearBar.Bar.MaxSize)
         {
-                this.Space.LoadLevel(Level.LoseScreen);
+            this.Space.LoadLevel(Level.LoseScreen);
         }
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.MonsterAI != null)
         {
-            this.FearBar.Bar.Increase(1);
+            this.Spook(1);
+        }
+    }
+    function Spook(amnt : Real)
+    {
+        this.FearBar.Bar.Increase(amnt);
+        var max = this.FearBar.Bar.MaxSize;
+        var scale = this.FearBar.Transform.Scale.Y;
+        if(scale >= max*0.85)
+        {
+            if(this.FearBar.Sprite.Color != Real4(0.929412, 0.109804, 0, 1))
+            {
+                this.FearBar.Sprite.Color = Real4(0.929412, 0.109804, 0, 1);
+            }
+        }
+        else
+        {
+            if(scale >= max*0.5)
+            {
+                this.FearBar.Sprite.Color = Real4(0.929412, 0.109804, 0.929412 * ((0.85 - (scale/max))/0.35), 1);
+            }
+            else if(this.FearBar.Transform.Scale.Y >= max*0.15)
+            {
+                this.FearBar.Sprite.Color = Real4(0.929412 * (( (scale/max) - 0.15)/0.35), 0.109804, 0.929412, 1);
+            }
+            else
+            {
+                this.FearBar.Sprite.Color = Real4(0, 0.109804, 0.929412, 1);
+            }
         }
     }
 }
