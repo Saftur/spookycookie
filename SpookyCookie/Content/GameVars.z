@@ -1,0 +1,10 @@
+class GameVars : ZilchComponent
+{
+    var BatteryLife : Real = 60;
+    var HallwayPos : Real3 = Real3();
+    
+    function Reset()
+    {
+        this.BatteryLife = 60;
+    }
+}

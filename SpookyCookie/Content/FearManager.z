@@ -6,8 +6,7 @@ class FearManager : ZilchComponent
     
     var BatteryBar : Cog = null;
     
-    [Property]
-    var BatteryLife : Real = 120;
+    var BatteryLife : Real = 60;
     
     function Initialize(init : CogInitializer)
     {
@@ -15,6 +14,7 @@ class FearManager : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         this.FearBar = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.FearBar;
         this.BatteryBar = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.BatteryLife;
+        this.BatteryLife = this.GameSession.GameVars.BatteryLife;
     }
 
     function OnLogicUpdate(event : UpdateEvent)

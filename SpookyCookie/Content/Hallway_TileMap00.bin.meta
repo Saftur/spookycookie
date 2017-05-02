@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "Hallway_TileMap00",
+		uint64 ResourceId = 5967dae3ffcb2c94,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "5967cb8c929685e3:Hallway",
+	},
+},

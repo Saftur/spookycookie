@@ -58,6 +58,10 @@ class MenuLevelStart : ZilchComponent
         {
             Console.WriteLine("Changing Level");
             this.FadeStarting = false;
+            //Reset game values
+            if(this.LevelToLoad == Level.GameLevel)
+                this.GameSession.GameVars.Reset();
+            
             this.Space.LoadLevel(this.LevelToLoad);
         }
     }
