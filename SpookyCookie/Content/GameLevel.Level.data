@@ -123,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [16.3336334, -1.84119451, 50],
+			Vec3 Translation = [5.22258139, 0.411929905, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -135,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 18.4519176,
+			float Size = 27.5270424,
 		},
 		EditorCameraController = 
 		{
@@ -143,7 +143,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [16.3336334, -1.84119451, -1.08417574e-07],
+			Vec3 LookTarget = [5.22258139, 0.411929905, -1.08417574e-07],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -223,7 +223,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [18.5, -2.5, 0],
+			Vec3 Translation = [2.56117344, -5.49491072, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -290,7 +290,6 @@ Level =
 		},
 		FearManager = 
 		{
-			float BatteryLife = 60,
 		},
 		Hierarchy = 
 		{
@@ -353,7 +352,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [29.6052322, -0.649127483, 0],
+			Vec3 Translation = [13.6664057, -3.6440382, 0],
 			Vec3 Scale = [10, 10, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -439,7 +438,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, -2.5, 0],
+					Vec3 Translation = [5.56117344, -5.49491072, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -487,7 +486,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, -2.5, 0],
+					Vec3 Translation = [3.56117344, -5.49491072, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -535,7 +534,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, -1.5, 0],
+					Vec3 Translation = [3.56117344, -4.49491072, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -583,7 +582,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, -1.5, 0],
+					Vec3 Translation = [5.56117344, -4.49491072, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -631,7 +630,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, -1.5, 0],
+					Vec3 Translation = [4.56117344, -4.49491072, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -679,7 +678,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, -2.5, 0],
+					Vec3 Translation = [4.56117344, -5.49491072, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -747,7 +746,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 5.5, 0],
+					Vec3 Translation = [5.5, -1, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -782,6 +781,28 @@ Level =
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
+				Object = 
+				{
+					float DistanceSpawn = 0,
+					CogPath TargetPath = 
+					{
+						string Path = ":/Player",
+						bool ErrorOnResolveToNull = false,
+						bool ErrorOnPathCantCompute = false,
+						bool ErrorOnDirectLinkFail = false,
+						bool UpdateCogOnPathChange = true,
+						bool UpdatePathOnCogChange = true,
+						bool UpdateCogOnInitialize = true,
+						bool ResolvedNullErrorOccurred = false,
+						uint ResolvedCog = 3,
+						CogPathPreference PathPreference0 = CogRelative,
+						CogPathPreference PathPreference1 = SpaceRelative,
+						CogPathPreference PathPreference2 = Absolute,
+					},
+					float DetectDistance = 6,
+					float RespawnTime = 3,
+					string GhostType = "59d8f73facf9aa15:Ghost1",
+				},
 			},
 			Cog = 
 			{
@@ -795,7 +816,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, 5.5, 0],
+					Vec3 Translation = [4.5, -1, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -847,7 +868,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, 4.5, 0],
+					Vec3 Translation = [4.5, -2, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -898,7 +919,803 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 4.5, 0],
+					Vec3 Translation = [5.5, -2, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4ec59cd11e0:bookcase2",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 19,
+				},
+				Named = 
+				{
+					string Name = "bookcase3",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, -1, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4e75ac1fb2f:BOOKSELF_3",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 20,
+				},
+				Named = 
+				{
+					string Name = "bookcase1",
+				},
+				Archetyped = 
+				{
+					string Name = "59d8dfe820c6dc73:bookcase",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, -2, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4ea58a431d5:bookcase1",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 21,
+				},
+				Named = 
+				{
+					string Name = "bookcase4",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, -1, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4fa5bb5bfd6:BOOKSELF_4",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 22,
+				},
+				Named = 
+				{
+					string Name = "bookcase2",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, -2, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4ec59cd11e0:bookcase2",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 23,
+				},
+				Named = 
+				{
+					string Name = "bookcase3",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, -1, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4e75ac1fb2f:BOOKSELF_3",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 24,
+				},
+				Named = 
+				{
+					string Name = "bookcase1",
+				},
+				Archetyped = 
+				{
+					string Name = "59d8dfe820c6dc73:bookcase",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, -2, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4ea58a431d5:bookcase1",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 25,
+				},
+				Named = 
+				{
+					string Name = "bookcase4",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.5, -1, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4fa5bb5bfd6:BOOKSELF_4",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 26,
+				},
+				Named = 
+				{
+					string Name = "bookcase2",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.5, -2, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4ec59cd11e0:bookcase2",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 27,
+				},
+				Named = 
+				{
+					string Name = "bookcase3",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, -1, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4e75ac1fb2f:BOOKSELF_3",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 28,
+				},
+				Named = 
+				{
+					string Name = "bookcase1",
+				},
+				Archetyped = 
+				{
+					string Name = "59d8dfe820c6dc73:bookcase",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, -2, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4ea58a431d5:bookcase1",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 29,
+				},
+				Named = 
+				{
+					string Name = "bookcase4",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, -1, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4fa5bb5bfd6:BOOKSELF_4",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 30,
+				},
+				Named = 
+				{
+					string Name = "bookcase2",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, -2, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4ec59cd11e0:bookcase2",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 31,
+				},
+				Named = 
+				{
+					string Name = "bookcase3",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 2.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4e75ac1fb2f:BOOKSELF_3",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 32,
+				},
+				Named = 
+				{
+					string Name = "bookcase1",
+				},
+				Archetyped = 
+				{
+					string Name = "59d8dfe820c6dc73:bookcase",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 1.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4ea58a431d5:bookcase1",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 33,
+				},
+				Named = 
+				{
+					string Name = "bookcase4",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 2.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963e4fa5bb5bfd6:BOOKSELF_4",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = false,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 34,
+				},
+				Named = 
+				{
+					string Name = "bookcase2",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 1.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -940,7 +1757,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 19,
+			uint Id = 35,
 		},
 		Named = 
 		{
@@ -958,7 +1775,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 20,
+					uint Id = 36,
 				},
 				Named = 
 				{
@@ -966,7 +1783,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 5.5, 0],
+					Vec3 Translation = [-5.43882656, 2.50508928, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1006,7 +1823,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 21,
+					uint Id = 37,
 				},
 				Named = 
 				{
@@ -1014,7 +1831,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 4.5, 0],
+					Vec3 Translation = [-4.43882656, 1.50508928, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1076,7 +1893,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 22,
+					uint Id = 38,
 				},
 				Named = 
 				{
@@ -1084,7 +1901,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 4.5, 0],
+					Vec3 Translation = [-5.43882656, 1.50508928, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1124,7 +1941,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 23,
+					uint Id = 39,
 				},
 				Named = 
 				{
@@ -1132,7 +1949,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 4.5, 0],
+					Vec3 Translation = [-3.43882656, 1.50508928, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1172,7 +1989,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 24,
+					uint Id = 40,
 				},
 				Named = 
 				{
@@ -1180,7 +1997,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 3.5, 0],
+					Vec3 Translation = [-5.43882656, 0.505089283, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1220,7 +2037,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 25,
+					uint Id = 41,
 				},
 				Named = 
 				{
@@ -1228,7 +2045,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 5.5, 0],
+					Vec3 Translation = [-4.43882656, 2.50508928, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1268,7 +2085,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 26,
+					uint Id = 42,
 				},
 				Named = 
 				{
@@ -1276,7 +2093,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 5.5, 0],
+					Vec3 Translation = [-3.43882656, 2.50508928, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1318,7 +2135,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 27,
+			uint Id = 43,
 		},
 		Named = 
 		{
@@ -1337,299 +2154,11 @@ Level =
 				string Name = "59d8dfa8393d9518:wood_floor",
 				LinkId = 
 				{
-					uint Id = 28,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [20.5, 6.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 29,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [10.5, 7.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 30,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [17.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 31,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [12.5, 7.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 32,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [20.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 33,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [17.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 34,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [10.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 35,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [20.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 36,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [20.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 37,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [18.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 38,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [11.5, 8.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 39,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [12.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 40,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [19.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 41,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [11.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 42,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [10.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 43,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [21.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
 					uint Id = 44,
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 6.5, -0.100000001],
+					Vec3 Translation = [4.56117344, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1647,7 +2176,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, -0.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1665,7 +2194,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 2.5, -0.100000001],
+					Vec3 Translation = [1.56117344, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1683,7 +2212,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 0.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1701,7 +2230,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 8.5, -0.100000001],
+					Vec3 Translation = [4.56117344, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1719,7 +2248,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 0.5, -0.100000001],
+					Vec3 Translation = [1.56117344, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1737,7 +2266,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 6.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1755,7 +2284,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 4.5, -0.100000001],
+					Vec3 Translation = [4.56117344, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1773,7 +2302,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, -0.5, -0.100000001],
+					Vec3 Translation = [4.56117344, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1791,7 +2320,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, -1.5, -0.100000001],
+					Vec3 Translation = [2.56117344, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1809,7 +2338,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, -1.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1827,7 +2356,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 0.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1845,7 +2374,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 3.5, -0.100000001],
+					Vec3 Translation = [3.56117344, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1863,7 +2392,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 3.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1881,7 +2410,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 8.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1899,7 +2428,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, -2.5, -0.100000001],
+					Vec3 Translation = [5.56117344, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1917,7 +2446,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 3.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1935,7 +2464,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, -2.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1953,7 +2482,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, -2.5, -0.100000001],
+					Vec3 Translation = [0.561173439, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1971,7 +2500,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, -1.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1989,7 +2518,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 7.5, -0.100000001],
+					Vec3 Translation = [2.56117344, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2007,7 +2536,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 1.5, -0.100000001],
+					Vec3 Translation = [0.561173439, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2025,7 +2554,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 6.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2043,7 +2572,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 4.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2061,7 +2590,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, -1.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2079,7 +2608,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, -2.5, -0.100000001],
+					Vec3 Translation = [3.56117344, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2097,7 +2626,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 0.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2115,7 +2644,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, 8.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2133,7 +2662,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 2.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2151,7 +2680,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, -2.5, -0.100000001],
+					Vec3 Translation = [0.561173439, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2169,7 +2698,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 2.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2187,7 +2716,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 0.5, -0.100000001],
+					Vec3 Translation = [5.56117344, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2205,7 +2734,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 0.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2223,7 +2752,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, -0.5, -0.100000001],
+					Vec3 Translation = [0.561173439, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2241,7 +2770,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 4.5, -0.100000001],
+					Vec3 Translation = [1.56117344, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2259,7 +2788,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, -1.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2277,7 +2806,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 6.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2295,7 +2824,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, 3.5, -0.100000001],
+					Vec3 Translation = [2.56117344, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2313,7 +2842,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 2.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2331,7 +2860,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, 1.5, -0.100000001],
+					Vec3 Translation = [0.561173439, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2349,7 +2878,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 6.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2367,7 +2896,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 6.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2385,7 +2914,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, -2.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2403,7 +2932,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, 4.5, -0.100000001],
+					Vec3 Translation = [1.56117344, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2421,7 +2950,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, -1.5, -0.100000001],
+					Vec3 Translation = [2.56117344, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2439,7 +2968,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 3.5, -0.100000001],
+					Vec3 Translation = [3.56117344, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2457,7 +2986,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 7.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2475,7 +3004,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, 7.5, -0.100000001],
+					Vec3 Translation = [2.56117344, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2493,7 +3022,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 5.5, -0.100000001],
+					Vec3 Translation = [5.56117344, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2511,7 +3040,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 1.5, -0.100000001],
+					Vec3 Translation = [2.56117344, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2529,7 +3058,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 1.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2547,7 +3076,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 4.5, -0.100000001],
+					Vec3 Translation = [1.56117344, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2565,7 +3094,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 8.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2583,7 +3112,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 3.5, -0.100000001],
+					Vec3 Translation = [1.56117344, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2601,7 +3130,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 2.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2619,7 +3148,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 5.5, -0.100000001],
+					Vec3 Translation = [3.56117344, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2637,7 +3166,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, -0.5, -0.100000001],
+					Vec3 Translation = [0.561173439, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2655,7 +3184,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 5.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2673,7 +3202,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, -0.5, -0.100000001],
+					Vec3 Translation = [2.56117344, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2691,7 +3220,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 7.5, -0.100000001],
+					Vec3 Translation = [1.56117344, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2709,7 +3238,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 1.5, -0.100000001],
+					Vec3 Translation = [4.56117344, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2727,7 +3256,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 2.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2745,7 +3274,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 4.5, -0.100000001],
+					Vec3 Translation = [2.56117344, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2763,7 +3292,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, 3.5, -0.100000001],
+					Vec3 Translation = [3.56117344, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2781,7 +3310,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, -0.5, -0.100000001],
+					Vec3 Translation = [2.56117344, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2799,7 +3328,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, 2.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2817,7 +3346,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, -0.5, -0.100000001],
+					Vec3 Translation = [0.561173439, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2835,7 +3364,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 1.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2853,7 +3382,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 5.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2871,7 +3400,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 0.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2889,7 +3418,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, -0.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2907,7 +3436,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 5.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2925,7 +3454,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, -0.5, -0.100000001],
+					Vec3 Translation = [5.56117344, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2943,7 +3472,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 5.5, -0.100000001],
+					Vec3 Translation = [5.56117344, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2961,7 +3490,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, -1.5, -0.100000001],
+					Vec3 Translation = [1.56117344, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2979,7 +3508,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 5.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2997,7 +3526,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 7.5, -0.100000001],
+					Vec3 Translation = [5.56117344, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3015,7 +3544,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 3.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3033,7 +3562,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, -1.5, -0.100000001],
+					Vec3 Translation = [-5.43882656, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3051,7 +3580,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 5.5, -0.100000001],
+					Vec3 Translation = [4.56117344, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3069,7 +3598,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, 2.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3087,7 +3616,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, 1.5, -0.100000001],
+					Vec3 Translation = [4.56117344, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3105,7 +3634,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 4.5, -0.100000001],
+					Vec3 Translation = [3.56117344, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3123,7 +3652,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, -2.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3141,7 +3670,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, -1.5, -0.100000001],
+					Vec3 Translation = [0.561173439, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3159,7 +3688,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, 0.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3177,7 +3706,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, -0.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3195,7 +3724,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 4.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3213,7 +3742,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 2.5, -0.100000001],
+					Vec3 Translation = [0.561173439, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3231,7 +3760,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 8.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3249,7 +3778,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 4.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3267,7 +3796,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, 8.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3285,7 +3814,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 7.5, -0.100000001],
+					Vec3 Translation = [0.561173439, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3303,7 +3832,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, 6.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, 0.505089283, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3321,7 +3850,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, -0.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3339,7 +3868,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 4.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, 2.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3357,7 +3886,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, 8.5, -0.100000001],
+					Vec3 Translation = [1.56117344, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3375,7 +3904,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 1.5, -0.100000001],
+					Vec3 Translation = [4.56117344, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3393,7 +3922,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 8.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3411,7 +3940,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, 7.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3429,7 +3958,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, 2.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3447,7 +3976,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, -0.5, -0.100000001],
+					Vec3 Translation = [3.56117344, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3465,7 +3994,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 6.5, -0.100000001],
+					Vec3 Translation = [4.56117344, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3483,7 +4012,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 7.5, -0.100000001],
+					Vec3 Translation = [2.56117344, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3501,7 +4030,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 6.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3519,7 +4048,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, -1.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3537,7 +4066,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, 6.5, -0.100000001],
+					Vec3 Translation = [-1.43882656, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3555,7 +4084,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, 4.5, -0.100000001],
+					Vec3 Translation = [4.56117344, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3573,7 +4102,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 0.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3591,7 +4120,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, 7.5, -0.100000001],
+					Vec3 Translation = [3.56117344, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3609,7 +4138,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [13.5, 1.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3627,7 +4156,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [17.5, 1.5, -0.100000001],
+					Vec3 Translation = [5.56117344, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3645,7 +4174,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 7.5, -0.100000001],
+					Vec3 Translation = [-3.43882656, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3663,7 +4192,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [18.5, 3.5, -0.100000001],
+					Vec3 Translation = [-4.43882656, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3681,7 +4210,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 5.5, -0.100000001],
+					Vec3 Translation = [0.561173439, 5.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3699,7 +4228,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 8.5, -0.100000001],
+					Vec3 Translation = [4.56117344, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3717,7 +4246,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, 8.5, -0.100000001],
+					Vec3 Translation = [3.56117344, -0.494910717, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3735,7 +4264,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, -1.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, -3.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3753,7 +4282,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 2.5, -0.100000001],
+					Vec3 Translation = [2.56117344, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3771,7 +4300,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, -2.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3789,7 +4318,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [21.5, 8.5, -0.100000001],
+					Vec3 Translation = [5.56117344, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3807,7 +4336,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [20.5, 4.5, -0.100000001],
+					Vec3 Translation = [0.561173439, -4.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3825,7 +4354,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [14.5, 2.5, -0.100000001],
+					Vec3 Translation = [1.56117344, 3.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3843,7 +4372,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 6.5, -0.100000001],
+					Vec3 Translation = [3.56117344, 1.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3861,7 +4390,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [19.5, 5.5, -0.100000001],
+					Vec3 Translation = [-0.438826561, -2.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3879,7 +4408,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, -2.5, -0.100000001],
+					Vec3 Translation = [1.56117344, 4.50508928, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3897,7 +4426,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [12.5, -2.5, -0.100000001],
+					Vec3 Translation = [-2.43882656, -1.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3915,7 +4444,295 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, -2.5, -0.100000001],
+					Vec3 Translation = [1.56117344, -1.49491072, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 172,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.56117344, 4.50508928, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 173,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.56117344, 0.505089283, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 174,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.43882656, 2.50508928, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 175,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.43882656, 5.50508928, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 176,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.56117344, 5.50508928, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 177,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.56117344, -4.49491072, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 178,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.56117344, -0.494910717, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 179,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.43882656, -5.49491072, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 180,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.56117344, 5.50508928, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 181,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.56117344, 1.50508928, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 182,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.43882656, -0.494910717, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 183,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.43882656, 3.50508928, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 184,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.56117344, 2.50508928, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 185,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.43882656, -5.49491072, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 186,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.43882656, -5.49491072, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 187,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.43882656, -5.49491072, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -3930,7 +4747,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 172,
+			uint Id = 188,
 		},
 		Named = 
 		{
@@ -3948,7 +4765,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 173,
+					uint Id = 189,
 				},
 				Named = 
 				{
@@ -3960,7 +4777,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 3.5, 0],
+					Vec3 Translation = [0.5, 1.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -4000,7 +4817,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 174,
+					uint Id = 190,
 				},
 				Named = 
 				{
@@ -4012,7 +4829,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 3.5, 0],
+					Vec3 Translation = [-0.5, 1.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -4052,7 +4869,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 175,
+					uint Id = 191,
 				},
 				Named = 
 				{
@@ -4060,7 +4877,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [15.5, 2.5, 0],
+					Vec3 Translation = [-0.5, 0.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -4100,7 +4917,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 176,
+					uint Id = 192,
 				},
 				Named = 
 				{
@@ -4108,7 +4925,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [16.5, 2.5, 0],
+					Vec3 Translation = [0.5, 0.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -4150,7 +4967,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 177,
+			uint Id = 193,
 		},
 		Named = 
 		{
@@ -4158,7 +4975,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [-15.9388256, -2.99491072, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4185,7 +5002,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 178,
+			uint Id = 194,
 		},
 		Named = 
 		{
@@ -4193,7 +5010,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [16.5, 200, -1],
+			Vec3 Translation = [0, 0, -1],
 			Vec3 Scale = [30, 40, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4220,7 +5037,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 179,
+			uint Id = 195,
 		},
 		Named = 
 		{
@@ -4228,7 +5045,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [19.8577919, 9.3089695, 0],
+			Vec3 Translation = [3.91896534, 6.31405878, 0],
 			Vec3 Scale = [2, 1.29999995, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4271,7 +5088,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 180,
+			uint Id = 196,
 		},
 		Named = 
 		{
@@ -4283,7 +5100,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [20.5, 7.5, 0],
+			Vec3 Translation = [4.56117344, 4.50508928, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4338,9 +5155,9 @@ Level =
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
 			},
-			float DetectDistance = 0,
-			float RespawnTime = 0,
-			string GhostType = "",
+			float DetectDistance = 5,
+			float RespawnTime = 3,
+			string GhostType = "596280dc86e44d40:Ghost",
 		},
 		Lightup = 
 		{
@@ -4351,11 +5168,11 @@ Level =
 		string Name = "595be4681ff93a82:Key",
 		LinkId = 
 		{
-			uint Id = 181,
+			uint Id = 197,
 		},
 		Transform = 
 		{
-			Vec3 Translation = [10.5, 6.5, 0],
+			Vec3 Translation = [-4.5, 4.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4368,7 +5185,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 182,
+			uint Id = 198,
 		},
 		Named = 
 		{
@@ -4380,7 +5197,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [11.5, -0.5, 0],
+			Vec3 Translation = [-4, -5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -4447,7 +5264,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 183,
+			uint Id = 199,
 		},
 		Named = 
 		{

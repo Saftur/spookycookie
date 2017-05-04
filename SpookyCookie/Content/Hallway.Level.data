@@ -91,6 +91,25 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		HUDCreator = 
+		{
+			string HUDLevel = "",
+			CogPath PlayerRef = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
 	},
 	Cog = 
 	{
@@ -104,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [5.00336599, 5.34985304, 50],
+			Vec3 Translation = [-7.75758553, -1.59384286, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 29.8364697,
+			float Size = 26.9971561,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +143,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [5.00336599, 5.34985304, 0],
+			Vec3 LookTarget = [-7.75758553, -1.59384286, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 

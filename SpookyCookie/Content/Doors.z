@@ -3,10 +3,13 @@
 class Doors : ZilchComponent
 {
     var Locked : Boolean = true;
+    var HUD : Space = null;
+    var Linger : Real = -1;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        this.HUD = this.Space.LevelSettings.HUDCreator.HUDSpace;
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
@@ -14,16 +17,34 @@ class Doors : ZilchComponent
         {
             this.CheckLockState();
         }
+        else
+        {
+            if(this.Linger == -1)
+            {
+                this.HUD.LevelSettings.HUDReferences.LockedText.FadeText.StartFade = true;
+                this.Linger = 0;
+            }
+        }
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Linger >= 0)
+        {
+            this.Linger += event.Dt;
+            if(this.Linger > 1.25)
+            {
+                this.Linger = -1;
+                this.HUD.LevelSettings.HUDReferences.LockedText.FadeText.StartFade = true;
+            }
+        }
         if(!this.Owner.Sprite.AnimationActive)
             return;
         
         if(this.Owner.Sprite.CurrentFrame == 4)
         {
             this.Owner.Sprite.SpriteSource = SpriteSource.Open_Door;
-            this.Space.LoadLevel(Level.Kitchen);
+            this.GameSession.GameVars.HallwayPos = Real3();
+            this.Space.LoadLevel(Level.Hallway);
         }
     }
     function CheckLockState()
