@@ -2,9 +2,16 @@
 // All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 class LoadIn : ZilchComponent
 {
+    [Property]
+    var Hallway : Boolean = false;
     function Initialize(init : CogInitializer)
     {
         var loadScreen = this.Space.FindObjectByName("LoadScreen2");
+        if(this.Hallway)
+        {
+            var player = this.Space.FindObjectByName("Player");
+            player.Transform.Translation = this.GameSession.GameVars.HallwayPos;
+        }
         loadScreen.Transform.Translation = Real3(0, 0, 2);
         loadScreen.Fade.Opacity = 1;
         loadScreen.Sprite.Color = Real4(loadScreen.Sprite.Color.XYZ, 1);

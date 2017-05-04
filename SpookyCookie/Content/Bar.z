@@ -27,7 +27,7 @@ class Bar : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
+        /*
         if(Zero.Keyboard.KeyIsPressed(Keys.Down))
         {
             this.Decrease(0.1);
@@ -35,7 +35,7 @@ class Bar : ZilchComponent
         if(Zero.Keyboard.KeyIsPressed(Keys.Up))
         {
             this.Increase(0.1);
-        }
+        }*/
     }
     function Decrease(percent : Real)
     {

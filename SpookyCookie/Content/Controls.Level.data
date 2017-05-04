@@ -571,7 +571,7 @@ Level =
 			string DefaultSprite = "",
 			string HoveredSprite = "",
 			string ClickedSprite = "5963c99435c7574a:PLAY001",
-			string LevelToLoad = "596137f64e545252:CLevel",
+			string LevelToLoad = "59df2ae304d16aa0:GameLevel",
 		},
 	},
 	Cog = 

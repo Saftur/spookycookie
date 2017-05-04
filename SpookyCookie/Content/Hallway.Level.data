@@ -12,7 +12,7 @@ Level =
 		},
 		GravityEffect = 
 		{
-			bool Active = true,
+			bool Active = false,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
 			float Strength = 10,
@@ -93,10 +93,10 @@ Level =
 		},
 		HUDCreator = 
 		{
-			string HUDLevel = "",
+			string HUDLevel = "596277398670a6d9:HUDLevel",
 			CogPath PlayerRef = 
 			{
-				string Path = "",
+				string Path = ":/Player",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -104,7 +104,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
+				uint ResolvedCog = 3,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -112,13 +112,14 @@ Level =
 		},
 		LoadIn = 
 		{
+			bool Hallway = true,
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -126,7 +127,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.9577465, -7.35432053, 50],
+			Vec3 Translation = [-10.6281033, -4.94377518, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -138,7 +139,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 16.3746109,
+			float Size = 14.9568901,
 		},
 		EditorCameraController = 
 		{
@@ -146,7 +147,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-10.9577465, -7.35432053, 0],
+			Vec3 LookTarget = [-10.6281033, -4.94377518, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -189,12 +190,36 @@ Level =
 			bool Active = true,
 			float Volume = 1,
 		},
+		ScreenShake = 
+		{
+			float ShakeTime = 0.0500000007,
+		},
+		FollowObject = 
+		{
+			bool Active = true,
+			CogPath ObjectToFollow = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 Displacement = [0, 0, 40],
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -6876,7 +6901,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4,
+				uint ResolvedCog = 3,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -6920,6 +6945,24 @@ Level =
 			string PaletteName = "5963cd1991627fe2:Room",
 			float UnitsPerTile = 1,
 			float MeshThickness = 1.20000005,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5963e2025d14442a:LoadScreen2",
+		LinkId = 
+		{
+			uint Id = 369,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-68.8286285, 3.57630301, 0],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "LoadScreen2",
 		},
 	},
 },
