@@ -7,6 +7,8 @@ class LoadIn : ZilchComponent
     function Initialize(init : CogInitializer)
     {
         var loadScreen = this.Space.FindObjectByName("LoadScreen2");
+        var leveltitle = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.LevelTitle;
+        leveltitle.FadeText.StartFade = true;
         if(this.Hallway)
         {
             var player = this.Space.FindObjectByName("Player");

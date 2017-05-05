@@ -48,7 +48,7 @@ class PlayerMovement : ZilchComponent
                     this.Owner.Sprite.SpriteSource = SpriteSource.Character_Right_Side_1;
                 this.Walking = true;
             }
-            if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
+            else if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
             {
                 this.Destination += Real3(0,this.StepSize,0);
                 this.RBody.Velocity += Real3(0,this.Speed,0);
@@ -76,11 +76,11 @@ class PlayerMovement : ZilchComponent
                 if (this.Dir.X != 0) {
                     this.Beam.Transform.Scale = Real3(5, 1, 1);
                     this.Beam.Transform.Translation = Real3(3*this.Dir.X, 0, 0);
-                    this.Beam.BoxCollider.Size = Real3(0.8, 0.01, 1);
+                    this.Beam.BoxCollider.Size = Real3(1, 1, 1);
                 } else if (this.Dir.Y != 0) {
                     this.Beam.Transform.Scale = Real3(1, 5, 1);
                     this.Beam.Transform.Translation = Real3(0, 3*this.Dir.Y, 0);
-                    this.Beam.BoxCollider.Size = Real3(0.01, 0.8, 1);
+                    this.Beam.BoxCollider.Size = Real3(1, 1, 1);
                 }
                 this.Owner.Sprite.AnimationActive = true;
             }

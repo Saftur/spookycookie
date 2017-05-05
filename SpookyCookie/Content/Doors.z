@@ -5,6 +5,12 @@ class Doors : ZilchComponent
     var Locked : Boolean = true;
     var HUD : Space = null;
     var Linger : Real = -1;
+    
+    [Property]
+    var LevelToLoad : Level;
+    [Property]
+    var HallwayPos : Real3;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -17,7 +23,7 @@ class Doors : ZilchComponent
         {
             this.CheckLockState();
         }
-        else
+        else if(event.OtherObject.PlayerMovement != null)
         {
             if(this.Linger == -1)
             {
@@ -37,14 +43,22 @@ class Doors : ZilchComponent
                 this.HUD.LevelSettings.HUDReferences.LockedText.FadeText.StartFade = true;
             }
         }
+        else if(this.Linger <= -2)
+        {
+            this.Linger -= event.Dt;
+            if(this.Linger < 3)
+            {
+                this.GameSession.GameVars.HallwayPos = this.HallwayPos;
+                this.Space.LoadLevel(this.LevelToLoad);
+            }
+        }
         if(!this.Owner.Sprite.AnimationActive)
             return;
         
         if(this.Owner.Sprite.CurrentFrame == 4)
         {
             this.Owner.Sprite.SpriteSource = SpriteSource.Open_Door;
-            this.GameSession.GameVars.HallwayPos = Real3();
-            this.Space.LoadLevel(Level.Hallway);
+            this.Linger = -2;
         }
     }
     function CheckLockState()

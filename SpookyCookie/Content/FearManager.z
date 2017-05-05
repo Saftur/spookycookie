@@ -20,6 +20,7 @@ class FearManager : ZilchComponent
     function OnLogicUpdate(event : UpdateEvent)
     {
         this.BatteryBar.Bar.Decrease(event.Dt/this.BatteryLife);
+        this.GameSession.GameVars.BatteryLife -= (event.Dt/this.BatteryLife);
         if(this.BatteryBar.Transform.Scale.X == 0.0001 || this.FearBar.Transform.Scale.Y >= this.FearBar.Bar.MaxSize)
         {
             this.Space.LoadLevel(Level.LoseScreen);

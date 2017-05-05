@@ -40,7 +40,7 @@ class MonsterAI : ZilchComponent
         {
             this.Owner.Sprite.FlipX = false;
         }
-        this.Owner.RigidBody.Velocity = movement;
+        this.Owner.RigidBody.Velocity = movement * Real3(this.ChaseSpeed, this.ChaseSpeed, 0);
         
         /*
         if (this.Beam != null) {
