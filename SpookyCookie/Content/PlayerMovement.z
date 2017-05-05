@@ -21,10 +21,8 @@ class PlayerMovement : ZilchComponent
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(Keys.Tab))
-        {
-            Console.WriteLine("`this.Owner.Transform.Translation` `this.Destination` `this.Walking`");
-        }
+        if(this.Owner.FearManager.Spooked)
+            return;
         
         if(!this.Walking)
         {

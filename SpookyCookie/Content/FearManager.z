@@ -8,6 +8,9 @@ class FearManager : ZilchComponent
     
     var BatteryLife : Real = 60;
     
+    var Spooked : Boolean = false;
+    var Timer : Real = 1;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -19,11 +22,25 @@ class FearManager : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Spooked)
+        {
+            this.Timer -= event.Dt;
+            if(this.Timer < 0)
+            {
+                this.Space.LevelSettings.LevelTransition.LevelToLoad = Level.LoseScreen;
+                this.Space.LevelSettings.LevelTransition.Load = true;
+            }
+            return;
+        }
         this.BatteryBar.Bar.Decrease(event.Dt/this.BatteryLife);
         this.GameSession.GameVars.BatteryLife -= (event.Dt/this.BatteryLife);
         if(this.BatteryBar.Transform.Scale.X == 0.0001 || this.FearBar.Transform.Scale.Y >= this.FearBar.Bar.MaxSize)
         {
-            this.Space.LoadLevel(Level.LoseScreen);
+            this.Spooked = true;
+            this.FearBar.Transform.Scale *= Real3(2,2,1);
+            this.Space.LevelSettings.HUDCreator.HUDSpace.FindObjectByName("Fear").Transform.Scale *=Real3(2,2,1);
+            this.Owner.Transform.Translation += Real3(0,0,8);
+            this.Space.FindObjectByName("Background").Transform.Translation += Real3(0,0,10);
         }
     }
     function OnCollisionStarted(event : CollisionEvent)

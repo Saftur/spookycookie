@@ -13,7 +13,7 @@ class CookieJar : ZilchComponent
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.PlayerMovement != null && !this.Owner.Doors.Locked)
+        if(event.OtherObject.PlayerMovement != null)
         {
             this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.VictoryText.SpriteText.Visible = true;
             this.Space.TimeSpace.TogglePause();

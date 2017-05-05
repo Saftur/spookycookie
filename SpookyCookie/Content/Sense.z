@@ -19,6 +19,11 @@ class Sense : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Dad.ObjectToFollow.Cog.FearManager.Spooked)
+        {
+            this.Dad.ObjectToFollow.Cog.FearManager.FearBar.Shake.StartShake = true;
+            return;
+        }
         var i = 0;
         var shake = false;
         while(i < this.Ghosts.Count)

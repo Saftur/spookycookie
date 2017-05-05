@@ -113,6 +113,13 @@ Level =
 		LoadIn = 
 		{
 			bool Hallway = true,
+			bool Menu = false,
+			string LevelText = "Hallway",
+		},
+		LevelTransition = 
+		{
+			float Time = 1,
+			string LevelToLoad = "59d81eede428fde1:Kitchen",
 		},
 	},
 	Cog = 
@@ -127,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-10.6281033, -4.94377518, 50],
+			Vec3 Translation = [12.0815287, 9.83112907, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -139,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 14.9568901,
+			float Size = 74.0818481,
 		},
 		EditorCameraController = 
 		{
@@ -147,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-10.6281033, -4.94377518, 0],
+			Vec3 LookTarget = [12.0815287, 9.83112907, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -183,7 +190,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 200,
-			float Size = 20,
+			float Size = 10,
 		},
 		SoundListener = 
 		{
@@ -6203,7 +6210,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 15.5, 0],
+					Vec3 Translation = [7.5, 11.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6221,7 +6228,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 14.5, 0],
+					Vec3 Translation = [10.5, 6.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6239,7 +6246,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 12.5, 0],
+					Vec3 Translation = [6.5, 8.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6257,7 +6264,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [8.5, 13.5, 0],
+					Vec3 Translation = [6.5, 7.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6275,7 +6282,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 13.5, 0],
+					Vec3 Translation = [10.5, 8.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6293,7 +6300,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [8.5, 14.5, 0],
+					Vec3 Translation = [7.5, 10.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6311,7 +6318,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, 16.5, 0],
+					Vec3 Translation = [10.5, 9.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6329,7 +6336,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, 12.5, 0],
+					Vec3 Translation = [11.5, 10.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6347,7 +6354,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 14.5, 0],
+					Vec3 Translation = [11.5, 6.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6365,7 +6372,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 17.5, 0],
+					Vec3 Translation = [6.5, 10.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6383,7 +6390,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [8.5, 17.5, 0],
+					Vec3 Translation = [9.5, 7.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6401,7 +6408,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [7.5, 12.5, 0],
+					Vec3 Translation = [9.5, 9.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6419,7 +6426,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, 13.5, 0],
+					Vec3 Translation = [7.5, 8.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6437,7 +6444,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 12.5, 0],
+					Vec3 Translation = [10.5, 7.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6455,7 +6462,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [7.5, 15.5, 0],
+					Vec3 Translation = [11.5, 11.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6473,7 +6480,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 17.5, 0],
+					Vec3 Translation = [11.5, 7.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6491,7 +6498,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [9.5, 12.5, 0],
+					Vec3 Translation = [8.5, 8.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6509,7 +6516,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [8.5, 16.5, 0],
+					Vec3 Translation = [11.5, 9.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6527,7 +6534,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [7.5, 16.5, 0],
+					Vec3 Translation = [10.5, 11.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6545,7 +6552,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [7.5, 14.5, 0],
+					Vec3 Translation = [8.5, 11.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6563,7 +6570,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [9.5, 17.5, 0],
+					Vec3 Translation = [6.5, 9.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6581,7 +6588,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 16.5, 0],
+					Vec3 Translation = [8.5, 9.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6599,7 +6606,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [10.5, 13.5, 0],
+					Vec3 Translation = [10.5, 10.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6617,7 +6624,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, 14.5, 0],
+					Vec3 Translation = [11.5, 8.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6635,7 +6642,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [9.5, 15.5, 0],
+					Vec3 Translation = [6.5, 11.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6653,7 +6660,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [9.5, 16.5, 0],
+					Vec3 Translation = [9.5, 11.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6671,7 +6678,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 16.5, 0],
+					Vec3 Translation = [8.5, 7.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6689,7 +6696,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [9.5, 13.5, 0],
+					Vec3 Translation = [8.5, 6.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6707,7 +6714,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [7.5, 17.5, 0],
+					Vec3 Translation = [6.5, 6.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6725,7 +6732,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [8.5, 12.5, 0],
+					Vec3 Translation = [7.5, 6.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6743,7 +6750,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [8.5, 15.5, 0],
+					Vec3 Translation = [9.5, 6.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6761,7 +6768,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [11.5, 15.5, 0],
+					Vec3 Translation = [9.5, 8.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6779,7 +6786,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [9.5, 14.5, 0],
+					Vec3 Translation = [7.5, 9.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6797,7 +6804,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [7.5, 13.5, 0],
+					Vec3 Translation = [8.5, 10.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6815,7 +6822,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, 15.5, 0],
+					Vec3 Translation = [9.5, 10.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6833,7 +6840,3247 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [6.5, 17.5, 0],
+					Vec3 Translation = [7.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 367,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [19.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 368,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [22.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 369,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [18.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 370,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [18.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 371,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [22.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 372,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [19.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 373,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [22.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 374,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [23.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 375,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [23.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 376,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [18.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 377,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [21.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 378,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [21.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 379,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [19.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 380,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [22.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 381,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [23.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 382,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [23.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 383,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [20.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 384,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [23.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 385,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [22.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 386,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [20.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 387,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [18.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 388,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [20.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 389,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [22.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 390,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [23.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 391,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [18.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 392,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [21.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 393,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [20.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 394,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [20.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 395,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [18.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 396,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [19.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 397,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [21.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 398,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [21.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 399,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [19.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 400,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [20.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 401,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [21.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 402,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [19.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 403,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [25.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 404,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 405,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [24.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 406,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [24.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 407,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 408,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [25.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 409,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 410,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [29.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 411,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [29.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 412,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [24.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 413,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [27.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 414,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [27.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 415,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [25.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 416,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 417,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [29.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 418,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [29.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 419,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [26.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 420,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [29.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 421,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 422,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [26.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 423,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [24.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 424,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [26.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 425,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [28.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 426,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [29.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 427,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [24.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 428,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [27.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 429,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [26.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 430,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [26.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 431,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [24.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 432,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [25.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 433,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [27.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 434,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [27.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 435,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [25.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 436,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [26.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 437,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [27.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 438,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [25.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 439,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 440,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 441,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 442,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 443,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 444,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 445,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 446,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 447,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 448,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 449,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 450,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 451,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 452,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 453,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 454,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 455,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 456,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 457,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 458,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 459,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 460,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 461,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [4.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 462,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 463,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 464,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 465,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 466,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 467,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 468,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 469,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 470,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 471,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 472,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 473,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 474,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [1.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 475,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 476,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 477,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 478,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 479,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 480,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 481,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 482,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 483,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 484,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 485,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 486,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 487,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 488,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 489,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 490,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 491,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 492,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 493,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 494,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 495,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 496,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 497,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 498,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 499,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 500,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 11.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 501,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 502,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 503,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 504,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 505,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 6.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 506,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 8.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 507,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 9.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 508,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 509,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 10.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 510,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 7.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 511,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 17.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 512,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 12.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 513,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 14.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 514,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 13.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 515,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 14.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 516,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 16.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 517,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 15.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 518,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 16.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 519,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 12.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 520,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 16.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 521,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 13.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 522,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 15.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 523,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 14.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 524,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 13.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 525,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 17.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 526,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 13.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 527,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 14.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 528,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 15.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 529,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 17.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 530,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 17.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 531,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 15.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 532,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 15.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 533,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, 16.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 534,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-0.5, 14.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 535,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 17.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 536,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 17.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 537,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 13.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 538,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 12.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 539,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, 12.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 540,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 12.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 541,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 12.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 542,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 14.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 543,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 15.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 544,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3.5, 16.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 545,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, 16.5, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+			},
+			ArchetypeInstance = 
+			{
+				string Name = "59d8dfa8393d9518:wood_floor",
+				LinkId = 
+				{
+					uint Id = 546,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-4.5, 13.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -6848,7 +10095,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 367,
+			uint Id = 547,
 		},
 		Named = 
 		{
@@ -6916,7 +10163,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 368,
+			uint Id = 548,
 		},
 		Named = 
 		{
@@ -6952,7 +10199,7 @@ Level =
 		string Name = "5963e2025d14442a:LoadScreen2",
 		LinkId = 
 		{
-			uint Id = 369,
+			uint Id = 549,
 		},
 		Transform = 
 		{
@@ -6963,6 +10210,41 @@ Level =
 		Named = 
 		{
 			string Name = "LoadScreen2",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 550,
+		},
+		Named = 
+		{
+			string Name = "Editor Marker",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.5, -5.5, 1],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },

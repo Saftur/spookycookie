@@ -30,7 +30,6 @@ class Object : ZilchComponent
         this.Beam = this.Space.FindObjectByName("Beam");
         
     }
-
     function OnLogicUpdate(event : UpdateEvent)
     {
         if (this.Beam != null) {
@@ -40,7 +39,10 @@ class Object : ZilchComponent
             var inBeam = tilePos.X > beamPos.X-beamScl.X/2 && tilePos.X < beamPos.X+beamScl.X/2 &&
                          tilePos.Y > beamPos.Y-beamScl.Y/2 && tilePos.Y < beamPos.Y+beamScl.Y/2;
             if (inBeam)
+            {
                 this.Discovered = true;
+                //Console.WriteLine("Gotcha");
+            }
         }
         if (!this.Discovered) {
             var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Target.Transform.Translation.XY);
