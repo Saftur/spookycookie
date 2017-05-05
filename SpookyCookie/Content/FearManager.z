@@ -41,6 +41,8 @@ class FearManager : ZilchComponent
             this.Space.LevelSettings.HUDCreator.HUDSpace.FindObjectByName("Fear").Transform.Scale *=Real3(2,2,1);
             this.Owner.Transform.Translation += Real3(0,0,8);
             this.Space.FindObjectByName("Background").Transform.Translation += Real3(0,0,10);
+            this.Owner.RigidBody.Velocity = Real3(0,0,0);
+            this.Owner.Sprite.SpriteSource = SpriteSource.BeanBag;
         }
     }
     function OnCollisionStarted(event : CollisionEvent)

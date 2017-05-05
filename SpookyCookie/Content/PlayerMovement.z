@@ -21,6 +21,10 @@ class PlayerMovement : ZilchComponent
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(Zero.Keyboard.KeyIsDown(Keys.Control) && Zero.Keyboard.KeyIsDown(Keys.G))
+        {
+            this.Space.LoadLevel(Level.Kitchen);
+        }
         if(this.Owner.FearManager.Spooked)
             return;
         
