@@ -1,0 +1,30 @@
+class DogMovement : ZilchComponent
+{
+    var Target : Cog = null;
+    var HasBone : Real = 0;
+ 
+    
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+          Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        this.Target = this.Space.FindObjectByName("Player");
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        
+        
+        
+          
+        
+    
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+
+
+    }
+}
