@@ -2,7 +2,7 @@ TextContent =
 {
 	ZilchScriptBuilder = 
 	{
-		string Name = "DogMovement",
+		string Name = "Dog",
 		uint64 ResourceId = 5976437873b122db,
 	},
 },

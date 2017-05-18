@@ -1,8 +1,14 @@
-class DogMovement : ZilchComponent
+class  Dog : ZilchComponent
 {
     var Target : Cog = null;
     var HasBone : Real = 0;
  
+    [Property]
+    var DetectDistance : Real;
+    
+    var Distance : Real;
+    
+    var Detected : Real;
     
     
     function Initialize(init : CogInitializer)
@@ -14,7 +20,7 @@ class DogMovement : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        
+        this.Distance = (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y)^2;
         
         
           
