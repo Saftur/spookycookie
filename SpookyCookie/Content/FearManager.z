@@ -42,7 +42,7 @@ class FearManager : ZilchComponent
             this.Owner.Transform.Translation += Real3(0,0,8);
             this.Space.FindObjectByName("Background").Transform.Translation += Real3(0,0,10);
             this.Owner.RigidBody.Velocity = Real3(0,0,0);
-            this.Owner.Sprite.SpriteSource = SpriteSource.BeanBag;
+            this.Owner.Sprite.SpriteSource = SpriteSource.Character_Front_2;
         }
     }
     function OnCollisionStarted(event : CollisionEvent)

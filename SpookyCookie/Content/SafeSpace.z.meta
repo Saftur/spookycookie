@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "SafeSpace",
+		uint64 ResourceId = 597640bd0dadc2b7,
+	},
+},
