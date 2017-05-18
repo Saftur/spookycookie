@@ -291,6 +291,8 @@ Level =
 				CogPathPreference PathPreference2 = Absolute,
 			},
 			float DetectDistance = 5,
+			float RespawnTime = 0,
+			string GhostType = "",
 		},
 	},
 	Cog = 
@@ -371,6 +373,45 @@ Level =
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [-0.189999998, 0.150000006, 0],
 			Vec3 Size = [0.284999996, 0.36500001, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Named = 
+		{
+			string Name = "TopDog",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [15.0301781, -4.57427216, -0.00199946179],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		DogMovement = 
+		{
+			float ChaseSpeed = 0,
 		},
 	},
 },

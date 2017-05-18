@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [78.7671204, 0, 2],
+		Vec3 Translation = [55.0668716, 1.24843192, 0],
 		Vec3 Scale = [50, 50, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -38,7 +38,7 @@ Cog =
 	},
 	Fade = 
 	{
-		float Time = 0.5,
+		float Time = 1,
 		bool Invis = false,
 	},
 },

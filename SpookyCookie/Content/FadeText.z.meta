@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "FadeText",
+		uint64 ResourceId = 59d6162a0c8e7fe7,
+	},
+},

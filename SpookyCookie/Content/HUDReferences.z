@@ -7,11 +7,15 @@ class HUDReferences : ZilchComponent
     var FearBar : Cog = null;
     var BatteryLife : Cog = null;
     var VictoryText : Cog = null;
+    var LockedText : Cog = null;
+    var LevelTitle : Cog = null;
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.FearBar = this.Space.FindObjectByName("FearBar");
         this.BatteryLife = this.Space.FindObjectByName("BatteryLife");
         this.VictoryText = this.Space.FindObjectByName("VictoryText");
+        this.LockedText = this.Space.FindObjectByName("LockedText");
+        this.LevelTitle = this.Space.FindObjectByName("LevelTitle");
     }
 }

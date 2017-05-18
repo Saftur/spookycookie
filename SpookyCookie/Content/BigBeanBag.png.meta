@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "BigBeanBag",
+		uint64 ResourceId = 596bccc2b6718c86,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 256,
+		uint FrameSizeY = 236,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 128,
+		float OriginY = 118,
+		float PixelsPerUnit = 256,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

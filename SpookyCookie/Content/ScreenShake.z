@@ -21,10 +21,11 @@ class ScreenShake : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        /*
         if(Zero.Keyboard.KeyIsPressed(Keys.M))
         {
             this.StartShake = true;
-        }
+        }*/
         if(this.StartShake)
         {
             /*

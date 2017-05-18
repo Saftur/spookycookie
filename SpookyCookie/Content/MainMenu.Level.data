@@ -93,6 +93,9 @@ Level =
 		},
 		LoadIn = 
 		{
+			bool Hallway = false,
+			bool Menu = true,
+			string LevelText = "",
 		},
 	},
 	Cog = 

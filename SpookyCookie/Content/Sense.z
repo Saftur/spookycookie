@@ -7,7 +7,7 @@ class Sense : ZilchComponent
     
     var Camera : Cog = null;
     var Ghosts : Array[Cog] = Array[Cog]();
-    var ScareRange : Real = 5;
+    var ScareRange : Real = 3;
     var DebugNum : Integer = 0;
     function Initialize(init : CogInitializer)
     {
@@ -19,26 +19,17 @@ class Sense : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Dad.ObjectToFollow.Cog.FearManager.Spooked)
+        {
+            this.Dad.ObjectToFollow.Cog.FearManager.FearBar.Shake.StartShake = true;
+            return;
+        }
         var i = 0;
         var shake = false;
-        //Console.WriteLine("`this.Ghosts.Capacity`");
         while(i < this.Ghosts.Count)
         {
-            if(this.Ghosts[i] == null)
-            {
-                Console.WriteLine("hm `i` `this.Ghosts.Count`");
-                //break;
-                this.RemoveGhost(this.Ghosts[i]);
-                i -= 1;
-                if(i < 0)
-                    i = 0;
-                continue;
-            }
-            this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 1);
-            
             var trail = this.Ghosts[i].FindChildByName("GhostTrail");
             var dist = Math.Distance(this.Owner.Transform.Translation.XY, this.Ghosts[i].Transform.Translation.XY);
-            this.Dad.ObjectToFollow.Cog.FearManager.FearBar.Bar.Increase(event.Dt/(dist*10));
             
             //Console.WriteLine("`dist` `event.Dt`");
             
@@ -46,17 +37,21 @@ class Sense : ZilchComponent
             {
                 this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, (this.ScareRange-dist)*(1/0.1));
                 trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, (this.ScareRange-dist)*(1/0.1));
+                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*3));
             }
             else if(dist <= (this.ScareRange - 0.1))
             {
                 this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 1);
                 trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, 1);
+                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*2));
             }
             else
             {
                 this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 0);
                 trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, 0);
+                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*10));
             }
+            
             if(dist <= this.ScareRange)
             {
                 if(!shake)
@@ -70,15 +65,13 @@ class Sense : ZilchComponent
             i += 1;
         }
         this.Camera.ScreenShake.StartShake = shake;
+        this.Dad.ObjectToFollow.Cog.FearManager.FearBar.Shake.StartShake = shake;
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.MonsterAI != null)
         {
             this.AddGhost(event.OtherObject);
-            //this.Ghosts.Add(event.OtherObject);
-            //event.OtherObject.MonsterAI.ArrayIndex = this.Ghosts.Count - 1;
-            //Console.WriteLine("Added `this.Ghosts.Count` `event.OtherObject.Name` `event.OtherObject.MonsterAI.ArrayIndex`");
         }
     }
     function OnCollisionEnded(event : CollisionEvent)
@@ -104,31 +97,17 @@ class Sense : ZilchComponent
     }
     function RemoveGhost(ghost : Cog)
     {
-        var i = 0;
-        while(i < this.Ghosts.Count)
-        {
-            //Console.WriteLine("`i`");
-            if(this.Ghosts[i] == ghost)
-                break;
-                //return;
-            i += 1;
-        }
-        var index = ghost.MonsterAI.ArrayIndex;
-        if(index < this.Ghosts.Count)
+        var i = ghost.MonsterAI.ArrayIndex;
+        if(i < this.Ghosts.Count)
         {
             Console.WriteLine("`this.DebugNum` Removed `this.Ghosts.Count` `ghost.Name` `ghost.MonsterAI.ArrayIndex`");
             this.Ghosts.RemoveAt(ghost.MonsterAI.ArrayIndex);
-            i = 0;
-            while(i < index)
+            while(i < this.Ghosts.Count)
             {
-                if(this.Ghosts[i] == null)
-                    break;
                 this.Ghosts[i].MonsterAI.ArrayIndex -= 1;
-                if(this.Ghosts[i].MonsterAI.ArrayIndex < 0)
-                    this.Ghosts[i].MonsterAI.ArrayIndex = 0;
+                Console.WriteLine("i:`i` Count:`this.Ghosts.Count` index:`this.Ghosts[i].MonsterAI.ArrayIndex` `this.Ghosts[i].Name`");
                 i += 1;
             }
-            Console.WriteLine("`this.DebugNum` Removed `this.Ghosts.Count` `ghost.Name` `ghost.MonsterAI.ArrayIndex`");
         }
     }
 }

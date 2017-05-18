@@ -93,6 +93,9 @@ Level =
 		},
 		LoadIn = 
 		{
+			bool Hallway = false,
+			bool Menu = true,
+			string LevelText = "",
 		},
 	},
 	Cog = 
@@ -107,7 +110,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [43.2917938, -3.14033747, 50],
+			Vec3 Translation = [22.8729782, -3.14033747, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -119,7 +122,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 81.8730927,
+			float Size = 90.4838028,
 		},
 		EditorCameraController = 
 		{
@@ -127,7 +130,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [43.2917938, -3.14033747, 1.89234447e-06],
+			Vec3 LookTarget = [22.8729782, -3.14033747, 1.89234447e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -571,7 +574,7 @@ Level =
 			string DefaultSprite = "",
 			string HoveredSprite = "",
 			string ClickedSprite = "5963c99435c7574a:PLAY001",
-			string LevelToLoad = "596137f64e545252:CLevel",
+			string LevelToLoad = "59df2ae304d16aa0:GameLevel",
 		},
 	},
 	Cog = 

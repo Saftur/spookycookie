@@ -3,10 +3,19 @@
 class Doors : ZilchComponent
 {
     var Locked : Boolean = true;
+    var HUD : Space = null;
+    var Linger : Real = -1;
+    
+    [Property]
+    var LevelToLoad : Level;
+    [Property]
+    var HallwayPos : Real3;
+    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        this.HUD = this.Space.LevelSettings.HUDCreator.HUDSpace;
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
@@ -14,16 +23,42 @@ class Doors : ZilchComponent
         {
             this.CheckLockState();
         }
+        else if(event.OtherObject.PlayerMovement != null)
+        {
+            if(this.Linger == -1)
+            {
+                this.HUD.LevelSettings.HUDReferences.LockedText.FadeText.StartFade = true;
+                this.Linger = 0;
+            }
+        }
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(this.Linger >= 0)
+        {
+            this.Linger += event.Dt;
+            if(this.Linger > 1.25)
+            {
+                this.Linger = -1;
+                this.HUD.LevelSettings.HUDReferences.LockedText.FadeText.StartFade = true;
+            }
+        }
+        else if(this.Linger <= -2)
+        {
+            this.Linger -= event.Dt;
+            if(this.Linger < 3)
+            {
+                this.GameSession.GameVars.HallwayPos = this.HallwayPos;
+                this.Space.LoadLevel(this.LevelToLoad);
+            }
+        }
         if(!this.Owner.Sprite.AnimationActive)
             return;
         
         if(this.Owner.Sprite.CurrentFrame == 4)
         {
             this.Owner.Sprite.SpriteSource = SpriteSource.Open_Door;
-            this.Space.LoadLevel(Level.Kitchen);
+            this.Linger = -2;
         }
     }
     function CheckLockState()

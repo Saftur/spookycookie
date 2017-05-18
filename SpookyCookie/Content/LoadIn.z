@@ -2,14 +2,47 @@
 // All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 class LoadIn : ZilchComponent
 {
+    [Property]
+    var Hallway : Boolean = false;
+    [Property]
+    var Menu : Boolean = false;
+    var Linger : Real = 1;
+    
+    [Property]
+    var LevelText : String = "";
+    var LevelTitle : Cog = null;
+    var LoadScreen : Cog = null;
     function Initialize(init : CogInitializer)
     {
-        var loadScreen = this.Space.FindObjectByName("LoadScreen2");
-        loadScreen.Transform.Translation = Real3(0, 0, 2);
-        loadScreen.Fade.Opacity = 1;
-        loadScreen.Sprite.Color = Real4(loadScreen.Sprite.Color.XYZ, 1);
-        loadScreen.Fade.Invis = false;
-        loadScreen.Fade.StartFade = true;
-        Console.WriteLine("`loadScreen.Sprite.Color` `loadScreen.Fade.Invis`");
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.LoadScreen = this.Space.FindObjectByName("LoadScreen2");
+        if(!this.Menu)
+        {
+            this.LevelTitle = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.LevelTitle;
+            this.LevelTitle.SpriteText.Text = this.LevelText;
+            this.LevelTitle.FadeText.Time = 0.5;
+            this.LevelTitle.FadeText.StartFade = true;
+        }
+        if(this.Hallway)
+        {
+            var player = this.Space.FindObjectByName("Player");
+            player.Transform.Translation = this.GameSession.GameVars.HallwayPos;
+        }
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.Menu)
+        {
+            this.LoadScreen.Fade.StartFade = true;
+        }
+        else if(this.Linger > 0)
+        {
+            this.Linger -= event.Dt;
+            if(this.Linger <= 0)
+            {
+                this.LevelTitle.FadeText.StartFade = true;
+                this.LoadScreen.Fade.StartFade = true;
+            }
+        }
     }
 }

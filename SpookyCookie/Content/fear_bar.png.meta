@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "fear_bar",
+		uint64 ResourceId = 59da53ce5d6741db,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 120,
+		uint FrameSizeY = 480,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 60,
+		float OriginY = 240,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

@@ -3,10 +3,13 @@
 class FearManager : ZilchComponent
 {
     var FearBar : Cog = null;
+    
     var BatteryBar : Cog = null;
     
-    [Property]
-    var BatteryLife : Real = 120;
+    var BatteryLife : Real = 60;
+    
+    var Spooked : Boolean = false;
+    var Timer : Real = 1;
     
     function Initialize(init : CogInitializer)
     {
@@ -14,21 +17,67 @@ class FearManager : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         this.FearBar = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.FearBar;
         this.BatteryBar = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.BatteryLife;
+        this.BatteryLife = this.GameSession.GameVars.BatteryLife;
     }
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-        this.BatteryBar.Bar.Decrease(event.Dt/this.BatteryLife);
-        if(this.BatteryBar.Transform.Scale.X == 0.0001 || this.FearBar.Transform.Scale.X >= this.FearBar.Bar.MaxSize)
+        if(this.Spooked)
         {
-                this.Space.LoadLevel(Level.LoseScreen);
+            this.Timer -= event.Dt;
+            if(this.Timer < 0)
+            {
+                this.Space.LevelSettings.LevelTransition.LevelToLoad = Level.LoseScreen;
+                this.Space.LevelSettings.LevelTransition.Load = true;
+            }
+            return;
+        }
+        this.BatteryBar.Bar.Decrease(event.Dt/this.BatteryLife);
+        this.GameSession.GameVars.BatteryLife -= (event.Dt/this.BatteryLife);
+        if(this.BatteryBar.Transform.Scale.X == 0.0001 || this.FearBar.Transform.Scale.Y >= this.FearBar.Bar.MaxSize)
+        {
+            this.Spooked = true;
+            this.FearBar.Transform.Scale *= Real3(2,2,1);
+            this.Space.LevelSettings.HUDCreator.HUDSpace.FindObjectByName("Fear").Transform.Scale *=Real3(2,2,1);
+            this.Owner.Transform.Translation += Real3(0,0,8);
+            this.Space.FindObjectByName("Background").Transform.Translation += Real3(0,0,10);
+            this.Owner.RigidBody.Velocity = Real3(0,0,0);
+            this.Owner.Sprite.SpriteSource = SpriteSource.Character_Front_2;
         }
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(event.OtherObject.MonsterAI != null)
         {
-            this.FearBar.Bar.Increase(1);
+            this.Spook(1);
+        }
+    }
+    function Spook(amnt : Real)
+    {
+        this.FearBar.Bar.Increase(amnt);
+        var max = this.FearBar.Bar.MaxSize;
+        var scale = this.FearBar.Transform.Scale.Y;
+        if(scale >= max*0.85)
+        {
+            if(this.FearBar.Sprite.Color != Real4(0.929412, 0.109804, 0, 1))
+            {
+                this.FearBar.Sprite.Color = Real4(0.929412, 0.109804, 0, 1);
+            }
+        }
+        else
+        {
+            if(scale >= max*0.5)
+            {
+                this.FearBar.Sprite.Color = Real4(0.929412, 0.109804, 0.929412 * ((0.85 - (scale/max))/0.35), 1);
+            }
+            else if(this.FearBar.Transform.Scale.Y >= max*0.15)
+            {
+                this.FearBar.Sprite.Color = Real4(0.929412 * (( (scale/max) - 0.15)/0.35), 0.109804, 0.929412, 1);
+            }
+            else
+            {
+                this.FearBar.Sprite.Color = Real4(0, 0.109804, 0.929412, 1);
+            }
         }
     }
 }
