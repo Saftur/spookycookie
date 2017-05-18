@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "Illusion",
+		uint64 ResourceId = 597645cf4a6b571d,
+	},
+},

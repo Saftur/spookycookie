@@ -1,0 +1,47 @@
+class Illusion : ZilchComponent
+{
+    [Property]
+    var Illusion : SpriteSource = null;
+    var FlickerLength : Real = 0.05;
+    var Timer : Real;
+    var RealObject : SpriteSource = null;
+    var StartFlicker : Boolean = false;
+    var Flicks : Integer = 10;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        this.RealObject = this.Owner.Sprite.SpriteSource;
+        this.Timer = this.FlickerLength;
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+        {
+            this.StartFlicker = true;
+        }
+        if(!this.StartFlicker)
+            return;
+        if(this.Flicks > 0)
+        {
+            this.Timer -= event.Dt;
+            if(this.Timer <= 0)
+            {
+                if(this.Owner.Sprite.SpriteSource == this.RealObject)
+                    this.Owner.Sprite.SpriteSource = this.Illusion;
+                else
+                    this.Owner.Sprite.SpriteSource = this.RealObject;
+                this.Timer = this.FlickerLength;
+                this.Flicks -= 1;
+                this.FlickerLength -= 0.01;
+            }
+        }
+        else
+        {
+            this.Flicks = 14;
+            this.FlickerLength = 0.05;
+            this.StartFlicker = false;
+        }
+    }
+}
