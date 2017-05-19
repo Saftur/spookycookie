@@ -26,6 +26,10 @@ class MonsterAI : ZilchComponent
         {
             this.Destroy();
         }
+        if(event.OtherObject.Name == "CreatedSpace" && event.OtherObject.SafeSpaceDestroy.SpaceActive == true)
+        {
+            this.Destroy();
+        }
     }
     function OnLogicUpdate(event : UpdateEvent)
     {

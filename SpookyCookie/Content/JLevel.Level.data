@@ -168,4 +168,40 @@ Level =
 			float Volume = 1,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "597f75e6fd904eaf:SafeSpace",
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "SafeSpace",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "597f76b8b2df6ef3:CreatedSpace",
+		LinkId = 
+		{
+			uint Id = 5,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.50684834, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "CreatedSpace",
+		},
+	},
 },
