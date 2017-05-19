@@ -68,6 +68,17 @@ class PlayerMovement : ZilchComponent
                     this.Owner.Sprite.SpriteSource = SpriteSource.Character_Front_2;
                 this.Walking = true;
             }
+            /*else if(Zero.Keyboard.KeyIsDown(Keys.A) && Zero.Keyboard.KeyIsDown(Keys.W))
+            {
+                this.Destination = this.Owner.Transform.Translation
+                this.Dir.X = -1;
+                this.Dir.Y = 1;
+                this.RBody.Velocity += Real3(this.Owner.Transform.Translation.X * this.Speed,this.Speed,0);
+                this.Walking = true;
+            }
+        */
+            
+            
             if(this.Dir == Integer2(0,0))
             {
                 this.Owner.Sprite.CurrentFrame = 0;
@@ -104,7 +115,7 @@ class PlayerMovement : ZilchComponent
                 if(this.Owner.Transform.Translation.Y*this.Dir.Y >= this.Destination.Y*this.Dir.Y)
                 {
                     this.Stop();
-                }
+                 }
             }
             if(this.Dir.X != 0)
             {
@@ -113,8 +124,9 @@ class PlayerMovement : ZilchComponent
                     this.Stop();
                 }
             }
-        }
+        
     }
+}
     
     function Stop()
     {
