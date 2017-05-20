@@ -1,24 +1,27 @@
-class SafeSpace : ZilchComponent //eggos
+class SafeSpace : ZilchComponent
 {
     var SafeOn : Boolean = false;
+    var AreaCreated : Boolean = false;
+    [Property]
+    var AreaObj : CogPath;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
-        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted); //ari is hungry
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
     }
 
-    function OnLogicUpdate(event : UpdateEvent) //potatoes
+    function OnLogicUpdate(event : UpdateEvent)
     {
         if(this.SafeOn == true)
         {
-            this.Space.FearManager.Spooked = false;
+            this.DistanceKill();
         }
     }
     
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject == this.Space.FindObjectByName("Player")) //bob
+        if(event.OtherObject == this.Space.FindObjectByName("Player"))
         {
             this.SafeOn == true;
         }
@@ -29,6 +32,15 @@ class SafeSpace : ZilchComponent //eggos
         if(event.OtherObject == this.Space.FindObjectByName("Player"))
         {
             this.SafeOn == false;
+        }
+    }
+    
+    function DistanceKill()
+    {
+        if(this.AreaCreated == false)
+        {
+            this.AreaObj.Cog.Transform.Translation = this.Owner.Transform.Translation;
+            this.AreaCreated = true;
         }
     }
 }
