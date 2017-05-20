@@ -123,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.16414022, 8.30236435, 50],
+			Vec3 Translation = [-6.61471224, 3.98336029, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -135,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 67.0321274,
+			float Size = 27.2532864,
 		},
 		EditorCameraController = 
 		{
@@ -143,7 +143,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.16414022, 8.30236435, 2.12890807e-08],
+			Vec3 LookTarget = [-6.61471224, 3.98336029, 2.12890807e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -548,83 +548,11 @@ Level =
 			string GhostType = "59d8f73facf9aa15:Ghost1",
 		},
 	},
-	ArchetypeInstance = 
-	{
-		string Name = "596280dc86e44d40:Ghost",
-		LinkId = 
-		{
-			uint Id = 10,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-7.87947845, -3.23427486, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Ghost",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59d8f73facf9aa15:Ghost1",
-		LinkId = 
-		{
-			uint Id = 11,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-8.55721951, 4.78630352, 0],
-			Vec3 Scale = [0.300000012, 0.300000012, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Ghost1",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59d80a68fb185d9a:Ghost2",
-		LinkId = 
-		{
-			uint Id = 12,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-8.47725868, 0.7138834, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "Ghost2",
-		},
-	},
-	ArchetypeInstance = 
-	{
-		string Name = "59d8031c8ff87f3d:GhostDeath",
-		LinkId = 
-		{
-			uint Id = 13,
-		},
-		Transform = 
-		{
-			Vec3 Translation = [-10.2936687, -2.19392991, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Named = 
-		{
-			string Name = "GhostDeath",
-		},
-	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 14,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -659,7 +587,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 15,
+			uint Id = 11,
 		},
 		Named = 
 		{
@@ -692,6 +620,16 @@ Level =
 		Illusion = 
 		{
 			string Illusion = "59de05d66f387d40:bear_clone_shadow",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 },
