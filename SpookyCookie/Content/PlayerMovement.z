@@ -4,10 +4,16 @@ class PlayerMovement : ZilchComponent
 {
     [Dependency]
     var RBody : RigidBody = null;
+    
+    [Property]
+    var StepSize : Real = 1;
+    var Destination : Real3 = Real3();
+    var Dir : Integer2 = Integer2(0,0);
+    var Walking : Boolean = false;
     var Beam : Cog = null;
+    
     [Property]
     var Speed : Real = 1;
-    
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -15,7 +21,6 @@ class PlayerMovement : ZilchComponent
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
-        var dir = Integer2(0,0);
         if(Zero.Keyboard.KeyIsDown(Keys.Control) && Zero.Keyboard.KeyIsDown(Keys.G))
         {
             this.Space.LoadLevel(Level.Kitchen);
@@ -23,48 +28,99 @@ class PlayerMovement : ZilchComponent
         if(this.Owner.FearManager.Spooked)
             return;
         
-        if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
+        if(!this.Walking)
         {
-            dir.X = -1;
-            if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Left_Side)
-                this.Owner.Sprite.SpriteSource = SpriteSource.Character_Left_Side;
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
-        {
-            dir.X = 1;
-            if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Right_Side_1)
-                this.Owner.Sprite.SpriteSource = SpriteSource.Character_Right_Side_1;
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
-        {
-            dir.Y = 1;
-            if(dir.X == 0 && this.Owner.Sprite.SpriteSource != SpriteSource.Character_Up)
-                this.Owner.Sprite.SpriteSource = SpriteSource.Character_Up;
-        }
-        else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
-        {
-            dir.Y = -1;
-            if(dir.X == 0 &&this.Owner.Sprite.SpriteSource != SpriteSource.Character_Front_2)
-                this.Owner.Sprite.SpriteSource = SpriteSource.Character_Front_2;
-        }
-        if(dir == Integer2(0,0))
-        {
-            this.Owner.Sprite.CurrentFrame = 0;
-            this.Owner.Sprite.AnimationActive = false;
+            this.Destination = this.Owner.Transform.Translation;
+            
+            if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
+            {
+                this.Destination += Real3(-this.StepSize,0,0);
+                this.RBody.Velocity += Real3(-this.Speed,0,0);
+                this.Dir.X = -1;
+                if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Left_Side)
+                    this.Owner.Sprite.SpriteSource = SpriteSource.Character_Left_Side;
+                this.Walking = true;
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
+            {
+                this.Destination += Real3(this.StepSize,0,0);
+                this.RBody.Velocity += Real3(this.Speed,0,0);
+                this.Dir.X = 1;
+                if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Right_Side_1)
+                    this.Owner.Sprite.SpriteSource = SpriteSource.Character_Right_Side_1;
+                this.Walking = true;
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
+            {
+                this.Destination += Real3(0,this.StepSize,0);
+                this.RBody.Velocity += Real3(0,this.Speed,0);
+                this.Dir.Y = 1;
+                if(this.Dir.X == 0 && this.Owner.Sprite.SpriteSource != SpriteSource.Character_Up)
+                    this.Owner.Sprite.SpriteSource = SpriteSource.Character_Up;
+                this.Walking = true;
+            }
+            else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
+            {
+                this.Destination += Real3(0,-this.StepSize,0);
+                this.RBody.Velocity += Real3(0,-this.Speed,0);
+                this.Dir.Y = -1;
+                if(this.Dir.X == 0 &&this.Owner.Sprite.SpriteSource != SpriteSource.Character_Front_2)
+                    this.Owner.Sprite.SpriteSource = SpriteSource.Character_Front_2;
+                this.Walking = true;
+            }
+            if(this.Dir == Integer2(0,0))
+            {
+                this.Owner.Sprite.CurrentFrame = 0;
+                this.Owner.Sprite.AnimationActive = false;
+            }
+            else
+            {
+                if (this.Dir.X != 0) {
+                    this.Beam.Transform.Scale = Real3(5, 1, 1);
+                    this.Beam.Transform.Translation = Real3(3*this.Dir.X, 0, 0);
+                    this.Beam.BoxCollider.Size = Real3(1, 1, 1);
+                } else if (this.Dir.Y != 0) {
+                    this.Beam.Transform.Scale = Real3(1, 5, 1);
+                    this.Beam.Transform.Translation = Real3(0, 3*this.Dir.Y, 0);
+                    this.Beam.BoxCollider.Size = Real3(1, 1, 1);
+                }
+                this.Owner.Sprite.AnimationActive = true;
+            }
+            var ray = Ray();
+            ray.Start = this.Owner.Transform.Translation;
+            ray.Direction = Real3(this.Dir,0);
+            var result = this.Space.PhysicsSpace.CastRayFirst(ray);
+            
+            if(result.Distance < 1)
+            {
+                this.Destination = this.Owner.Transform.Translation;
+                this.Stop();
+            }
         }
         else
         {
-            if (dir.X != 0) {
-                this.Beam.Transform.Scale = Real3(5, 1, 1);
-                this.Beam.Transform.Translation = Real3(3*dir.X, 0, 0);
-                this.Beam.BoxCollider.Size = Real3(1, 1, 1);
-            } else if (dir.Y != 0) {
-                this.Beam.Transform.Scale = Real3(1, 5, 1);
-                this.Beam.Transform.Translation = Real3(0, 3*dir.Y, 0);
-                this.Beam.BoxCollider.Size = Real3(1, 1, 1);
+            if(this.Dir.Y != 0)
+            {
+                if(this.Owner.Transform.Translation.Y*this.Dir.Y >= this.Destination.Y*this.Dir.Y)
+                {
+                    this.Stop();
+                }
             }
-            this.Owner.Sprite.AnimationActive = true;
+            if(this.Dir.X != 0)
+            {
+                if(this.Owner.Transform.Translation.X*this.Dir.X >= this.Destination.X*this.Dir.X)
+                {
+                    this.Stop();
+                }
+            }
         }
-        this.Owner.RigidBody.Velocity = Real3(dir*Real2(this.Speed, this.Speed), 0);
+    }
+    
+    function Stop()
+    {
+        this.Walking = false;
+        this.Owner.Transform.Translation = this.Destination;
+        this.Dir = Integer2(0,0);
+        this.RBody.Velocity = Real3(0,0,0);
     }
 }
