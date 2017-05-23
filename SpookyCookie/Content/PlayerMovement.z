@@ -35,7 +35,7 @@ class PlayerMovement : ZilchComponent
             if(this.Owner.Sprite.SpriteSource != SpriteSource.Character_Right_Side_1)
                 this.Owner.Sprite.SpriteSource = SpriteSource.Character_Right_Side_1;
         }
-        else if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
+        if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
         {
             dir.Y = 1;
             if(dir.X == 0 && this.Owner.Sprite.SpriteSource != SpriteSource.Character_Up)
@@ -54,13 +54,33 @@ class PlayerMovement : ZilchComponent
         }
         else
         {
+            var ray = Ray();
+            ray.Start = this.Owner.Transform.Translation;
+            ray.Direction = Real3(dir, 0);
+            var results = this.Space.PhysicsSpace.CastRayFirst(ray);
+            //Console.WriteLine("`results.ObjectHit`");
+            
+            var len = 5.0;
+            if(results.Distance < len)
+                len = results.Distance;
             if (dir.X != 0) {
-                this.Beam.Transform.Scale = Real3(5, 1, 1);
-                this.Beam.Transform.Translation = Real3(3*dir.X, 0, 0);
+                this.Beam.Transform.Scale = Real3(len, 1, 1);
+                this.Beam.Transform.Translation = Real3((len*0.5 + 0.5)*dir.X, 0, 0);
                 this.Beam.BoxCollider.Size = Real3(1, 1, 1);
+                if(dir.Y != 0)
+                {
+                    Console.WriteLine("`this.Beam.Transform.Rotation`");
+                    this.Beam.Transform.Rotation = Quaternion(0,0,0.382683,0.92388);
+                    this.Beam.Transform.Translation = Real3((len*0.5 + 0.5)*dir.X,0,0);
+                }
+                else
+                {
+                    this.Beam.Transform.Rotation = Quaternion(0,0,0,0);
+                }
             } else if (dir.Y != 0) {
-                this.Beam.Transform.Scale = Real3(1, 5, 1);
-                this.Beam.Transform.Translation = Real3(0, 3*dir.Y, 0);
+                this.Beam.Transform.Rotation = Quaternion(0,0,0,0);
+                this.Beam.Transform.Scale = Real3(1, len, 1);
+                this.Beam.Transform.Translation = Real3(0, (len*0.5 + 0.5)*dir.Y, 0);
                 this.Beam.BoxCollider.Size = Real3(1, 1, 1);
             }
             this.Owner.Sprite.AnimationActive = true;
