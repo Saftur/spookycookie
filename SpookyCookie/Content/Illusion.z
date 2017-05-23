@@ -1,0 +1,98 @@
+class Illusion : ZilchComponent
+{
+    [Property]
+    var Illusion : SpriteSource = null;
+    var FlickerLength : Real = 0.08;
+    var Timer : Real;
+    var RealObject : SpriteSource = null;
+    var StartFlicker : Boolean = false;
+    var Flicks : Integer = 13;
+    var EndImage : SpriteSource;
+    var Creep : Boolean = false;
+    
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
+        
+        this.RealObject = this.Owner.Sprite.SpriteSource;
+        this.EndImage = this.Illusion;
+        this.Timer = this.FlickerLength;
+    }
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        Console.WriteLine("yo");
+        if(event.OtherObject.Sense != null)
+        {
+            this.Creep = true;
+            this.Timer = 2;
+            Console.WriteLine("`this.Creep`");
+        }
+        if(event.OtherObject.Name == "Beam")
+        {
+            if(this.Owner.Sprite.SpriteSource == this.Illusion)
+            {
+                this.StartFlicker = true;
+                this.Timer = this.FlickerLength;
+                this.Flicks = 13;
+                this.EndImage = this.RealObject;
+            }
+        }
+    }
+    function OnCollisionEnded(event : CollisionEvent)
+    {
+        if(event.OtherObject.Sense != null)
+        {
+            this.Creep = false;
+            this.Timer = 2;
+        }
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+        {
+            if(this.EndImage == this.RealObject)
+                this.EndImage = this.Illusion;
+            else
+                this.EndImage = this.RealObject;
+            this.StartFlicker = true;
+        }
+        if(!this.StartFlicker)
+        {
+            if(this.Creep)
+            {
+                this.Timer -= event.Dt;
+                if(this.Timer < 0)
+                {
+                    this.Timer = this.FlickerLength;
+                    this.StartFlicker = true;
+                    this.Flicks = 13;
+                    this.EndImage = this.Illusion;
+                }
+            }
+            return;
+        }
+        if(this.Flicks > 0)
+        {
+            this.Timer -= event.Dt;
+            if(this.Timer <= 0)
+            {
+                if(this.Owner.Sprite.SpriteSource == this.RealObject)
+                    this.Owner.Sprite.SpriteSource = this.Illusion;
+                else
+                    this.Owner.Sprite.SpriteSource = this.RealObject;
+                this.Timer = this.FlickerLength;
+                this.Flicks -= 1;
+                this.FlickerLength -= 0.01;
+            }
+        }
+        else
+        {
+            this.Flicks = 13;
+            this.FlickerLength = 0.08;
+            this.Owner.Sprite.SpriteSource = this.EndImage;
+            this.StartFlicker = false;
+        }
+    }
+}

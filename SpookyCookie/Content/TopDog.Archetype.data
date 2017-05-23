@@ -1,0 +1,57 @@
+Cog = 
+{
+	LinkId = 
+	{
+		uint Id = 1,
+	},
+	Named = 
+	{
+		string Name = "TopDog",
+	},
+	Archetyped = 
+	{
+		string Name = "597f73f3cf7568ed:TopDog",
+	},
+	Transform = 
+	{
+		Vec3 Translation = [15.0301781, -4.57427216, -0.00199946179],
+		Vec3 Scale = [1, 1, 1],
+		Quat Rotation = [0, 0, 0, 1],
+	},
+	Sprite = 
+	{
+		bool Visible = true,
+		bool VisibilityCulling = true,
+		bool VisibilityEvents = true,
+		bool CastShadows = false,
+		Vec4 Color = [1, 1, 1, 1],
+		BlendMode BlendMode = Alpha,
+		SpriteGeometryMode GeometryMode = ZPlane,
+		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		string SpriteSource = "5275aa4d802dd6dc:Square",
+		bool RenderMask = false,
+		bool FlipX = false,
+		bool FlipY = false,
+		bool AnimationActive = true,
+		float AnimationSpeed = 1,
+		uint StartFrame = 0,
+	},
+	SoundEmitter = 
+	{
+		float Volume = 1,
+		float Pitch = 0.49999994,
+		float PitchSemitones = 6,
+		bool UsePitchSemitones = true,
+		bool Positional = true,
+		int Version = 1,
+	},
+	SimpleSound = 
+	{
+		bool StartPlaying = false,
+		string CueName = "4e1bd44008b4dc2a:DefaultCue",
+	},
+	Dog = 
+	{
+		float DetectDistance = 1,
+	},
+},

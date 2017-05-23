@@ -1,0 +1,25 @@
+class SafeSpaceDestroy : ZilchComponent
+{
+    [Property]
+    var ParentSpace : CogPath;
+    var SpaceActive : Boolean = false;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+        if(this.ParentSpace.Cog.SafeSpace.SafeOn == true)
+        {
+            this.SpaceActive == true;
+        }
+        
+        else if(this.ParentSpace.Cog.SafeSpace.SafeOn == false && this.ParentSpace.Cog.SafeSpace.AreaCreated == true)
+        {
+            this.Owner.Transform.Translation.Z = -5;
+            this.SpaceActive = false;
+            this.ParentSpace.Cog.SafeSpace.AreaCreated = false;
+        }
+    }
+}

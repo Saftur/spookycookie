@@ -5,9 +5,11 @@ class  Dog : ZilchComponent
  
     [Property]
     var DetectDistance : Real;
-    
     var Distance : Real;
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/master
     var Detected : Real = 0;
     
     
@@ -20,11 +22,21 @@ class  Dog : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
+<<<<<<< HEAD
         this.Distance = (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y)^2 + (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2;
         if(this.Distance < this.DetectDistance && this.Detected == 1)
         {
    
         }
+=======
+        this.Distance = Math.LengthSq(this.Owner.Transform.Translation - this.Target.Transform.Translation);
+        if(this.Detected == 1 && this.Distance < this.DetectDistance)
+        {
+                this.Space.SoundSpace.PlayCue(this.Owner.SimpleSound.Cue);
+                this.Detected = 0;
+        }
+        
+>>>>>>> origin/master
           
         
     
@@ -32,11 +44,18 @@ class  Dog : ZilchComponent
     
     function OnCollisionStarted(event : CollisionEvent)
     {
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/master
         if(event.OtherObject.Name == "Beam")
         {
             this.Detected = 1;
         }
+<<<<<<< HEAD
         
+=======
+>>>>>>> origin/master
 
     }
 }
