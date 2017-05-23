@@ -317,7 +317,7 @@ Level =
 		SimpleSound = 
 		{
 			bool StartPlaying = false,
-			string CueName = "4e1bd44008b4dc2a:DefaultCue",
+			string CueName = "597f75cf697d7243:Bark",
 		},
 		Dog = 
 		{
