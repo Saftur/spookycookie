@@ -37,6 +37,7 @@ class PlayerMovement : ZilchComponent
             if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
             {
                 this.Sense.Transform.SetEulerAnglesXYZ(0,0, Math.Pi);
+                this.Sense.FollowObject.Displacement = Real3(0,0.1,-0.1);
                 this.Destination += Real3(-this.StepSize,0,0);
                 this.RBody.Velocity += Real3(-this.Speed,0,0);
                 this.Dir.X = -1;
@@ -47,6 +48,7 @@ class PlayerMovement : ZilchComponent
             else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
             {
                 this.Sense.Transform.SetEulerAnglesXYZ(0,0,0);
+                this.Sense.FollowObject.Displacement = Real3(0,-0.5,-0.1);
                 this.Destination += Real3(this.StepSize,0,0);
                 this.RBody.Velocity += Real3(this.Speed,0,0);
                 this.Dir.X = 1;
@@ -57,6 +59,7 @@ class PlayerMovement : ZilchComponent
             if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
             {
                 this.Sense.Transform.SetEulerAnglesXYZ(0,0, Math.Pi/2);
+                this.Sense.FollowObject.Displacement = Real3(0.3,0,-0.1);
                 this.Destination += Real3(0,this.StepSize,0);
                 this.RBody.Velocity += Real3(0,this.Speed,0);
                 this.Dir.Y = 1;
@@ -67,6 +70,7 @@ class PlayerMovement : ZilchComponent
             else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
             {
                 this.Sense.Transform.SetEulerAnglesXYZ(0,0, 3*Math.Pi/2);
+                this.Sense.FollowObject.Displacement = Real3(-0.3,0,-0.1);
                 this.Destination += Real3(0,-this.StepSize,0);
                 this.RBody.Velocity += Real3(0,-this.Speed,0);
                 this.Dir.Y = -1;
@@ -90,6 +94,7 @@ class PlayerMovement : ZilchComponent
                 if(result.Distance < 1)
                 {
                     this.Destination = this.Owner.Transform.Translation;
+                    this.ShrinkBeam();
                     this.Stop();
                 }
                 
@@ -115,6 +120,12 @@ class PlayerMovement : ZilchComponent
         }
         
         //Beam Shrinking
+        this.ShrinkBeam();
+        
+        
+    }
+    function ShrinkBeam()
+    {
         var len = 5.0;
         var ray = Ray();
         ray.Start = this.Owner.Transform.Translation;
@@ -124,7 +135,18 @@ class PlayerMovement : ZilchComponent
         {
             len = result2.Distance;
         }
-        if((this.Dir.X != 0) || (this.Dir.Y != 0))
+        //Diagonal
+        if ((this.Dir.X != 0) && (this.Dir.Y != 0))
+        {
+            this.Beam.Transform.Scale = Real3(len, 1, 1);
+            this.Beam.Transform.Translation = Real3(Real2(Math.Sqrt(len*len/2)/2 + 0.5,Math.Sqrt(len*len/2)/2 + 0.5) * this.Dir, 0);
+            
+            var angle = Math.Pi/4;
+            if(this.Dir.X < 0)
+                angle += Math.Pi/2;
+            this.Beam.Transform.SetEulerAnglesXYZ(0,0,angle*this.Dir.Y);
+        }
+        else if((this.Dir.X != 0) || (this.Dir.Y != 0))
         {
             var ss = this.Owner.Sprite.SpriteSource;
             if((ss == SpriteSource.Character_Left_Side) || (ss == SpriteSource.Character_Right_Side_1))
@@ -140,29 +162,7 @@ class PlayerMovement : ZilchComponent
                 this.Beam.Transform.SetEulerAnglesXYZ(0,0,0);
             }
         }
-        
-        if (this.Dir.X != 0) {
-            if(this.Dir.Y != 0)
-            {
-                this.Beam.Transform.Scale = Real3(len, 1, 1);
-                this.Beam.Transform.Translation = Real3(Real2(Math.Sqrt(len*len/2)/2 + 0.5,Math.Sqrt(len*len/2)/2 + 0.5) * this.Dir, 0);
-                
-                var angle = Math.Pi/4;
-                if(this.Dir.X < 0)
-                    angle += Math.Pi/2;
-                this.Beam.Transform.SetEulerAnglesXYZ(0,0,angle*this.Dir.Y);
-            }
-            else
-            {
-                
-            }
-            //this.Beam.BoxCollider.Size = Real3(1, 1, 1);
-        } else if (this.Dir.Y != 0) {
-            
-            //this.Beam.BoxCollider.Size = Real3(1, 1, 1);
-        }
     }
-    
     function Stop()
     {
         this.Walking = false;
