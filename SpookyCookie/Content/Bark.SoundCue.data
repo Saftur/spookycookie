@@ -17,14 +17,19 @@ SoundCue =
 	uint MaxPlaybacks = 10,
 	Array Sounds = 
 	[
+		{
+			string SoundName = "59da0acec22d604b:IMG_0592_1_",
+			string GeneratedSoundName = "",
+			WhichSoundType WhichToUse = FromFile,
+			float Weight = 1,
+			float LoopEndTime = 0,
+			float LoopStartTime = 0,
+		},
 	],
 	Array SoundTags = 
 	[
-		{
-			string SoundTagName = "551c2d5a29ce571d:DefaultSoundTag",
-		},
 	],
 	string RolloffCurveName = "",
 	int Version = 1,
-	RolloffCurveType RolloffCurveType = Error,
+	RolloffCurveType RolloffCurveType = Linear,
 },

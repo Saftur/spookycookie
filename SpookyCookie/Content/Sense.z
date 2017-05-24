@@ -69,6 +69,7 @@ class Sense : ZilchComponent
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
+        Console.WriteLine("`event.OtherObject.Name`");
         if(event.OtherObject.MonsterAI != null)
         {
             this.AddGhost(event.OtherObject);

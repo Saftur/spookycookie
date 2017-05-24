@@ -200,7 +200,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "59d8f162d8c84102:victoryscreen",
+			string SpriteSource = "5944c07b177c7737:losescreen",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -221,55 +221,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -1.99120188, 0],
-			Vec3 Scale = [4, 4, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5963ca6528d43097:HOW TO000",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		Reactive = 
-		{
-			bool Active = true,
-			bool CaptureMouse = false,
-		},
-		MenuLevelStart = 
-		{
-			bool Active = true,
-			string DefaultSprite = "",
-			string HoveredSprite = "",
-			string ClickedSprite = "5963ca6528d6cc55:HOW TO001",
-			string LevelToLoad = "5963c5331c9e5220:Controls",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 6,
-		},
-		Named = 
-		{
-			string Name = "Sprite",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 1.05153465, 0],
+			Vec3 Translation = [-6.5, 4, 0],
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -309,7 +261,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -317,7 +269,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -4.98919201, 0],
+			Vec3 Translation = [6.5, 4, 0],
 			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -358,7 +310,7 @@ Level =
 		string Name = "5963db5ac3780986:LoadScreen",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -376,7 +328,7 @@ Level =
 		string Name = "5963e2025d14442a:LoadScreen2",
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 8,
 		},
 		Transform = 
 		{
@@ -387,6 +339,41 @@ Level =
 		Named = 
 		{
 			string Name = "LoadScreen2",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, -1],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
 	},
 },

@@ -1,0 +1,66 @@
+class Teleport : ZilchComponent
+{
+    [Dependency]
+    var Col : BoxCollider = null;   //Needs to collider with player
+    [Property]
+    var Destination : Real3 = Real3(0.01, 0.01, 0.01);
+    [Property]
+    var XDist : Real = 0;   //One of these values must be zero
+    [Property]
+    var YDist : Real = 0;
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+    function OnCollisionStarted(event : CollisionEvent)                         //*****IMPORTANT NOTE****** the ghosts are shifted before the player
+    {                                                                           //because once one of them is transported the ghosts will leave the ghosts array
+        if(event.OtherObject.PlayerMovement != null)
+        {
+            if(this.Destination != Real3(0.01,0.01,0.01))   //Teleport the player to a specific point
+            {
+                var dis = this.Destination - event.OtherObject.Transform.Translation;
+                foreach(var ghost in event.OtherObject.PlayerMovement.Sense.Sense.Ghosts)
+                {
+                    ghost.Transform.Translation += dis;
+                }
+                event.OtherObject.PlayerMovement.Destination = this.Destination;
+                event.OtherObject.Transform.Translation = this.Destination;
+            }
+            else
+            {
+                //Shift the player and any ghosts player is with rn left or right (not both)
+                var y = this.YDist;
+                var x = this.XDist;
+                if(y == 0)
+                {
+                    y = event.OtherObject.Transform.Translation.Y - this.Owner.Transform.Translation.Y;
+                }
+                if(x == 0)
+                {
+                    x = event.OtherObject.Transform.Translation.X - this.Owner.Transform.Translation.X;
+                }
+                foreach(var ghost in event.OtherObject.PlayerMovement.Sense.Sense.Ghosts)
+                {
+                    ghost.Transform.Translation += Real3(this.XDist, this.YDist, 0);
+                }
+                event.OtherObject.PlayerMovement.Destination = this.Owner.Transform.Translation + Real3(x, y, 0);
+                //Before moving the player, clear area of ghosts
+                var dest = event.OtherObject.PlayerMovement.Destination;
+                var filter = CastFilter();
+                var results = this.Space.PhysicsSpace.CastSphereResults(dest, 6, 100, filter);
+                foreach(var cast in results)
+                {
+                    if(cast.ObjectHit.MonsterAI != null)
+                    {
+                        cast.ObjectHit.MonsterAI.Destroy();
+                    }
+                }
+                event.OtherObject.PlayerMovement.Stop();
+            }
+        }
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}
