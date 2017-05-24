@@ -2,16 +2,16 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "victoryscreen",
-		uint64 ResourceId = 59d8f162d8c84102,
+		string Name = "diagwalk3003",
+		uint64 ResourceId = 5944c242adc86e2b,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 512,
-		uint FrameSizeY = 512,
+		uint FrameSizeX = 256,
+		uint FrameSizeY = 256,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 256,
-		float OriginY = 256,
-		float PixelsPerUnit = 64,
+		float OriginX = 128,
+		float OriginY = 128,
+		float PixelsPerUnit = 256,
 		bool Smoothing = false,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
