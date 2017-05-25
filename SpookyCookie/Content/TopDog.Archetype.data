@@ -15,7 +15,7 @@ Cog =
 	Transform = 
 	{
 		Vec3 Translation = [15.0301781, -4.57427216, -0.00199946179],
-		Vec3 Scale = [1, 1, 1],
+		Vec3 Scale = [0.25, 0.25, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,11 +24,11 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0, 0, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-		string SpriteSource = "5275aa4d802dd6dc:Square",
+		string SpriteSource = "5944c23afe4e6f90:dog",
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
@@ -52,6 +52,8 @@ Cog =
 	},
 	Dog = 
 	{
+		string Awake = "5944c247f71ac180:dog_awake",
+		string Barking = "",
 		float DetectDistance = 1,
 	},
 	BoxCollider = 
