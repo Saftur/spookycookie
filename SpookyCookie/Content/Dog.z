@@ -2,7 +2,10 @@ class  Dog : ZilchComponent
 {
     var Target : Cog = null;
     var HasBone : Real = 0;
- 
+    [Property]
+    var Awake : SpriteSource;
+    [Property]
+    var Barking : SpriteSource;
     [Property]
     var DetectDistance : Real;
     var Distance : Real;
@@ -45,8 +48,9 @@ class  Dog : ZilchComponent
         if(event.OtherObject.Name == "Beam")
         {
             this.Detected = 1;
+            this.Owner.Sprite.SpriteSource = this.Awake;
         }
-
+        
 
     }
 }
