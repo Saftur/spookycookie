@@ -15,8 +15,12 @@ class Teleport : ZilchComponent
     }
     function OnCollisionStarted(event : CollisionEvent)                         //*****IMPORTANT NOTE****** the ghosts are shifted before the player
     {                                                                           //because once one of them is transported the ghosts will leave the ghosts array
+        
+        Console.WriteLine("Boop `this.Owner.Transform.Translation`");
+        
         if(event.OtherObject.PlayerMovement != null)
         {
+            Console.WriteLine("HEY");
             if(this.Destination != Real3(0.01,0.01,0.01))   //Teleport the player to a specific point
             {
                 var dis = this.Destination - event.OtherObject.Transform.Translation;
@@ -57,6 +61,7 @@ class Teleport : ZilchComponent
                     }
                 }
                 event.OtherObject.PlayerMovement.Stop();
+                Console.WriteLine("`event.OtherObject.Transform.Translation`");
             }
         }
     }
