@@ -2,8 +2,8 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "actualvision",
-		uint64 ResourceId = 594619e36a92652c,
+		string Name = "flashlight",
+		uint64 ResourceId = 594615c82d25d726,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 512,
 		uint FrameSizeY = 512,

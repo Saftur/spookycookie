@@ -37,7 +37,7 @@ class PlayerMovement : ZilchComponent
             if(Zero.Keyboard.KeyIsDown(Keys.A) || Zero.Keyboard.KeyIsDown(Keys.Left))
             {
                 this.Sense.Transform.SetEulerAnglesXYZ(0,0, Math.Pi);
-                this.Sense.FollowObject.Displacement = Real3(0,0.1,-0.1);
+                //this.Sense.FollowObject.Displacement = Real3(0,0.1,-0.1);
                 this.Destination += Real3(-this.StepSize,0,0);
                 this.RBody.Velocity += Real3(-this.Speed,0,0);
                 this.Dir.X = -1;
@@ -48,7 +48,7 @@ class PlayerMovement : ZilchComponent
             else if(Zero.Keyboard.KeyIsDown(Keys.D) || Zero.Keyboard.KeyIsDown(Keys.Right))
             {
                 this.Sense.Transform.SetEulerAnglesXYZ(0,0,0);
-                this.Sense.FollowObject.Displacement = Real3(0,-0.5,-0.1);
+                //this.Sense.FollowObject.Displacement = Real3(0,-0.5,-0.1);
                 this.Destination += Real3(this.StepSize,0,0);
                 this.RBody.Velocity += Real3(this.Speed,0,0);
                 this.Dir.X = 1;
@@ -59,7 +59,7 @@ class PlayerMovement : ZilchComponent
             if(Zero.Keyboard.KeyIsDown(Keys.W) || Zero.Keyboard.KeyIsDown(Keys.Up))
             {
                 this.Sense.Transform.SetEulerAnglesXYZ(0,0, Math.Pi/2);
-                this.Sense.FollowObject.Displacement = Real3(0.3,0,-0.1);
+                //this.Sense.FollowObject.Displacement = Real3(0.3,0,-0.1);
                 this.Destination += Real3(0,this.StepSize,0);
                 this.RBody.Velocity += Real3(0,this.Speed,0);
                 this.Dir.Y = 1;
@@ -70,7 +70,7 @@ class PlayerMovement : ZilchComponent
             else if(Zero.Keyboard.KeyIsDown(Keys.S) || Zero.Keyboard.KeyIsDown(Keys.Down))
             {
                 this.Sense.Transform.SetEulerAnglesXYZ(0,0, 3*Math.Pi/2);
-                this.Sense.FollowObject.Displacement = Real3(-0.3,0,-0.1);
+                //this.Sense.FollowObject.Displacement = Real3(-0.3,0,-0.1);
                 this.Destination += Real3(0,-this.StepSize,0);
                 this.RBody.Velocity += Real3(0,-this.Speed,0);
                 this.Dir.Y = -1;
