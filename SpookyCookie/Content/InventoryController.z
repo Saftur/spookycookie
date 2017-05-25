@@ -1,0 +1,23 @@
+class InventoryController : ZilchComponent
+{
+    [Property]
+    var InventoryKey: Keys = Keys.I;
+    
+    [Property]
+    var Inventorysprite: SpriteSource = null;
+    
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(Zero.Keyboard, Events.KeyDown , this.OnKeyDown);
+    }
+    
+    function OnKeyDown(event : KeyboardEvent)
+    {
+        if(event.Key == this.InventoryKey)
+        {
+            this.Owner.Sprite.Visible = !this.Owner.Sprite.Visible;
+        }
+    }
+    
+}
