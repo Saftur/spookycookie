@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "SafeSpace",
 	},
+	Archetyped = 
+	{
+		string Name = "597f75e6fd904eaf:SafeSpace",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [0, 0, 0],
@@ -46,7 +50,7 @@ Cog =
 	{
 		CogPath AreaObj = 
 		{
-			string Path = "",
+			string Path = ":/CreatedSpace",
 			bool ErrorOnResolveToNull = false,
 			bool ErrorOnPathCantCompute = false,
 			bool ErrorOnDirectLinkFail = false,
@@ -54,7 +58,7 @@ Cog =
 			bool UpdatePathOnCogChange = true,
 			bool UpdateCogOnInitialize = true,
 			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 4294967293,
+			uint ResolvedCog = 2,
 			CogPathPreference PathPreference0 = CogRelative,
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,

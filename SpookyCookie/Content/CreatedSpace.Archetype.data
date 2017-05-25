@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "CreatedSpace",
 	},
+	Archetyped = 
+	{
+		string Name = "597f76b8b2df6ef3:CreatedSpace",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [-5.50684834, 0, 0],
@@ -20,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [1, 1, 1, 1],
+		Vec4 Color = [0, 0, 0, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -36,7 +40,7 @@ Cog =
 	{
 		CogPath ParentSpace = 
 		{
-			string Path = "",
+			string Path = ":/SafeSpace",
 			bool ErrorOnResolveToNull = false,
 			bool ErrorOnPathCantCompute = false,
 			bool ErrorOnDirectLinkFail = false,
@@ -44,7 +48,7 @@ Cog =
 			bool UpdatePathOnCogChange = true,
 			bool UpdateCogOnInitialize = true,
 			bool ResolvedNullErrorOccurred = false,
-			uint ResolvedCog = 4294967293,
+			uint ResolvedCog = 2,
 			CogPathPreference PathPreference0 = CogRelative,
 			CogPathPreference PathPreference1 = SpaceRelative,
 			CogPathPreference PathPreference2 = Absolute,

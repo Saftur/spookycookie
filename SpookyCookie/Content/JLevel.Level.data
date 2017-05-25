@@ -12,7 +12,7 @@ Level =
 		},
 		GravityEffect = 
 		{
-			bool Active = true,
+			bool Active = false,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
 			float Strength = 10,
@@ -91,12 +91,34 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		HUDCreator = 
+		{
+			string HUDLevel = "596277398670a6d9:HUDLevel",
+			CogPath PlayerRef = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+		HUDReferences = 
+		{
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -104,7 +126,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [0, 0, 90],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -116,7 +138,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20,
+			float Size = 32.974411,
 		},
 		EditorCameraController = 
 		{
@@ -124,7 +146,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [0, 0, 40],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -148,7 +170,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 40],
+			Vec3 Translation = [0, 0, 10],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -167,13 +189,37 @@ Level =
 			bool Active = true,
 			float Volume = 1,
 		},
+		FollowObject = 
+		{
+			bool Active = true,
+			CogPath ObjectToFollow = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 Displacement = [0, 0, 0],
+		},
+		ScreenShake = 
+		{
+			float ShakeTime = 0.0500000007,
+		},
 	},
 	ArchetypeInstance = 
 	{
 		string Name = "597f75e6fd904eaf:SafeSpace",
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 5,
 		},
 		Transform = 
 		{
@@ -191,7 +237,7 @@ Level =
 		string Name = "597f76b8b2df6ef3:CreatedSpace",
 		LinkId = 
 		{
-			uint Id = 5,
+			uint Id = 6,
 		},
 		Transform = 
 		{
@@ -202,6 +248,108 @@ Level =
 		Named = 
 		{
 			string Name = "CreatedSpace",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "597f7321ff137541:Player",
+		LinkId = 
+		{
+			uint Id = 3,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.0547956154, 2.93150663, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Named = 
+		{
+			string Name = "Sense",
+		},
+		Archetyped = 
+		{
+			string Name = "59ff7408b7c51027:Sense",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10.0000029, 5.28767109, 0],
+			Vec3 Scale = [14, 14, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0.950000048, 0.89380753, 0.517750025, 0.100000001],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5274db4c2e7c11f9:Circle",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		SphereCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 0.5,
+		},
+		FollowObject = 
+		{
+			bool Active = true,
+			CogPath ObjectToFollow = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 Displacement = [0, 0, -0.100000001],
+		},
+		Sense = 
+		{
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = true,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [625.000122, 330.479431, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
 		},
 	},
 },
