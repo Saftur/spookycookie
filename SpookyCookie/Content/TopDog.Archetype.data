@@ -14,7 +14,7 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [15.0301781, -4.57427216, -0.00199946179],
+		Vec3 Translation = [15, -4.57427216, -0.00199946179],
 		Vec3 Scale = [0.25, 0.25, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
@@ -53,7 +53,7 @@ Cog =
 	Dog = 
 	{
 		string Awake = "5944c247f71ac180:dog_awake",
-		string Barking = "",
+		string Barking = "594765d082243f16:dog_bark_bark000",
 		float DetectDistance = 1,
 	},
 	BoxCollider = 

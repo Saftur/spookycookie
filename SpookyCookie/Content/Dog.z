@@ -24,20 +24,34 @@ class  Dog : ZilchComponent
     {
 
         this.Distance = (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y)^2 + (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2;
-        if(this.Distance < this.DetectDistance && this.Detected == 1)
+        if(this.Distance <= this.DetectDistance)
         {
-   
+            //Console.WriteLine("bark");
+            this.Detected = 1;
+            
         }
-
-        this.Distance = Math.LengthSq(this.Owner.Transform.Translation - this.Target.Transform.Translation);
-        if(this.Detected == 1 && this.Distance < this.DetectDistance)
+        if(this.Detected == 1 && this.Owner.Sprite.SpriteSource == this.Awake && this.Owner.Sprite.CurrentFrame == 4)
         {
-                this.Space.SoundSpace.PlayCue(this.Owner.SimpleSound.Cue);
-                this.Detected = 0;
+           // Console.WriteLine("gets here");
+            this.Owner.Sprite.AnimationSpeed = 0;
         }
+       
+       
+      
         
-
-          
+    
+        
+        if(this.Detected == 1 && this.HasToy == false && this.Owner.Sprite.SpriteSource == this.Awake && this.Owner.Sprite.CurrentFrame == 5 && this.Distance < this.DetectDistance)
+        {
+            
+        }
+        if(this.Detected == 1 && this.Owner.Sprite.SpriteSource == this.Awake && this.Owner.Sprite.CurrentFrame == 4 && this.Distance < this.DetectDistance)
+        {
+            this.Space.SoundSpace.PlayCue(this.Owner.SimpleSound.Cue);
+            this.Detected = 0;
+            this.Owner.Sprite.AnimationSpeed = 1;
+            this.Owner.Sprite.SpriteSource = this.Barking;
+        }  
         
     
     }
@@ -45,12 +59,14 @@ class  Dog : ZilchComponent
     function OnCollisionStarted(event : CollisionEvent)
     {
 
-        if(event.OtherObject.Name == "Beam")
+        if(event.OtherObject.Name == "Beam" )
         {
+            
             this.Detected = 1;
-            this.Owner.Sprite.SpriteSource = this.Awake;
+            if(this.Owner.Sprite.SpriteSource != this.Awake && this.Owner.Sprite.SpriteSource != this.Barking)
+            {
+                this.Owner.Sprite.SpriteSource = this.Awake;
+            }
         }
-        
-
-    }
+}
 }

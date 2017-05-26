@@ -1,0 +1,47 @@
+class KeyitemController : ZilchComponent
+{
+    var Inventoryframe: Cog = null; 
+    [Property]
+    var ImportantSound: SoundCue = SoundCue.DefaultCue;
+    [Property]
+    var KeyItem : Integer = 1;
+    [Property]
+    var Inventory1: SpriteSource = null;
+    [Property]
+    var Inventory2: SpriteSource = null;
+    [Property]
+    var Inventory3: SpriteSource = null;
+    [Property]
+    var Inventory4: SpriteSource = null;
+    [Property]
+    var Inventory5: SpriteSource = null;
+    function Initialize(init : CogInitializer)
+    {
+        this.Inventoryframe = this.Space.FindObjectByName("Inventoryframe");
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(this.KeyItem == 1)
+        {
+            this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory1;
+        }
+        if(this.KeyItem == 2)
+        {
+            this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory2;
+        }
+        if(this.KeyItem == 3)
+        {
+           this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory3;
+        }
+        if(this.KeyItem == 4)
+        {
+           this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory3;
+        }
+        if(this.KeyItem == 5)
+        {
+           this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory3;
+        }
+    }
+}

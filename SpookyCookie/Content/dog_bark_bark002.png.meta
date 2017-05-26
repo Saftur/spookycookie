@@ -2,16 +2,16 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "actualvision",
-		uint64 ResourceId = 59f8b14a13780613,
+		string Name = "dog_bark_bark002",
+		uint64 ResourceId = 5947773f07fea913,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 512,
-		uint FrameSizeY = 512,
+		uint FrameSizeY = 216,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
 		float OriginX = 256,
-		float OriginY = 256,
-		float PixelsPerUnit = 64,
+		float OriginY = 108,
+		float PixelsPerUnit = 512,
 		bool Smoothing = false,
 		bool Looping = true,
 		Vec4 Slices = [0, 0, 0, 0],
