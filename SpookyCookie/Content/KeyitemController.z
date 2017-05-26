@@ -25,23 +25,25 @@ class KeyitemController : ZilchComponent
     {
         if(this.KeyItem == 1)
         {
-            this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory1;
+            this.Inventoryframe.Sprite.SpriteSource = this.Inventory1;
         }
         if(this.KeyItem == 2)
         {
-            this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory2;
+            this.Inventoryframe.Sprite.SpriteSource = this.Inventory2;
         }
         if(this.KeyItem == 3)
         {
-           this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory3;
+           this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
         }
         if(this.KeyItem == 4)
         {
-           this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory3;
+           this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
         }
         if(this.KeyItem == 5)
         {
-           this.Inventoryframe.InventoryController.Inventorysprite = this.Inventory3;
+           this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
         }
-    }
+    this.Space.SoundSpace.PlayCue(this.ImportantSound);
+    this.Owner.Destroy();
+    }        
 }
