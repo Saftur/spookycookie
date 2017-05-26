@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "SqueakyFloorTiles",
+		uint64 ResourceId = 5948b48657f08744,
+	},
+},

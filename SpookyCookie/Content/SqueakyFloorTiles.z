@@ -1,0 +1,23 @@
+class SqueakyFloorTiles : ZilchComponent
+{
+    var Active : Boolean = true;
+    var Player : Cog = null;
+    function Initialize(init : CogInitializer)
+    {
+        Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
+        this.Player = this.Space.FindObjectByName("Player");
+    }
+
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject == this.Player)
+        {
+            this.Player.FearManager.Spook(0.25);
+        }
+    }
+}
