@@ -123,7 +123,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [14.5471268, -4.04457664, 50],
+			Vec3 Translation = [10.3629971, -1.39690769, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -135,7 +135,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 4.45109224,
+			float Size = 16.3323307,
 		},
 		EditorCameraController = 
 		{
@@ -143,7 +143,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [14.5471268, -4.04457664, 6.4316049e-07],
+			Vec3 LookTarget = [10.3629971, -1.39690769, 8.06699347e-08],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -179,7 +179,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 200,
-			float Size = 5,
+			float Size = 20,
 		},
 		SoundListener = 
 		{
@@ -327,7 +327,9 @@ Level =
 		{
 			string Awake = "5944c247f71ac180:dog_awake",
 			string Barking = "59477b7147e18a78:dog_bark",
-			float DetectDistance = 1,
+			float DetectDistance = 5,
+			string GetsToy = "5948bd1a41a403cd:dog_bone",
+			string ToySleep = "5948bd3d49e9d18c:dog_bone_sleep",
 		},
 		BoxCollider = 
 		{
@@ -337,7 +339,7 @@ Level =
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.5, 0.5],
+			Vec3 Size = [0.25, 0.25, 0.5],
 		},
 	},
 	Cog = 
@@ -438,7 +440,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-1.5, 7.5, 0],
+					Vec3 Translation = [0.0349683762, 2.95774937, 0],
 					Vec3 Scale = [1, 5, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -473,8 +475,10 @@ Level =
 				Dog = 
 				{
 					string Awake = "5944c247f71ac180:dog_awake",
-					string Barking = "594777470f14c397:dog_bark_bark (1)",
+					string Barking = "",
 					float DetectDistance = 0,
+					string GetsToy = "",
+					string ToySleep = "",
 				},
 			},
 		},
@@ -530,6 +534,56 @@ Level =
 			bool AnimationActive = true,
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Named = 
+		{
+			string Name = "Toy",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [10.3256779, -5.10039902, -0.00199945178],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5948b2e56ba12b44:just_bone_things",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		PickupController = 
+		{
+			string PickupSound = "4e1bd44008b4dc2a:DefaultCue",
+			int Pickuptype = 4,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 },

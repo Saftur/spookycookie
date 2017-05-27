@@ -49,12 +49,15 @@ class FearManager : ZilchComponent
     {
         if(event.OtherObject.MonsterAI != null)
         {
-            this.Spook(1);
+            this.Spook(1, false);
         }
     }
-    function Spook(amnt : Real)
+    function Spook(amnt : Real, despook : Boolean)
     {
-        this.FearBar.Bar.Increase(amnt);
+        if(despook)
+            this.FearBar.Bar.Decrease(amnt);
+        else
+            this.FearBar.Bar.Increase(amnt);
         var max = this.FearBar.Bar.MaxSize;
         var scale = this.FearBar.Transform.Scale.Y;
         if(scale >= max*0.85)

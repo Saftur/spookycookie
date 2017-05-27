@@ -53,8 +53,10 @@ Cog =
 	Dog = 
 	{
 		string Awake = "5944c247f71ac180:dog_awake",
-		string Barking = "594765d082243f16:dog_bark_bark000",
-		float DetectDistance = 1,
+		string Barking = "59477b7147e18a78:dog_bark",
+		float DetectDistance = 5,
+		string GetsToy = "5948bd1a41a403cd:dog_bone",
+		string ToySleep = "5948bd3d49e9d18c:dog_bone_sleep",
 	},
 	BoxCollider = 
 	{
@@ -64,6 +66,6 @@ Cog =
 		string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 		string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 		Vec3 Offset = [0, 0, 0],
-		Vec3 Size = [0.5, 0.5, 0.5],
+		Vec3 Size = [0.25, 0.25, 0.5],
 	},
 },

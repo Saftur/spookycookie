@@ -8,11 +8,15 @@ class  Dog : ZilchComponent
     var Barking : SpriteSource;
     [Property]
     var DetectDistance : Real;
+    [Property]
+    var GetsToy: SpriteSource;
+   [Property]
+   var ToySleep : SpriteSource;
     var Distance : Real;
 
     var Detected : Real = 0;
     var HasToy : Boolean = false;
-    
+    var Sleeping : Boolean = false;
     function Initialize(init : CogInitializer)
     {
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -36,8 +40,10 @@ class  Dog : ZilchComponent
             this.Owner.Sprite.AnimationSpeed = 0;
         }
        
-       
-      
+       if(this.Owner.Sprite.SpriteSource == this.GetsToy && this.Owner.Sprite.CurrentFrame == 4)
+       {
+           this.Owner.Sprite.SpriteSource = this.ToySleep;
+        }
         
     
         
@@ -47,6 +53,7 @@ class  Dog : ZilchComponent
         }
         if(this.Detected == 1 && this.Owner.Sprite.SpriteSource == this.Awake && this.Owner.Sprite.CurrentFrame == 4 && this.Distance < this.DetectDistance)
         {
+            //Console.WriteLine("gets here");
             this.Space.SoundSpace.PlayCue(this.Owner.SimpleSound.Cue);
             this.Detected = 0;
             this.Owner.Sprite.AnimationSpeed = 1;
@@ -59,7 +66,8 @@ class  Dog : ZilchComponent
     function OnCollisionStarted(event : CollisionEvent)
     {
 
-        if(event.OtherObject.Name == "Beam" )
+        
+        if(event.OtherObject.Name == "Beam" && !this.HasToy && !this.Sleeping)
         {
             
             this.Detected = 1;
@@ -68,5 +76,16 @@ class  Dog : ZilchComponent
                 this.Owner.Sprite.SpriteSource = this.Awake;
             }
         }
-}
+       
+        else if(event.OtherObject.Name == "Player" && this.HasToy && !this.Sleeping )
+        {
+            
+            this.Owner.Sprite.SpriteSource = this.GetsToy;
+            this.Sleeping = true;
+        }else{
+            return;
+        }
+         //Console.WriteLine(this.HasToy);   
+    }
+
 }

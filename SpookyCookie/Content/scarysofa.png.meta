@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "scarysofa",
+		uint64 ResourceId = 5948b6a90f1a5a27,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 512,
+		uint FrameSizeY = 512,
+		uint FrameCount = 3,
+		float FrameDelay = 0.166666672,
+		float OriginX = 256,
+		float OriginY = 256,
+		float PixelsPerUnit = 256,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},

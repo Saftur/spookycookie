@@ -13,6 +13,8 @@ class PlayerMovement : ZilchComponent
     var Beam : Cog = null;
     var Sense : Cog = null;
     
+    var Active : Boolean = false;
+    
     [Property]
     var Speed : Real = 1;
     function Initialize(init : CogInitializer)
@@ -23,6 +25,9 @@ class PlayerMovement : ZilchComponent
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
+        if(!this.Active)
+            return;
+        
         if(Zero.Keyboard.KeyIsDown(Keys.Control) && Zero.Keyboard.KeyIsDown(Keys.G))
         {
             this.Space.LoadLevel(Level.Kitchen);

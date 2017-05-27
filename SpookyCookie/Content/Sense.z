@@ -37,19 +37,19 @@ class Sense : ZilchComponent
             {
                 this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, (this.ScareRange-dist)*(1/0.1));
                 trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, (this.ScareRange-dist)*(1/0.1));
-                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*3));
+                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*3), false);
             }
             else if(dist <= (this.ScareRange - 0.1))
             {
                 this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 1);
                 trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, 1);
-                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*2));
+                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*2), false);
             }
             else
             {
                 this.Ghosts[i].Sprite.Color = Real4(this.Ghosts[i].Sprite.Color.XYZ, 0);
                 trail.SpriteParticleSystem.Tint = Real4(trail.SpriteParticleSystem.Tint.XYZ, 0);
-                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*10));
+                this.Dad.ObjectToFollow.Cog.FearManager.Spook(event.Dt/(dist*10), false);
             }
             
             if(dist <= this.ScareRange)
