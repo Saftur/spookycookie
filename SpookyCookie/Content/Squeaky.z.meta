@@ -1,0 +1,8 @@
+TextContent = 
+{
+	ZilchScriptBuilder = 
+	{
+		string Name = "Squeaky",
+		uint64 ResourceId = 5948b79cb9b39809,
+	},
+},

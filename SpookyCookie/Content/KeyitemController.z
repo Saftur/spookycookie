@@ -13,8 +13,6 @@ class KeyitemController : ZilchComponent
     var Inventory3: SpriteSource = null;
     [Property]
     var Inventory4: SpriteSource = null;
-    [Property]
-    var Inventory5: SpriteSource = null;
     function Initialize(init : CogInitializer)
     {
         this.Inventoryframe = this.Space.FindObjectByName("Inventoryframe");
@@ -33,17 +31,13 @@ class KeyitemController : ZilchComponent
         }
         if(this.KeyItem == 3)
         {
-           this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
+            this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
         }
         if(this.KeyItem == 4)
         {
-           this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
+            this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
         }
-        if(this.KeyItem == 5)
-        {
-           this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
-        }
-    this.Space.SoundSpace.PlayCue(this.ImportantSound);
-    this.Owner.Destroy();
-    }        
+        this.Space.SoundSpace.PlayCue(this.ImportantSound);
+        this.Owner.Destroy();
+    }
 }
