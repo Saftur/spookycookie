@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "dog_bone_sleep",
+		uint64 ResourceId = 5948bd3d49e9d18c,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 256,
+		uint FrameSizeY = 140,
+		uint FrameCount = 8,
+		float FrameDelay = 0.25,
+		float OriginX = 128,
+		float OriginY = 70,
+		float PixelsPerUnit = 64,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
