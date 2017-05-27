@@ -2,14 +2,14 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "dog_bark_bark (1)",
-		uint64 ResourceId = 594777470f14c397,
+		string Name = "dog_bone",
+		uint64 ResourceId = 5948bd1a41a403cd,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 512,
+		uint FrameSizeX = 256,
 		uint FrameSizeY = 216,
-		uint FrameCount = 2,
-		float FrameDelay = 0.0833333358,
-		float OriginX = 256,
+		uint FrameCount = 5,
+		float FrameDelay = 0.200000003,
+		float OriginX = 128,
 		float OriginY = 108,
 		float PixelsPerUnit = 64,
 		bool Smoothing = false,
