@@ -3,9 +3,6 @@ class InventoryController : ZilchComponent
     [Property]
     var InventoryKey: Keys = Keys.I;
     
-    [Property]
-    var Inventorysprite: SpriteSource = null;
-    
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);

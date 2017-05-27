@@ -31,7 +31,7 @@ class Illusion : ZilchComponent
         }
         if(event.OtherObject.Name == "Beam")
         {
-            if(this.Owner.Sprite.SpriteSource == this.Illusion)
+            if(this.Owner.Sprite.SpriteSource == this.Illusion || !this.Creep)
             {
                 this.StartFlicker = true;
                 this.InBeam = true;

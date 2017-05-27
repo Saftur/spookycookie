@@ -44,5 +44,15 @@ class LoadIn : ZilchComponent
                 this.LoadScreen.Fade.StartFade = true;
             }
         }
+        else if(this.Linger > -1)
+        {
+            this.Linger -= event.Dt;
+            if(this.Linger <= -1)
+            {
+                var player = this.Space.FindObjectByName("Player");
+                player.PlayerMovement.Active = true;
+                player.Sprite.AnimationActive = false;
+            }
+        }
     }
 }

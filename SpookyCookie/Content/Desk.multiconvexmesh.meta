@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "Desk",
+		uint64 ResourceId = 5948bdefe587ee88,
+		string LoaderType = "MultiConvexMesh",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "",
+	},
+},

@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "bedbutreal",
+		uint64 ResourceId = 5948bebfa00ea09d,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 512,
+		uint FrameSizeY = 341,
+		uint FrameCount = 1,
+		float FrameDelay = 0.0833333358,
+		float OriginX = 256,
+		float OriginY = 170.5,
+		float PixelsPerUnit = 256,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
