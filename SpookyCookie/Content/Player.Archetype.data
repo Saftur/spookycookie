@@ -8,6 +8,10 @@ Cog =
 	{
 		string Name = "Player",
 	},
+	Archetyped = 
+	{
+		string Name = "597f7321ff137541:Player",
+	},
 	Transform = 
 	{
 		Vec3 Translation = [2.5, -5.5, 0],
@@ -28,7 +32,7 @@ Cog =
 		bool RenderMask = false,
 		bool FlipX = false,
 		bool FlipY = false,
-		bool AnimationActive = true,
+		bool AnimationActive = false,
 		float AnimationSpeed = 1,
 		uint StartFrame = 0,
 	},
