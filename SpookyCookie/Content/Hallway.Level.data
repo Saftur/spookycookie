@@ -10623,7 +10623,7 @@ Level =
 		},
 		Doors = 
 		{
-			string LevelToLoad = "5967cb8c929685e3:Hallway",
+			string LevelToLoad = "59d81eede428fde1:Kitchen",
 			Vec3 HallwayPos = [0.5, -5.5, 0],
 		},
 	},

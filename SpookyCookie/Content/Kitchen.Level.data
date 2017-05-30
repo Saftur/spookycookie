@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335684,
+			float Size = 14.9569044,
 		},
 		EditorCameraController = 
 		{
@@ -2208,7 +2208,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0.000599861145, 1],
+			Vec4 Color = [1, 1, 1, 0.999899983],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2258,7 +2258,7 @@ Level =
 		string Name = "597f7321ff137541:Player",
 		LinkId = 
 		{
-			uint Id = 108,
+			uint Id = 3,
 		},
 		Transform = 
 		{
