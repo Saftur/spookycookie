@@ -15,6 +15,7 @@ class  Dog : ZilchComponent
     var Distance : Real;
 
     var Detected : Real = 0;
+    var Bowwowing : Boolean = false;
     var HasToy : Boolean = false;
     var Sleeping : Boolean = false;
     function Initialize(init : CogInitializer)
@@ -56,10 +57,15 @@ class  Dog : ZilchComponent
             //Console.WriteLine("gets here");
             this.Space.SoundSpace.PlayCue(this.Owner.SimpleSound.Cue);
             this.Detected = 0;
+            this.Bowwowing = true;
             this.Owner.Sprite.AnimationSpeed = 1;
             this.Owner.Sprite.SpriteSource = this.Barking;
         }  
-        
+        if(this.Bowwowing)
+        {
+            var player = this.Space.FindObjectByName("Player");
+            player.FearManager.FearBar.Bar.Increase(0.1);
+        }
     
     }
     
