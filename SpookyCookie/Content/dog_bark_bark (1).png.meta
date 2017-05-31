@@ -3,7 +3,7 @@ ImageContent =
 	TextureBuilder = 
 	{
 		string Name = "dog_bark_bark (1)",
-		uint64 ResourceId = 594df2f8031191d0,
+		uint64 ResourceId = 594df3802cff7e31,
 		BuilderTextureType TextureType = Texture2D,
 		RgbUsage RgbUsage = Color,
 		AlphaUsage AlphaUsage = Transparency,

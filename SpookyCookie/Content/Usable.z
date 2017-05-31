@@ -1,0 +1,15 @@
+class Usable : ZilchComponent
+{
+    function Initialize(init : CogInitializer)
+    {
+        //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

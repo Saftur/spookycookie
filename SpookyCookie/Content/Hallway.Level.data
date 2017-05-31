@@ -134,7 +134,9 @@ Level =
 		},
 		Transform = 
 		{
+
 			Vec3 Translation = [-0.759049654, -2.58132696, 50],
+
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +148,9 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
+
 			float Size = 20.1896782,
+
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +158,9 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
+
 			Vec3 LookTarget = [-0.759049654, -2.58132696, 0],
+
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -11923,13 +11929,283 @@ Level =
 		},
 		Transform = 
 		{
+<<<<<<< HEAD
+			Vec3 Translation = [9.97960758, -26.3465214, -0.0499992371],
+			Vec3 Scale = [1.5, 1.5, 1],
+=======
 			Vec3 Translation = [-11.4901037, -2.970649, 0],
 			Vec3 Scale = [1, 6, 1],
+>>>>>>> origin/master
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Named = 
 		{
 			string Name = "Teleport",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 558,
+		},
+		Named = 
+		{
+			string Name = "Spawner",
+		},
+		Archetyped = 
+		{
+			string Name = "594e0a7511022e31:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24.09935, 2.15870261, -0.0499992371],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Object = 
+		{
+			float DistanceSpawn = 0,
+			CogPath TargetPath = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float DetectDistance = 10,
+			float RespawnTime = 6,
+			string GhostType = "59d8f73facf9aa15:Ghost1",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.0500000007, 0.0500000007, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 559,
+		},
+		Named = 
+		{
+			string Name = "Spawner",
+		},
+		Archetyped = 
+		{
+			string Name = "594e0a7511022e31:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24.5568542, 4.56238985, -0.0499992371],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Object = 
+		{
+			float DistanceSpawn = 0,
+			CogPath TargetPath = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float DetectDistance = 10,
+			float RespawnTime = 6,
+			string GhostType = "59d8f73facf9aa15:Ghost1",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.0500000007, 0.0500000007, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 560,
+		},
+		Named = 
+		{
+			string Name = "Spawner",
+		},
+		Archetyped = 
+		{
+			string Name = "594e0a7511022e31:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [24.4872551, 0.473407984, -0.0499992371],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Object = 
+		{
+			float DistanceSpawn = 0,
+			CogPath TargetPath = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float DetectDistance = 10,
+			float RespawnTime = 6,
+			string GhostType = "59d8f73facf9aa15:Ghost1",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.0500000007, 0.0500000007, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 561,
+		},
+		Named = 
+		{
+			string Name = "Spawner",
+		},
+		Archetyped = 
+		{
+			string Name = "594e0a7511022e31:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [22.0164661, 4.64938927, -0.0499992371],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Object = 
+		{
+			float DistanceSpawn = 0,
+			CogPath TargetPath = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float DetectDistance = 10,
+			float RespawnTime = 6,
+			string GhostType = "59d8f73facf9aa15:Ghost1",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.0500000007, 0.0500000007, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 562,
+		},
+		Named = 
+		{
+			string Name = "Spawner",
+		},
+		Archetyped = 
+		{
+			string Name = "594e0a7511022e31:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [22.2426643, 0.33420825, -0.0499992371],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Object = 
+		{
+			float DistanceSpawn = 0,
+			CogPath TargetPath = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float DetectDistance = 10,
+			float RespawnTime = 6,
+			string GhostType = "59d8f73facf9aa15:Ghost1",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.0500000007, 0.0500000007, 0.5],
 		},
 	},
 },

@@ -222,7 +222,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [-6.5, -6, 0],
-			Vec3 Scale = [5, 4, 1],
+			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -235,7 +235,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5963c99435c2acdd:PLAY000",
+			string SpriteSource = "594df812447b589d:Play button000",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -253,7 +253,7 @@ Level =
 			bool Active = true,
 			string DefaultSprite = "5963c99435c2acdd:PLAY000",
 			string HoveredSprite = "",
-			string ClickedSprite = "5963c99435c7574a:PLAY001",
+			string ClickedSprite = "594df812446574c4:Play button001",
 			string LevelToLoad = "59df2ae304d16aa0:GameLevel",
 		},
 	},
@@ -270,7 +270,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [0, -6, 0],
-			Vec3 Scale = [5, 4, 1],
+			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -283,7 +283,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5963ca6528d43097:HOW TO000",
+			string SpriteSource = "594df8314d939f51:How to button000",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -299,9 +299,9 @@ Level =
 		MenuLevelStart = 
 		{
 			bool Active = true,
-			string DefaultSprite = "5963ca6528d43097:HOW TO000",
+			string DefaultSprite = "594df8314d939f51:How to button000",
 			string HoveredSprite = "",
-			string ClickedSprite = "5963ca6528d6cc55:HOW TO001",
+			string ClickedSprite = "594df8304dbcdd8b:How to button001",
 			string LevelToLoad = "5963c5331c9e5220:Controls",
 		},
 	},
@@ -318,7 +318,7 @@ Level =
 		Transform = 
 		{
 			Vec3 Translation = [6.5, -6, 0],
-			Vec3 Scale = [5, 4, 1],
+			Vec3 Scale = [4, 4, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -331,7 +331,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5963ca762c966931:QUIT000",
+			string SpriteSource = "594df8e33b698d32:Quit button000",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -347,9 +347,9 @@ Level =
 		ExitButton = 
 		{
 			bool Active = true,
-			string DefaultSprite = "5963ca762c966931:QUIT000",
+			string DefaultSprite = "594df8e33b698d32:Quit button000",
 			string HoveredSprite = "",
-			string ClickedSprite = "5963ca762c8b221d:QUIT001",
+			string ClickedSprite = "594df8e23b90b40a:Quit button001",
 			string LevelToLoad = "",
 		},
 	},
