@@ -6,11 +6,9 @@ class KeyitemController : ZilchComponent
     [Property]
     var KeyItem : Integer = 1;
     [Property]
-    var Inventory1: SpriteSource = null;
+    var DiscoveredMap: SpriteSource = null;
     [Property]
-    var Inventory2: SpriteSource = null;
-    [Property]
-    var Inventory3: SpriteSource = null;
+    var DiscoveredBone: SpriteSource = null;
     function Initialize(init : CogInitializer)
     {
         this.Inventoryframe = this.Space.FindObjectByName("Inventoryframe");
@@ -23,15 +21,11 @@ class KeyitemController : ZilchComponent
         {
             if(this.KeyItem == 1)
             {
-                this.Inventoryframe.Sprite.SpriteSource = this.Inventory1;
+                this.GameSession.GameVars.HasItem1 = true;
             }
             if(this.KeyItem == 2)
             {
-                this.Inventoryframe.Sprite.SpriteSource = this.Inventory2;
-            }
-            if(this.KeyItem == 3)
-            {
-                this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
+                this.GameSession.GameVars.HasItem2 = true;
             }
 
             this.Space.SoundSpace.PlayCue(this.ImportantSound);
