@@ -14,8 +14,8 @@ Cog =
 	},
 	Transform = 
 	{
-		Vec3 Translation = [9.03870678, -20.2306786, -0.0499992371],
-		Vec3 Scale = [1.5, 1.5, 1],
+		Vec3 Translation = [43.8667679, -8.07480621, -0.00299835205],
+		Vec3 Scale = [14, 14, 1],
 		Quat Rotation = [0, 0, 0, 1],
 	},
 	Sprite = 
@@ -24,7 +24,7 @@ Cog =
 		bool VisibilityCulling = true,
 		bool VisibilityEvents = true,
 		bool CastShadows = false,
-		Vec4 Color = [0, 0, 0, 1],
+		Vec4 Color = [1, 1, 1, 1],
 		BlendMode BlendMode = Alpha,
 		SpriteGeometryMode GeometryMode = ZPlane,
 		string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -78,7 +78,7 @@ Cog =
 		bool Mode2D = true,
 		bool AllowSleep = true,
 		bool Inherit2DMode = true,
-		Vec3 Velocity = [0, 0, 0],
+		Vec3 Velocity = [2741.67285, -504.675354, -0.187396988],
 		Vec3 AngularVelocity = [0, 0, 0],
 	},
 	Hierarchy = 

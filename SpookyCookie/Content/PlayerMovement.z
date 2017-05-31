@@ -170,7 +170,7 @@ class PlayerMovement : ZilchComponent
         var result2 = this.Space.PhysicsSpace.CastRayFirst(ray);
         if(result2.Distance < len)
         {
-            len = result2.Distance;
+            len = 5;
         }
         //Diagonal
         if ((this.Dir.X != 0) && (this.Dir.Y != 0))

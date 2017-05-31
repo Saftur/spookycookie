@@ -72,7 +72,6 @@ class MenuLevelStart : ZilchComponent
         Console.WriteLine("Click");
         //if(this.StartButton)
         //{
-            this.FadeScreen.Transform.Translation = Real3(0, 0, 2);
             this.FadeScreen.Fade.StartFade = true;
             this.FadeStarting = true;
         //}

@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0.191536576, 0.812937379, 50],
+			Vec3 Translation = [-1.60021627, 2.53961945, 49.9490013],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.245677,
+			float Size = 12.2456856,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0.191536576, 0.812937379, -3.1499269e-07],
+			Vec3 LookTarget = [-1.60021627, 2.53961945, -0.050999999],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -238,7 +238,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1, -4.5, 0],
+			Vec3 Translation = [0.5, -4.5, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -252,7 +252,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5963e3d3b0eaf446:Character_Up",
+			string SpriteSource = "5963e461a1043f00:Character_Right_Side_1",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -320,13 +320,13 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0.0349683762, 2.95774937, 0],
-					Vec3 Scale = [1, 5, 1],
+					Vec3 Translation = [3, 0, 0],
+					Vec3 Scale = [5, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
 				{
-					bool Visible = false,
+					bool Visible = true,
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
@@ -367,7 +367,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, -0.100000001],
+			Vec3 Translation = [0, 0, -1],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3195,7 +3195,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-16, -3, 0],
+			Vec3 Translation = [-16, -3, -0.200000003],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3458,7 +3458,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-44.2502785, -0.867655754, 5],
+			Vec3 Translation = [-43.9999962, -0.631577015, 5],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3482,6 +3482,7 @@ Level =
 		},
 		Fade = 
 		{
+			bool DontFadeKids = false,
 			float Time = 1,
 			bool Invis = false,
 		},
@@ -3658,60 +3659,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Bookcase",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [5, -1, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5948b7b0c6ce1750:BOOKSELF",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [1, 1, 0.5],
-		},
-		Illusion = 
-		{
-			string Illusion = "5948b01d482e6e8b:scarybookcase",
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 174,
-		},
-		Named = 
-		{
 			string Name = "Bed",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [4, -4.5, 0],
+			Vec3 Translation = [4, -4.5, -0.100000001],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3748,16 +3700,16 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 175,
+			uint Id = 174,
 		},
 		Named = 
 		{
-			string Name = "Bed",
+			string Name = "Bookcase",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
-			Vec3 Scale = [2, 2, 1],
+			Vec3 Translation = [5, -1, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -3766,11 +3718,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5948bf917a419507:rug",
+			string SpriteSource = "5948b7b0c6ce1750:BOOKSELF",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -3790,7 +3742,56 @@ Level =
 		},
 		Illusion = 
 		{
-			string Illusion = "5948b7603d844cbe:scaryrug",
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 175,
+				},
+				Named = 
+				{
+					string Name = "Illusion",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5948b01d482e6e8b:scarybookcase",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					bool DontFadeKids = false,
+					float Time = 1.5,
+					bool Invis = false,
+				},
+			},
 		},
 	},
 	Cog = 
@@ -3801,11 +3802,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Bookcase",
+			string Name = "Rug",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 6, 0],
+			Vec3 Translation = [0, 0, -0.100000001],
 			Vec3 Scale = [2, 2, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3815,7 +3816,105 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5948bf917a419507:rug",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Illusion = 
+		{
+		},
+		SphereCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			float Radius = 1,
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 177,
+				},
+				Named = 
+				{
+					string Name = "Illusion",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0.0500000007],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5948b7603d844cbe:scaryrug",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					bool DontFadeKids = false,
+					float Time = 1.5,
+					bool Invis = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 178,
+		},
+		Named = 
+		{
+			string Name = "Couch",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 6, -0.100000001],
+			Vec3 Scale = [2, 2, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -3839,22 +3938,71 @@ Level =
 		},
 		Illusion = 
 		{
-			string Illusion = "5948b6a90f1a5a27:scarysofa",
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 179,
+				},
+				Named = 
+				{
+					string Name = "Illusion",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5948b6a90f1a5a27:scarysofa",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					bool DontFadeKids = false,
+					float Time = 1.5,
+					bool Invis = false,
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 177,
+			uint Id = 180,
 		},
 		Named = 
 		{
-			string Name = "Bookcase",
+			string Name = "Desk",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-4.5, 2, 0],
+			Vec3 Translation = [-4.4487915, 2.45594096, -0.100000001],
 			Vec3 Scale = [1.5, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -3864,7 +4012,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -3888,7 +4036,56 @@ Level =
 		},
 		Illusion = 
 		{
-			string Illusion = "5948be5381274eb5:scarydesk",
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = false,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 181,
+				},
+				Named = 
+				{
+					string Name = "Illusion",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0.0500000007],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5948be5381274eb5:scarydesk",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					bool DontFadeKids = false,
+					float Time = 1.5,
+					bool Invis = false,
+				},
+			},
 		},
 	},
 },

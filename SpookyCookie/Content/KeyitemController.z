@@ -11,8 +11,6 @@ class KeyitemController : ZilchComponent
     var Inventory2: SpriteSource = null;
     [Property]
     var Inventory3: SpriteSource = null;
-    [Property]
-    var Inventory4: SpriteSource = null;
     function Initialize(init : CogInitializer)
     {
         this.Inventoryframe = this.Space.FindObjectByName("Inventoryframe");
@@ -21,23 +19,23 @@ class KeyitemController : ZilchComponent
     
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(this.KeyItem == 1)
+        if(event.OtherObject.Name == "Player")
         {
-            this.Inventoryframe.Sprite.SpriteSource = this.Inventory1;
+            if(this.KeyItem == 1)
+            {
+                this.Inventoryframe.Sprite.SpriteSource = this.Inventory1;
+            }
+            if(this.KeyItem == 2)
+            {
+                this.Inventoryframe.Sprite.SpriteSource = this.Inventory2;
+            }
+            if(this.KeyItem == 3)
+            {
+                this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
+            }
+
+            this.Space.SoundSpace.PlayCue(this.ImportantSound);
+            this.Owner.Destroy();
         }
-        if(this.KeyItem == 2)
-        {
-            this.Inventoryframe.Sprite.SpriteSource = this.Inventory2;
-        }
-        if(this.KeyItem == 3)
-        {
-            this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
-        }
-        if(this.KeyItem == 4)
-        {
-            this.Inventoryframe.Sprite.SpriteSource = this.Inventory3;
-        }
-        this.Space.SoundSpace.PlayCue(this.ImportantSound);
-        this.Owner.Destroy();
     }
 }
