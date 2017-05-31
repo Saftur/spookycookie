@@ -1,0 +1,21 @@
+//By Brennan Bundy
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
+class MapController : ZilchComponent
+{
+    var MapScreen: Cog = null; 
+    function Initialize(init : CogInitializer)
+    {
+        this.MapScreen = this.Space.FindObjectByName("MapScreen");
+        Zero.Connect(this.Owner, Events.MouseDown, this.OnMouseDown);
+    }
+    function OnMouseDown(event : ViewportMouseEvent)
+    {
+        if(this.GameSession.GameVars.HasMap)
+        {
+            this.MapScreen.Sprite.Visible = !this.MapScreen.Sprite.Visible;
+        }
+    }
+    function OnLogicUpdate(event : UpdateEvent)
+    {
+    }
+}

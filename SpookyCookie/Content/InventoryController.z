@@ -1,8 +1,9 @@
+//By Brennan Bundy
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 class InventoryController : ZilchComponent
 {
     [Property]
     var InventoryKey: Keys = Keys.I;
-
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -14,17 +15,16 @@ class InventoryController : ZilchComponent
         if(event.Key == this.InventoryKey)
         {
             this.Owner.Sprite.Visible = !this.Owner.Sprite.Visible;
-            if(this.GameSession.GameVars.HasItem1)
+            if(this.GameSession.GameVars.HasMap)
             {
-                var item1 = this.Owner.FindChildByName("MenuItem1");
+                var item1 = this.Owner.FindChildByName("IMap");
                 item1.Sprite.Visible = ! item1.Sprite.Visible;
             }
-            if(this.GameSession.GameVars.HasItem2)
+            if(this.GameSession.GameVars.HasBone)
             {
-                var item2 = this.Owner.FindChildByName("MenuItem2");
+                var item2 = this.Owner.FindChildByName("IBone");
                 item2.Sprite.Visible = ! item2.Sprite.Visible;
             }
         }
     }
-    
 }
