@@ -1,15 +1,16 @@
 class Illusion : ZilchComponent
 {
-    [Property]
-    var Illusion : SpriteSource = null;
+    var Illusion : Cog = null;
+    var Timer : Real = -1;
+    /*
     var FlickerLength : Real = 0.08;
-    var Timer : Real;
     var RealObject : SpriteSource = null;
     var StartFlicker : Boolean = false;
     var Flicks : Integer = 13;
     var EndImage : SpriteSource;
     var Creep : Boolean = false;
     var InBeam : Boolean = false;
+    */
     
     function Initialize(init : CogInitializer)
     {
@@ -17,53 +18,52 @@ class Illusion : ZilchComponent
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         Zero.Connect(this.Owner, Events.CollisionEnded, this.OnCollisionEnded);
         
+        /*
         this.RealObject = this.Owner.Sprite.SpriteSource;
         this.EndImage = this.Illusion;
         this.Timer = this.FlickerLength;
+        */
+        
+        this.Illusion = this.Owner.FindChildByName("Illusion");
+        this.Illusion.Fade.Time = this.Owner.Fade.Time;
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.Sense != null)
-        {
-            this.Creep = true;
-            this.Timer = 2;
-            Console.WriteLine("`this.Creep`");
-        }
         if(event.OtherObject.Name == "Beam")
         {
-            if(this.Owner.Sprite.SpriteSource == this.Illusion || !this.Creep)
-            {
-                this.StartFlicker = true;
-                this.InBeam = true;
-                this.Timer = this.FlickerLength;
-                this.Flicks = 13;
-                this.EndImage = this.RealObject;
-            }
+            this.Timer = -1;
+            this.Illusion.Sprite.Color = Real4(this.Illusion.Sprite.Color.XYZ, 0);
+            this.Illusion.Fade.StartFade = false;
+            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.XYZ, 1);
+            this.Illusion.Fade.StartFade = false;
         }
     }
     function OnCollisionEnded(event : CollisionEvent)
     {
-        if(event.OtherObject.Sense != null)
-        {
-            this.Creep = false;
-            this.Owner.Sprite.SpriteSource = this.RealObject;
-        }
         if(event.OtherObject.Name == "Beam")
         {
-            this.InBeam = false;
             this.Timer = 2;
         }
     }
     function OnLogicUpdate(event : UpdateEvent)
     {
-        if(Zero.Keyboard.KeyIsPressed(Keys.Space))
+        if(this.Timer >= 0)
         {
-            if(this.EndImage == this.RealObject)
-                this.EndImage = this.Illusion;
-            else
-                this.EndImage = this.RealObject;
-            this.StartFlicker = true;
+            this.Timer -= event.Dt;
+            if(this.Timer <= 0)
+            {
+                Console.WriteLine("Bam");
+                this.Illusion.Sprite.Color = Real4(this.Illusion.Sprite.Color.XYZ, 0);
+                this.Illusion.Fade.Opacity = 0;
+                this.Illusion.Fade.Invis = true;
+                this.Illusion.Fade.StartFade = true;
+                
+                this.Owner.Fade.Invis = false;
+                this.Owner.Fade.Opacity = 1;
+                this.Owner.Fade.StartFade = true;
+            }
         }
+        /*
         if(!this.StartFlicker)
         {
             if(this.Creep && (this.Owner.Sprite.SpriteSource == this.RealObject) && !this.InBeam)
@@ -100,5 +100,6 @@ class Illusion : ZilchComponent
             this.Owner.Sprite.SpriteSource = this.EndImage;
             this.StartFlicker = false;
         }
+        */
     }
 }

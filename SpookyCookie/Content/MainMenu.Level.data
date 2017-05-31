@@ -110,7 +110,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.46034694, 0.567241192, 50],
+			Vec3 Translation = [13.9415646, -3.43297863, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -122,7 +122,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 33.2871628,
+			float Size = 74.0818481,
 		},
 		EditorCameraController = 
 		{
@@ -130,7 +130,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.46034694, 0.567241192, 1.64134667e-06],
+			Vec3 LookTarget = [13.9415646, -3.43297863, 1.64134667e-06],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -353,22 +353,48 @@ Level =
 			string LevelToLoad = "",
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "5963db5ac3780986:LoadScreen",
 		LinkId = 
 		{
 			uint Id = 8,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [75.4794464, 0.136986494, 2],
-			Vec3 Scale = [50, 50, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "LoadScreen",
+		},
+		Archetyped = 
+		{
+			string Name = "5963db5ac3780986:LoadScreen",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 2],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Fade = 
+		{
+			float Time = 1,
+			bool Invis = true,
 		},
 	},
 	ArchetypeInstance = 
