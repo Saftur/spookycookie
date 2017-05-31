@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.9101696, 0.166824326, 47.9990005],
+			Vec3 Translation = [17.1101322, 0.31881234, 47.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335684,
+			float Size = 33.287178,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [3.9101696, 0.166824326, -2.00100017],
+			Vec3 LookTarget = [17.1101322, 0.31881234, -2.00100017],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -234,7 +234,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, -0.110628605, 0],
+			Vec3 Translation = [0, 0, 0],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -366,12 +366,19 @@ Level =
 					string Name = "wood_floor",
 				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59d8dfa8393d9518:wood_floor",
 				LinkId = 
 				{
 					uint Id = 13,
+				},
+				Named = 
+				{
+					string Name = "wood_floor",
+				},
+				Archetyped = 
+				{
+					string Name = "59d8dfa8393d9518:wood_floor",
 				},
 				Transform = 
 				{
@@ -379,9 +386,36 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				Named = 
+				Sprite = 
 				{
-					string Name = "wood_floor",
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8cf71ef8c66:carpet floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Lightup = 
+				{
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
 			ArchetypeInstance = 
@@ -1275,7 +1309,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-0.527657151, 2.52765512, -0.100000001],
+					Vec3 Translation = [-0.5, 2.5, 0],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2013,74 +2047,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Sense",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [13.6016216, -3.57168674, 0],
-			Vec3 Scale = [10, 10, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = false,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [0.950000048, 0.89380753, 0.517750025, 0.100000001],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5274db4c2e7c11f9:Circle",
-			bool RenderMask = false,
-			bool FlipX = false,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		SphereCollider = 
-		{
-			bool Ghost = true,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			float Radius = 0.5,
-		},
-		FollowObject = 
-		{
-			bool Active = true,
-			CogPath ObjectToFollow = 
-			{
-				string Path = ":/Player",
-				bool ErrorOnResolveToNull = false,
-				bool ErrorOnPathCantCompute = false,
-				bool ErrorOnDirectLinkFail = false,
-				bool UpdateCogOnPathChange = true,
-				bool UpdatePathOnCogChange = true,
-				bool UpdateCogOnInitialize = true,
-				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 3,
-				CogPathPreference PathPreference0 = CogRelative,
-				CogPathPreference PathPreference1 = SpaceRelative,
-				CogPathPreference PathPreference2 = Absolute,
-			},
-			Vec3 Displacement = [0, 0, 0],
-		},
-		Sense = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 104,
-		},
-		Named = 
-		{
 			string Name = "CookieJar",
 		},
 		Transform = 
@@ -2129,7 +2095,7 @@ Level =
 		string Name = "5963e2025d14442a:LoadScreen2",
 		LinkId = 
 		{
-			uint Id = 105,
+			uint Id = 104,
 		},
 		Transform = 
 		{
@@ -2146,7 +2112,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 106,
+			uint Id = 105,
 		},
 		Named = 
 		{
@@ -2177,6 +2143,29 @@ Level =
 			uint StartFrame = 0,
 		},
 	},
+	ArchetypeInstance = 
+	{
+		string Name = "597f73f3cf7568ed:TopDog",
+		LinkId = 
+		{
+			uint Id = 106,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3.65970492, 0.808526278, 0],
+			Vec3 Scale = [0.5, 0.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "TopDog",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
+		},
+	},
 	Cog = 
 	{
 		LinkId = 
@@ -2185,20 +2174,11 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "TopDog",
-		},
-		Archetyped = 
-		{
-			string Name = "597f73f3cf7568ed:TopDog",
-		},
-		EditorFlags = 
-		{
-			bool Locked = true,
-			bool Hidden = false,
+			string Name = "Toy",
 		},
 		Transform = 
 		{
-			Vec3 Translation = [3.65970492, 0.808526278, 0],
+			Vec3 Translation = [-1.36159313, -0.647134662, 0],
 			Vec3 Scale = [0.5, 0.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -2208,11 +2188,11 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 0, 0.000599861145, 1],
+			Vec4 Color = [1, 1, 1, 1],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5944c23afe4e6f90:dog",
+			string SpriteSource = "5948b2e56ba12b44:just_bone_things",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -2220,37 +2200,20 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		SoundEmitter = 
+		PickupController = 
 		{
-			float Volume = 1,
-			float Pitch = 0.49999994,
-			float PitchSemitones = 6,
-			bool UsePitchSemitones = true,
-			bool Positional = true,
-			int Version = 1,
-		},
-		SimpleSound = 
-		{
-			bool StartPlaying = false,
-			string CueName = "597f75cf697d7243:Bark",
-		},
-		Dog = 
-		{
-			string Awake = "5944c247f71ac180:dog_awake",
-			string Barking = "59477b7147e18a78:dog_bark",
-			float DetectDistance = 5,
-			string GetsToy = "5948bd1a41a403cd:dog_bone",
-			string ToySleep = "5948bd3d49e9d18c:dog_bone_sleep",
+			string PickupSound = "4e1bd44008b4dc2a:DefaultCue",
+			int Pickuptype = 4,
 		},
 		BoxCollider = 
 		{
-			bool Ghost = false,
+			bool Ghost = true,
 			bool SendsMessages = true,
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.25, 0.25, 0.5],
+			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
 	ArchetypeInstance = 
@@ -2258,7 +2221,7 @@ Level =
 		string Name = "597f7321ff137541:Player",
 		LinkId = 
 		{
-			uint Id = 108,
+			uint Id = 3,
 		},
 		Transform = 
 		{
@@ -2269,6 +2232,24 @@ Level =
 		Named = 
 		{
 			string Name = "Player",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ff7408b7c51027:Sense",
+		LinkId = 
+		{
+			uint Id = 108,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [37.6723671, -2.0264535, 0],
+			Vec3 Scale = [1.5, 1.5, 1],
+			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
+		},
+		Named = 
+		{
+			string Name = "Sense",
 		},
 	},
 },

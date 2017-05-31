@@ -36,7 +36,6 @@ class PickupController : ZilchComponent
         if(this.Pickuptype == 4)
         {
             this.Space.FindObjectByName("TopDog").Dog.HasToy = true;
-            Console.WriteLine("gets here");
         }
         this.Space.SoundSpace.PlayCue(this.PickupSound);
         this.Owner.Destroy();

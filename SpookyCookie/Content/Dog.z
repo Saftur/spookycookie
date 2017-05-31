@@ -14,8 +14,6 @@ class  Dog : ZilchComponent
    var ToySleep : SpriteSource;
     var Distance : Real;
 
-    var Detected : Real = 0;
-    var Bowwowing : Boolean = false;
     var HasToy : Boolean = false;
     var Sleeping : Boolean = false;
     function Initialize(init : CogInitializer)
@@ -27,71 +25,49 @@ class  Dog : ZilchComponent
 
     function OnLogicUpdate(event : UpdateEvent)
     {
-
-        this.Distance = (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y)^2 + (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2;
-        if(this.Distance <= this.DetectDistance)
+        this.Distance = Math.Sqrt(   (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y)^2 + (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2   );
+        if(this.Owner.Sprite.SpriteSource == SpriteSource.Dog)
         {
-            //Console.WriteLine("bark");
-            this.Detected = 1;
-            
-        }
-        if(this.Detected == 1 && this.Owner.Sprite.SpriteSource == this.Awake && this.Owner.Sprite.CurrentFrame == 4)
-        {
-           // Console.WriteLine("gets here");
-            this.Owner.Sprite.AnimationSpeed = 0;
-        }
-       
-       if(this.Owner.Sprite.SpriteSource == this.GetsToy && this.Owner.Sprite.CurrentFrame == 4)
-       {
-           this.Owner.Sprite.SpriteSource = this.ToySleep;
-        }
-        
-    
-        
-        if(this.Detected == 1 && this.HasToy == false && this.Owner.Sprite.SpriteSource == this.Awake && this.Owner.Sprite.CurrentFrame == 5 && this.Distance < this.DetectDistance)
-        {
-            
-        }
-        if(this.Detected == 1 && this.Owner.Sprite.SpriteSource == this.Awake && this.Owner.Sprite.CurrentFrame == 4 && this.Distance < this.DetectDistance)
-        {
-            //Console.WriteLine("gets here");
-            this.Space.SoundSpace.PlayCue(this.Owner.SimpleSound.Cue);
-            this.Detected = 0;
-            this.Bowwowing = true;
-            this.Owner.Sprite.AnimationSpeed = 1;
-            this.Owner.Sprite.SpriteSource = this.Barking;
-        }  
-        if(this.Bowwowing)
-        {
-            var player = this.Space.FindObjectByName("Player");
-            player.FearManager.FearBar.Bar.Increase(0.1);
-        }
-    
-    }
-    
-    function OnCollisionStarted(event : CollisionEvent)
-    {
-
-        
-        if(event.OtherObject.Name == "Beam" && !this.HasToy && !this.Sleeping)
-        {
-            
-            this.Detected = 1;
-            if(this.Owner.Sprite.SpriteSource != this.Awake && this.Owner.Sprite.SpriteSource != this.Barking)
+            Console.WriteLine("`this.Distance`");
+            if(this.Distance <= this.DetectDistance)
             {
                 this.Owner.Sprite.SpriteSource = this.Awake;
             }
         }
-       
-        else if(event.OtherObject.Name == "Player" && this.HasToy && !this.Sleeping )
+        if(this.Owner.Sprite.SpriteSource == this.Awake)
         {
-            
-            this.Owner.Sprite.SpriteSource = this.GetsToy;
-            this.Sleeping = true;
-        }else{
-            return;
+            if(this.Owner.Sprite.CurrentFrame == 4)
+            {
+                this.Owner.Sprite.SpriteSource = this.Barking;
+                this.Space.SoundSpace.PlayCue(this.Owner.SimpleSound.Cue);
+            }
         }
-         //Console.WriteLine(this.HasToy);   
+        else if(this.Owner.Sprite.SpriteSource == this.Barking)
+        {
+            var player = this.Space.FindObjectByName("Player");
+            player.FearManager.Spook(0.1*event.Dt, false);
+            
+            if(this.Distance <= 2 && this.HasToy)
+            {
+                this.Owner.Sprite.SpriteSource = this.GetsToy;
+            }
+        }
+        if(this.Owner.Sprite.SpriteSource == this.GetsToy && this.Owner.Sprite.CurrentFrame == 4)
+        {
+            this.Owner.Sprite.SpriteSource = this.ToySleep;
+            this.Owner.BoxCollider.Ghost = true;
+        }
+    }
+    
+    function OnCollisionStarted(event : CollisionEvent)
+    {
+        if(event.OtherObject.Name == "Beam" && !this.HasToy && !this.Sleeping)
+        {
+            if(this.Owner.Sprite.SpriteSource == SpriteSource.Dog)
+            {
+                this.Owner.Sprite.SpriteSource = this.Awake;
+            }
+        }
     }
 
 }
