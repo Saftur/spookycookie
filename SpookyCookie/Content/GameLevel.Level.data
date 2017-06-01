@@ -119,7 +119,7 @@ Level =
 		LevelTransition = 
 		{
 			float Time = 1,
-			string LevelToLoad = "594f45fb93b94360:Hallway",
+			string LevelToLoad = "5967cb8c929685e3:Hallway",
 		},
 	},
 	Cog = 
@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5.44983101, 0.768672705, 49.9490013],
+			Vec3 Translation = [3.50991011, 1.41881943, 49.9490013],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20.1897411,
+			float Size = 30.1195431,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-5.44983101, 0.768672705, -0.050999999],
+			Vec3 LookTarget = [3.50991011, 1.41881943, -0.0509996414],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -3302,7 +3302,7 @@ Level =
 		},
 		Doors = 
 		{
-			string LevelToLoad = "594f45fb93b94360:Hallway",
+			string LevelToLoad = "5967cb8c929685e3:Hallway",
 			Vec3 HallwayPos = [0.5, -5.5, 0],
 		},
 	},
