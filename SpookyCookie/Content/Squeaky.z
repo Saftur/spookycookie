@@ -12,7 +12,7 @@ class Squeaky : ZilchComponent
     {
         if(event.OtherObject.Name == "Player")
         {
-            this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.FearBar.Bar.Increase(0.01);
+            event.OtherObject.FearManager.Spook(0.1, false);
             this.Space.SoundSpace.PlayCue(this.Squeak);
         }
     }

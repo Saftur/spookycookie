@@ -28,7 +28,7 @@ class  Dog : ZilchComponent
         this.Distance = Math.Sqrt(   (this.Target.Transform.Translation.Y - this.Owner.Transform.Translation.Y)^2 + (this.Target.Transform.Translation.X - this.Owner.Transform.Translation.X)^2   );
         if(this.Owner.Sprite.SpriteSource == SpriteSource.Dog)
         {
-            Console.WriteLine("`this.Distance`");
+            //Console.WriteLine("`this.Distance`");
             if(this.Distance <= this.DetectDistance)
             {
                 this.Owner.Sprite.SpriteSource = this.Awake;
@@ -50,6 +50,7 @@ class  Dog : ZilchComponent
             if(this.Distance <= 2 && this.HasToy)
             {
                 this.Owner.Sprite.SpriteSource = this.GetsToy;
+                this.Space.SoundSpace.StopAllSounds();
             }
         }
         if(this.Owner.Sprite.SpriteSource == this.GetsToy && this.Owner.Sprite.CurrentFrame == 4)
