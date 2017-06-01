@@ -2,12 +2,12 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "bar island thing (1)",
-		uint64 ResourceId = 594f6570f0d0508a,
+		string Name = "bar_island_thing_clone",
+		uint64 ResourceId = 5950a54385db4c87,
 		uint64 AtlasId = 5274cf95e4a661fd,
 		uint FrameSizeX = 512,
 		uint FrameSizeY = 256,
-		uint FrameCount = 1,
+		uint FrameCount = 6,
 		float FrameDelay = 0.0833333358,
 		float OriginX = 256,
 		float OriginY = 128,

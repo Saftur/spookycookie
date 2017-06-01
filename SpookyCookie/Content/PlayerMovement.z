@@ -126,7 +126,7 @@ class PlayerMovement : ZilchComponent
                 ray.Direction = Real3(this.Dir,0);
                 var result = this.Space.PhysicsSpace.CastRayFirst(ray);
                 
-                if(result.Distance < 1.5)
+                if(result.Distance < 1.2)
                 {
                     this.Destination = this.Owner.Transform.Translation;
                     this.ShrinkBeam();

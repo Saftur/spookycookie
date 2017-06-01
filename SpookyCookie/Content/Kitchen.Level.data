@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.77940381, -1.01899076, 47.9990005],
+			Vec3 Translation = [5.94202709, 5.7957449, 47.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 13.5335646,
+			float Size = 14.7781048,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.77940381, -1.01899076, -2.00100017],
+			Vec3 LookTarget = [5.94202709, 5.7957449, -2.00100017],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -392,7 +392,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 1],
+					Vec4 Color = [1, 1, 1, 0.999899983],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2143,12 +2143,24 @@ Level =
 			uint StartFrame = 0,
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "597f73f3cf7568ed:TopDog",
 		LinkId = 
 		{
 			uint Id = 106,
+		},
+		Named = 
+		{
+			string Name = "TopDog",
+		},
+		Archetyped = 
+		{
+			string Name = "597f73f3cf7568ed:TopDog",
+		},
+		EditorFlags = 
+		{
+			bool Locked = true,
+			bool Hidden = false,
 		},
 		Transform = 
 		{
@@ -2156,14 +2168,55 @@ Level =
 			Vec3 Scale = [0.5, 0.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
-		Named = 
+		Sprite = 
 		{
-			string Name = "TopDog",
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5944c23afe4e6f90:Dog",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
 		},
-		EditorFlags = 
+		SoundEmitter = 
 		{
-			bool Locked = true,
-			bool Hidden = false,
+			float Volume = 1,
+			float Pitch = 0.49999994,
+			float PitchSemitones = 6,
+			bool UsePitchSemitones = true,
+			bool Positional = true,
+			int Version = 1,
+		},
+		SimpleSound = 
+		{
+			bool StartPlaying = false,
+			string CueName = "597f75cf697d7243:Bark",
+		},
+		Dog = 
+		{
+			string Awake = "5944c247f71ac180:dog_awake",
+			string Barking = "59477b7147e18a78:dog_bark",
+			float DetectDistance = 5,
+			string GetsToy = "5948bd1a41a403cd:dog_bone",
+			string ToySleep = "5948bd3d49e9d18c:dog_bone_sleep",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [-0.300000012, -1, 0],
+			Vec3 Size = [3, 0.25, 0.5],
 		},
 	},
 	Cog = 
@@ -2250,6 +2303,104 @@ Level =
 		Named = 
 		{
 			string Name = "Sense",
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 109,
+		},
+		Named = 
+		{
+			string Name = "WaffleCounter",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.03778315, 5.48629189, 0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "594f6570f0d0508a:bar island thing (1)",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Illusion = 
+		{
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = false,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [1, 0.5, 0.5],
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 110,
+				},
+				Named = 
+				{
+					string Name = "Illusion",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5950a54385db4c87:bar_island_thing_clone",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					bool DontFadeKids = false,
+					float Time = 1,
+					bool Invis = false,
+				},
+			},
 		},
 	},
 },
