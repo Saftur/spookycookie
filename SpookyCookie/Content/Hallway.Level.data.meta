@@ -3,7 +3,7 @@ DataContent =
 	DataBuilder = 
 	{
 		string Name = "Hallway",
-		uint64 ResourceId = 5967cb8c929685e3,
+		uint64 ResourceId = 594f45fb93b94360,
 		string LoaderType = "Level",
 		uint Version = 0,
 		bool ShowInEditor = true,
