@@ -12,7 +12,7 @@ Level =
 		},
 		GravityEffect = 
 		{
-			bool Active = false,
+			bool Active = true,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
 			float Strength = 10,
@@ -50,7 +50,7 @@ Level =
 			},
 			CogPath Camera = 
 			{
-				string Path = ":/Camera",
+				string Path = "",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -58,7 +58,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 2,
+				uint ResolvedCog = 4294967293,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -81,7 +81,7 @@ Level =
 			bool Active = true,
 			bool HalfCellOffset = false,
 			float CellSize = 1,
-			GridAxis Axis = ZAxis,
+			GridAxis Axis = YAxis,
 			int Lines = 100,
 			bool DrawAxisOrigins = true,
 			bool AlwaysDrawInEditor = true,
@@ -132,6 +132,10 @@ Level =
 		{
 			string Name = "EditorCamera",
 		},
+		Archetyped = 
+		{
+			string Name = "4de020863e840530:EditorCamera",
+		},
 		Transform = 
 		{
 			Vec3 Translation = [2.37000966, -4.46229458, 50],
@@ -140,9 +144,9 @@ Level =
 		},
 		Camera = 
 		{
-			ProjectionMode ProjectionMode = Orthographic,
+			ProjectionMode ProjectionMode = Perspective,
 			Facing Facing = NegativeZ,
-			CameraTransparentSort TransparentSort = ZDepth,
+			CameraTransparentSort TransparentSort = InheritFromSpace,
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
@@ -150,7 +154,7 @@ Level =
 		},
 		EditorCameraController = 
 		{
-			ControlMode ControlMode = ZPlane,
+			ControlMode ControlMode = Orbit,
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,

@@ -1,3 +1,5 @@
+//By Brennan Bundy
+// All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 class KeyitemController : ZilchComponent
 {
     var Inventoryframe: Cog = null; 
@@ -21,11 +23,11 @@ class KeyitemController : ZilchComponent
         {
             if(this.KeyItem == 1)
             {
-                this.GameSession.GameVars.HasItem1 = true;
+                this.GameSession.GameVars.HasMap = true;
             }
             if(this.KeyItem == 2)
             {
-                this.GameSession.GameVars.HasItem2 = true;
+                this.GameSession.GameVars.HasBone = true;
             }
 
             this.Space.SoundSpace.PlayCue(this.ImportantSound);
