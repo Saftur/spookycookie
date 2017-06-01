@@ -29,20 +29,28 @@ class Illusion : ZilchComponent
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
-        if(event.OtherObject.Name == "Beam")
+        if(event.OtherObject.Name == "Beam" && !this.Illusion.Fade.StartFade && !this.Illusion.Fade.StartFade)
         {
             this.Timer = -1;
             this.Illusion.Sprite.Color = Real4(this.Illusion.Sprite.Color.XYZ, 0);
+            this.Owner.Sprite.Color = Real4(this.Illusion.Sprite.Color.XYZ, 1);
+        }else{
+             this.Illusion.Sprite.Color = Real4(this.Illusion.Sprite.Color.XYZ, 0);
             this.Illusion.Fade.StartFade = false;
-            this.Owner.Sprite.Color = Real4(this.Owner.Sprite.Color.XYZ, 1);
-            this.Illusion.Fade.StartFade = false;
+            this.Owner.Sprite.Color = Real4(this.Illusion.Sprite.Color.XYZ, 1);
+            this.Owner.Fade.StartFade = false;
+             
+            //this.Illusion.Sprite.Color = Real4(this.Illusion.Sprite.Color.XYZ, 1);
+            
         }
     }
     function OnCollisionEnded(event : CollisionEvent)
     {
-        if(event.OtherObject.Name == "Beam")
+        if(event.OtherObject.Name == "Beam" && !this.Illusion.Fade.StartFade && !this.Illusion.Fade.StartFade)
         {
             this.Timer = 2;
+        }else{
+            //this.Timer = -1;
         }
     }
     function OnLogicUpdate(event : UpdateEvent)

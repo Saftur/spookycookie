@@ -91,12 +91,42 @@ Level =
 			int HilightInterval = 10,
 			bool FollowEditorCamera = false,
 		},
+		HUDCreator = 
+		{
+			string HUDLevel = "596277398670a6d9:HUDLevel",
+			CogPath PlayerRef = 
+			{
+				string Path = "",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4294967293,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+		},
+		LoadIn = 
+		{
+			bool Hallway = true,
+			bool Menu = false,
+			string LevelText = "Hallway",
+		},
+		LevelTransition = 
+		{
+			float Time = 1,
+			string LevelToLoad = "59d81eede428fde1:Kitchen",
+		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 2,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -108,7 +138,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 50],
+			Vec3 Translation = [2.37000966, -4.46229458, 50],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -120,7 +150,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 20,
+			float Size = 9.07180786,
 		},
 		EditorCameraController = 
 		{
@@ -128,7 +158,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [0, 0, 0],
+			Vec3 LookTarget = [2.37000966, -4.46229458, 0],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -138,6 +168,284 @@ Level =
 			bool DrawDebugObjects = true,
 			bool DrawEditorIcons = true,
 			bool Wireframe = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 2,
+		},
+		Named = 
+		{
+			string Name = "Camera",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 40],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Camera = 
+		{
+			ProjectionMode ProjectionMode = Orthographic,
+			Facing Facing = NegativeZ,
+			CameraTransparentSort TransparentSort = InheritFromSpace,
+			float FieldOfView = 45,
+			float NearPlane = 0.5,
+			float FarPlane = 200,
+			float Size = 10,
+		},
+		SoundListener = 
+		{
+			bool Active = true,
+			float Volume = 1,
+		},
+		ScreenShake = 
+		{
+			float ShakeTime = 0.0500000007,
+		},
+		FollowObject = 
+		{
+			bool Active = true,
+			CogPath ObjectToFollow = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 4,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			Vec3 Displacement = [0, 0, 40],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 4,
+		},
+		Named = 
+		{
+			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "597f7321ff137541:Player",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0.5, -4.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5963e461a1043f00:Character_Right_Side_1",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		PlayerMovement = 
+		{
+			float StepSize = 1,
+			float Speed = 3,
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = false,
+			bool Force = false,
+			bool Gravity = false,
+			bool Thrust = false,
+			bool Vortex = false,
+			bool Wind = false,
+			bool Invalid = false,
+			bool Torque = false,
+			bool PointGravity = false,
+			bool PointForce = false,
+			bool Buoyancy = false,
+			bool Custom = false,
+		},
+		FearManager = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 5,
+				},
+				Named = 
+				{
+					string Name = "Beam",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [3.25, 0, 0],
+					Vec3 Scale = [5.5, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0.5],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = false,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 6,
+		},
+		Named = 
+		{
+			string Name = "FloorNWalls",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		MultiSprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+		},
+		TileMap = 
+		{
+			string SourceName = "594f49d1cec918ec:Hallway_TileMap01",
+			string PaletteName = "5963cd1991627fe2:Room",
+			float UnitsPerTile = 1,
+			float MeshThickness = 1.20000005,
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5963e2025d14442a:LoadScreen2",
+		LinkId = 
+		{
+			uint Id = 7,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5, -51.5, 10],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "LoadScreen2",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "5963db5ac3780986:LoadScreen",
+		LinkId = 
+		{
+			uint Id = 8,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-51.5, 0.5, 10],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "LoadScreen",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ff7408b7c51027:Sense",
+		LinkId = 
+		{
+			uint Id = 9,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [63.1954613, 7.70697117, 0],
+			Vec3 Scale = [1.5, 1.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Sense",
 		},
 	},
 },

@@ -119,7 +119,7 @@ Level =
 		LevelTransition = 
 		{
 			float Time = 1,
-			string LevelToLoad = "5967cb8c929685e3:Hallway",
+			string LevelToLoad = "594f45fb93b94360:Hallway",
 		},
 	},
 	Cog = 
@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-1.60021627, 2.53961945, 49.9490013],
+			Vec3 Translation = [-5.44983101, 0.768672705, 49.9490013],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456856,
+			float Size = 20.1897411,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-1.60021627, 2.53961945, -0.050999999],
+			Vec3 LookTarget = [-5.44983101, 0.768672705, -0.050999999],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -3302,7 +3302,7 @@ Level =
 		},
 		Doors = 
 		{
-			string LevelToLoad = "5967cb8c929685e3:Hallway",
+			string LevelToLoad = "594f45fb93b94360:Hallway",
 			Vec3 HallwayPos = [0.5, -5.5, 0],
 		},
 	},
@@ -3495,54 +3495,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Beanbag",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [4.5, 1.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Sprite = 
-		{
-			bool Visible = true,
-			bool VisibilityCulling = true,
-			bool VisibilityEvents = true,
-			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
-			BlendMode BlendMode = Alpha,
-			SpriteGeometryMode GeometryMode = ZPlane,
-			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "596bccc2b6718c86:BigBeanBag",
-			bool RenderMask = false,
-			bool FlipX = true,
-			bool FlipY = false,
-			bool AnimationActive = true,
-			float AnimationSpeed = 1,
-			uint StartFrame = 0,
-		},
-		BoxCollider = 
-		{
-			bool Ghost = false,
-			bool SendsMessages = true,
-			bool Seamless = true,
-			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.0500000007, 0.0500000007, 0.5],
-		},
-		Lightup = 
-		{
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 170,
-		},
-		Named = 
-		{
 			string Name = "Spawner",
 		},
 		Transform = 
@@ -3588,7 +3540,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 171,
+			uint Id = 170,
 		},
 		Named = 
 		{
@@ -3638,7 +3590,7 @@ Level =
 		string Name = "59ff7408b7c51027:Sense",
 		LinkId = 
 		{
-			uint Id = 172,
+			uint Id = 171,
 		},
 		Transform = 
 		{
@@ -3655,7 +3607,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 173,
+			uint Id = 172,
 		},
 		Named = 
 		{
@@ -3700,7 +3652,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 174,
+			uint Id = 173,
 		},
 		Named = 
 		{
@@ -3755,7 +3707,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 175,
+					uint Id = 174,
 				},
 				Named = 
 				{
@@ -3798,7 +3750,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 176,
+			uint Id = 175,
 		},
 		Named = 
 		{
@@ -3853,7 +3805,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 177,
+					uint Id = 176,
 				},
 				Named = 
 				{
@@ -3896,7 +3848,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 178,
+			uint Id = 177,
 		},
 		Named = 
 		{
@@ -3951,7 +3903,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 179,
+					uint Id = 178,
 				},
 				Named = 
 				{
@@ -3994,7 +3946,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 180,
+			uint Id = 179,
 		},
 		Named = 
 		{
@@ -4049,7 +4001,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 181,
+					uint Id = 180,
 				},
 				Named = 
 				{

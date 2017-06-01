@@ -163,14 +163,14 @@ class PlayerMovement : ZilchComponent
     }
     function ShrinkBeam()
     {
-        var len = 5.0;
+        var len = 5.5;
         var ray = Ray();
         ray.Start = this.Owner.Transform.Translation;
         ray.Direction = Real3(this.Dir, 0);
         var result2 = this.Space.PhysicsSpace.CastRayFirst(ray);
         if(result2.Distance < len)
         {
-            len = 5;
+            len = 5.5;
         }
         //Diagonal
         if ((this.Dir.X != 0) && (this.Dir.Y != 0))
