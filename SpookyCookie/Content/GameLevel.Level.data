@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 90.4838409,
+			float Size = 74.0818481,
 		},
 		EditorCameraController = 
 		{
@@ -326,7 +326,7 @@ Level =
 				},
 				Sprite = 
 				{
-					bool Visible = true,
+					bool Visible = false,
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,

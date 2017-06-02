@@ -1,0 +1,12 @@
+BinaryContent = 
+{
+	BinaryBuilder = 
+	{
+		string Name = "Kitchen_TileMap01",
+		uint64 ResourceId = 59ed3701e688e84c,
+		string LoaderType = "TileMapSource",
+		uint Version = 0,
+		string FilterTag = "",
+		string ResourceOwner = "59d81eede428fde1:Kitchen",
+	},
+},
