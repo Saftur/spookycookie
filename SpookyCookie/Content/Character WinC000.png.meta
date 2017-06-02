@@ -2,14 +2,14 @@ ImageContent =
 {
 	SpriteSourceBuilder = 
 	{
-		string Name = "bar island thing (1)",
-		uint64 ResourceId = 594f6570f0d0508a,
+		string Name = "Character WinC000",
+		uint64 ResourceId = 5950a5c47c6030e1,
 		uint64 AtlasId = 5274cf95e4a661fd,
-		uint FrameSizeX = 512,
+		uint FrameSizeX = 256,
 		uint FrameSizeY = 256,
 		uint FrameCount = 1,
 		float FrameDelay = 0.0833333358,
-		float OriginX = 256,
+		float OriginX = 128,
 		float OriginY = 128,
 		float PixelsPerUnit = 256,
 		bool Smoothing = false,
