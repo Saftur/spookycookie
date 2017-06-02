@@ -8,8 +8,7 @@ class LoadIn : ZilchComponent
     var Menu : Boolean = false;
     var Linger : Real = 1;
     
-    [Property]
-    var LevelText : String = "";
+    //var LevelText : String = "";
     var LevelTitle : Cog = null;
     var LoadScreen : Cog = null;
     function Initialize(init : CogInitializer)
@@ -18,10 +17,10 @@ class LoadIn : ZilchComponent
         this.LoadScreen = this.Space.FindObjectByName("LoadScreen2");
         if(!this.Menu)
         {
-            this.LevelTitle = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.LevelTitle;
-            this.LevelTitle.SpriteText.Text = this.LevelText;
-            this.LevelTitle.FadeText.Time = 0.5;
-            this.LevelTitle.FadeText.StartFade = true;
+            this.LevelTitle = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.LevelTitleA;
+            //this.LevelTitle.SpriteText.Text = this.LevelText;
+            this.LevelTitle.Fade.Time = 0.5;
+            this.LevelTitle.Fade.StartFade = true;
         }
         if(this.Hallway)
         {
@@ -40,7 +39,7 @@ class LoadIn : ZilchComponent
             this.Linger -= event.Dt;
             if(this.Linger <= 0)
             {
-                this.LevelTitle.FadeText.StartFade = true;
+                this.LevelTitle.Fade.StartFade = true;
                 this.LoadScreen.Fade.StartFade = true;
             }
         }
