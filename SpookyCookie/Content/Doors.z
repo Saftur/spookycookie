@@ -2,6 +2,9 @@
 // All content © 2017 DigiPen (USA) Corporation, all rights reserved.
 class Doors : ZilchComponent
 {
+    [Property]
+    var NotLocked : Boolean = false;
+    
     var Locked : Boolean = true;
     var HUD : Space = null;
     var Linger : Real = -1;
@@ -16,11 +19,14 @@ class Doors : ZilchComponent
         Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         Zero.Connect(this.Owner, Events.CollisionStarted, this.OnCollisionStarted);
         this.HUD = this.Space.LevelSettings.HUDCreator.HUDSpace;
+        if(this.NotLocked)
+            this.Locked = false;
     }
     function OnCollisionStarted(event : CollisionEvent)
     {
         if(!this.Locked && event.OtherObject.PlayerMovement != null)
         {
+            event.OtherObject.PlayerMovement.HitDoor = true;
             this.CheckLockState();
         }
         else if(event.OtherObject.PlayerMovement != null)
@@ -63,7 +69,7 @@ class Doors : ZilchComponent
     }
     function CheckLockState()
     {
-        if(!this.Locked && this.Owner.Sprite.SpriteSource != SpriteSource.Open_Door)
+        if((this.NotLocked) || (!this.Locked && this.Owner.Sprite.SpriteSource != SpriteSource.Open_Door))
         {
             this.Owner.Sprite.AnimationActive = true;
         }

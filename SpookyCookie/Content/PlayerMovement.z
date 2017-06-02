@@ -13,6 +13,7 @@ class PlayerMovement : ZilchComponent
     var Beam : Cog = null;
     var Sense : Cog = null;
     
+    var HitDoor : Boolean = false;
     var Active : Boolean = false;
     
     [Property]
@@ -206,5 +207,8 @@ class PlayerMovement : ZilchComponent
         this.Owner.Transform.Translation = this.Destination;
         this.Dir = Integer2(0,0);
         this.RBody.Velocity = Real3(0,0,0);
+        
+        if(this.HitDoor)
+            this.Active = false;
     }
 }
