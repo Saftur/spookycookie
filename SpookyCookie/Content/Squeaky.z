@@ -14,7 +14,7 @@ class Squeaky : ZilchComponent
     {
         if(event.OtherObject.Name == "Player")
         {
-            event.OtherObject.FearManager.Spook(0.1, false);
+            event.OtherObject.FearManager.Spook(0.2, false);
             this.Space.SoundSpace.PlayCue(this.Squeak);
         }
     }

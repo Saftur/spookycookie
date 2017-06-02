@@ -114,7 +114,7 @@ Level =
 		{
 			bool Hallway = true,
 			bool Menu = false,
-			string LevelText = "Hallway",
+			int Room = 2,
 		},
 		LevelTransition = 
 		{
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.9657917,
+			float Size = 15.8364515,
 		},
 		EditorCameraController = 
 		{
@@ -11098,6 +11098,7 @@ Level =
 		},
 		Doors = 
 		{
+			bool NotLocked = false,
 			string LevelToLoad = "5967cb8c929685e3:Hallway",
 			Vec3 HallwayPos = [0.5, -5.5, 0],
 		},

@@ -12,6 +12,8 @@ class InventoryController : ZilchComponent
     
     function OnKeyDown(event : KeyboardEvent)
     {
+        if(!this.Owner.Parent.PlayerMovement.Active)
+            return;
         if(event.Key == this.InventoryKey)
         {
             this.Owner.Sprite.Visible = !this.Owner.Sprite.Visible;

@@ -114,7 +114,7 @@ Level =
 		{
 			bool Hallway = true,
 			bool Menu = false,
-			string LevelText = "Hallway",
+			int Room = 2,
 		},
 		LevelTransition = 
 		{
@@ -138,7 +138,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-8.64207363, -6.92030239, 42.0759697],
+			Vec3 Translation = [67.2677841, 7.01508093, 10.0938387],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -150,7 +150,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 12.2456741,
+			float Size = 67.032196,
 		},
 		EditorCameraController = 
 		{
@@ -158,7 +158,7 @@ Level =
 			float LookDistance = 10.0948391,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [-8.64207363, -6.92030239, 31.9811306],
+			Vec3 LookTarget = [67.2677841, 7.01508093, -0.00100000005],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -230,7 +230,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 5,
 		},
 		Named = 
 		{
@@ -256,7 +256,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5963e461a1043f00:Character_Right_Side_1",
+			string SpriteSource = "5963e3d3b0eaf446:Character_Up",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -316,7 +316,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 5,
+					uint Id = 6,
 				},
 				Named = 
 				{
@@ -324,8 +324,8 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [3.25, 0, 0],
-					Vec3 Scale = [5.5, 1, 1],
+					Vec3 Translation = [3, 0, 0],
+					Vec3 Scale = [5, 0.899999976, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
 				Sprite = 
@@ -357,13 +357,229 @@ Level =
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 7,
+				},
+				Named = 
+				{
+					string Name = "Inventoryframe",
+				},
+				EditorFlags = 
+				{
+					bool Locked = true,
+					bool Hidden = false,
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 2],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = false,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "59ec31c6df99f2c5:inventory",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				InventoryController = 
+				{
+					Enum InventoryKey = I,
+				},
+				Hierarchy = 
+				{
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 8,
+						},
+						Named = 
+						{
+							string Name = "IBone",
+						},
+						EditorFlags = 
+						{
+							bool Locked = true,
+							bool Hidden = false,
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-1.02732372, 0.46792841, 3],
+							Vec3 Scale = [1, 1, 1],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = false,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5948b2e56ba12b44:just_bone_things",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 9,
+						},
+						Named = 
+						{
+							string Name = "MapScreen",
+						},
+						EditorFlags = 
+						{
+							bool Locked = true,
+							bool Hidden = false,
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-0.192541122, 0.112701893, 4],
+							Vec3 Scale = [2.37881374, 2.37881374, 2.37881374],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = false,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5950ad5c1eff3f9e:map",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 10,
+						},
+						Named = 
+						{
+							string Name = "IMap",
+						},
+						EditorFlags = 
+						{
+							bool Locked = true,
+							bool Hidden = false,
+						},
+						Transform = 
+						{
+							Vec3 Translation = [1.17220497, 0.418921947, 1],
+							Vec3 Scale = [0.266177863, 0.266177863, 0.266177863],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = false,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5950ad5c1eff3f9e:map",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+						MapController = 
+						{
+							Enum ExitKey = E,
+						},
+						Reactive = 
+						{
+							bool Active = true,
+							bool CaptureMouse = false,
+						},
+					},
+					Cog = 
+					{
+						LinkId = 
+						{
+							uint Id = 11,
+						},
+						Named = 
+						{
+							string Name = "IStool",
+						},
+						EditorFlags = 
+						{
+							bool Locked = true,
+							bool Hidden = false,
+						},
+						Transform = 
+						{
+							Vec3 Translation = [-0.896346092, -1.26278067, 3],
+							Vec3 Scale = [1.03192329, 1.03192329, 1.03192329],
+							Quat Rotation = [0, 0, 0, 1],
+						},
+						Sprite = 
+						{
+							bool Visible = false,
+							bool VisibilityCulling = true,
+							bool VisibilityEvents = true,
+							bool CastShadows = false,
+							Vec4 Color = [1, 1, 1, 1],
+							BlendMode BlendMode = Alpha,
+							SpriteGeometryMode GeometryMode = ZPlane,
+							string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+							string SpriteSource = "5950b474f8da005c:four_legged_stool_clone",
+							bool RenderMask = false,
+							bool FlipX = false,
+							bool FlipY = false,
+							bool AnimationActive = true,
+							float AnimationSpeed = 1,
+							uint StartFrame = 0,
+						},
+					},
+				},
+			},
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 6,
+			uint Id = 12,
 		},
 		Named = 
 		{
@@ -371,7 +587,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 0],
+			Vec3 Translation = [0, 0, -0.100000001],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -399,7 +615,7 @@ Level =
 		string Name = "5963e2025d14442a:LoadScreen2",
 		LinkId = 
 		{
-			uint Id = 7,
+			uint Id = 13,
 		},
 		Transform = 
 		{
@@ -417,7 +633,7 @@ Level =
 		string Name = "5963db5ac3780986:LoadScreen",
 		LinkId = 
 		{
-			uint Id = 8,
+			uint Id = 14,
 		},
 		Transform = 
 		{
@@ -434,7 +650,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 9,
+			uint Id = 15,
 		},
 		Named = 
 		{
@@ -470,13 +686,13 @@ Level =
 		string Name = "59ff7408b7c51027:Sense",
 		LinkId = 
 		{
-			uint Id = 10,
+			uint Id = 16,
 		},
 		Transform = 
 		{
 			Vec3 Translation = [63.1954613, 7.70697117, 0],
 			Vec3 Scale = [1.5, 1.5, 1],
-			Quat Rotation = [0, 0, 0, 1],
+			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
 		},
 		Named = 
 		{
@@ -487,7 +703,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 11,
+			uint Id = 17,
 		},
 		Named = 
 		{
@@ -495,8 +711,8 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-11.6546822, -8.4898262, 0],
-			Vec3 Scale = [1, 1, 1],
+			Vec3 Translation = [-11.4676399, -8.27698517, 0],
+			Vec3 Scale = [1.5, 1.5, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
 		Sprite = 
@@ -509,7 +725,7 @@ Level =
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-			string SpriteSource = "5947749a3b0eff45:side door_0",
+			string SpriteSource = "59ec25e59c1f9e34:side door brown",
 			bool RenderMask = false,
 			bool FlipX = false,
 			bool FlipY = false,
@@ -530,15 +746,60 @@ Level =
 			bool Seamless = true,
 			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
 			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-			Vec3 Offset = [0, 0, 0],
-			Vec3 Size = [0.5, 0.25, 0.5],
+			Vec3 Offset = [-0.100000001, -0.100000001, 0],
+			Vec3 Size = [0.150000006, 0.25, 0.5],
 		},
 	},
 	Cog = 
 	{
 		LinkId = 
 		{
-			uint Id = 12,
+			uint Id = 18,
+		},
+		Named = 
+		{
+			string Name = "LoadScreen2",
+		},
+		Archetyped = 
+		{
+			string Name = "5963e2025d14442a:LoadScreen2",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [0, 0, 5],
+			Vec3 Scale = [50, 50, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [0, 0, 0, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5275aa4d802dd6dc:Square",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		Fade = 
+		{
+			bool DontFadeKids = false,
+			float Time = 1,
+			bool Invis = false,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 19,
 		},
 		Named = 
 		{
@@ -552,170 +813,6 @@ Level =
 		},
 		Hierarchy = 
 		{
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 13,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 14,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 15,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [8.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 16,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [7.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 17,
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-				Archetyped = 
-				{
-					string Name = "59ecbcb08d6afb8c:Squeak",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [6.5, -6.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5963c8ce7606072f:wood floor light",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Squeaky = 
-				{
-					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
-				},
-				BoxCollider = 
-				{
-					bool Ghost = true,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-				Hierarchy = 
-				{
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 18,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-8.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 19,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-5.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
 			Cog = 
 			{
 				LinkId = 
@@ -732,7 +829,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-2.5, -5.5, -0.100000001],
+					Vec3 Translation = [1.5, -3.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -742,7 +839,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -769,40 +866,110 @@ Level =
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
 					uint Id = 21,
 				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -7.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, -3.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
 					uint Id = 22,
 				},
-				Transform = 
-				{
-					Vec3 Translation = [-7.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
 				Named = 
 				{
 					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [8.5, -5.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
 			Cog = 
@@ -821,7 +988,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-2.5, -7.5, -0.100000001],
+					Vec3 Translation = [7.5, -5.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -831,7 +998,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -874,7 +1041,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-6.5, -6.5, -0.100000001],
+					Vec3 Translation = [6.5, -6.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -884,7 +1051,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -930,7 +1097,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-11.5, -3.5, -0.100000001],
+					Vec3 Translation = [-8.5, -4.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -940,7 +1107,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -965,9 +1132,6 @@ Level =
 					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-				Hierarchy = 
-				{
 				},
 			},
 			Cog = 
@@ -986,7 +1150,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-11.5, -4.5, -0.100000001],
+					Vec3 Translation = [-5.5, -3.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -996,7 +1160,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1021,9 +1185,6 @@ Level =
 					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-				Hierarchy = 
-				{
 				},
 			},
 			Cog = 
@@ -1042,7 +1203,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-11.5, -5.5, -0.100000001],
+					Vec3 Translation = [-2.5, -5.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1052,7 +1213,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1077,9 +1238,6 @@ Level =
 					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-				Hierarchy = 
-				{
 				},
 			},
 			Cog = 
@@ -1098,7 +1256,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-11.5, -6.5, -0.100000001],
+					Vec3 Translation = [1.5, -7.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1108,7 +1266,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1133,9 +1291,6 @@ Level =
 					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-				Hierarchy = 
-				{
 				},
 			},
 			Cog = 
@@ -1154,7 +1309,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-10.5, -6.5, -0.100000001],
+					Vec3 Translation = [-7.5, -5.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1164,7 +1319,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1189,9 +1344,6 @@ Level =
 					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-				Hierarchy = 
-				{
 				},
 			},
 			Cog = 
@@ -1210,7 +1362,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-10.5, -5.5, -0.100000001],
+					Vec3 Translation = [-2.5, -7.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1220,7 +1372,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1246,9 +1398,6 @@ Level =
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
-				Hierarchy = 
-				{
-				},
 			},
 			Cog = 
 			{
@@ -1266,7 +1415,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-10.5, -4.5, -0.100000001],
+					Vec3 Translation = [-6.5, -6.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1276,7 +1425,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1322,7 +1471,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-10.5, -3.5, -0.100000001],
+					Vec3 Translation = [-11.5, -3.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1332,7 +1481,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1378,7 +1527,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-9.5, -3.5, -0.100000001],
+					Vec3 Translation = [-11.5, -4.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1388,7 +1537,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1434,7 +1583,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-9.5, -4.5, -0.100000001],
+					Vec3 Translation = [-11.5, -5.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1444,7 +1593,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1490,7 +1639,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-9.5, -5.5, -0.100000001],
+					Vec3 Translation = [-11.5, -6.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1500,7 +1649,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1546,7 +1695,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-9.5, -6.5, -0.100000001],
+					Vec3 Translation = [-10.5, -6.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1556,7 +1705,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1586,40 +1735,116 @@ Level =
 				{
 				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
 					uint Id = 37,
 				},
-				Transform = 
-				{
-					Vec3 Translation = [-7.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-10.5, -5.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
+				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
 					uint Id = 38,
 				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
 				Named = 
 				{
 					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-10.5, -4.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
 				},
 			},
 			Cog = 
@@ -1638,7 +1863,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-5.5, -6.5, -0.100000001],
+					Vec3 Translation = [-10.5, -3.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1648,7 +1873,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1674,41 +1899,120 @@ Level =
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
+				Hierarchy = 
+				{
+				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
 					uint Id = 40,
 				},
-				Transform = 
-				{
-					Vec3 Translation = [-2.5, -6.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-9.5, -3.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
+				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
 					uint Id = 41,
 				},
-				Transform = 
-				{
-					Vec3 Translation = [-6.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
 				Named = 
 				{
 					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-9.5, -4.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
 				},
 			},
 			Cog = 
@@ -1727,7 +2031,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-1.5, -5.5, -0.100000001],
+					Vec3 Translation = [-9.5, -5.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1737,7 +2041,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1762,6 +2066,9 @@ Level =
 					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+				Hierarchy = 
+				{
 				},
 			},
 			Cog = 
@@ -1780,7 +2087,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-1.5, -7.5, -0.100000001],
+					Vec3 Translation = [-9.5, -6.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1790,7 +2097,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1816,6 +2123,9 @@ Level =
 					Vec3 Offset = [0, 0, 0],
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
+				Hierarchy = 
+				{
+				},
 			},
 			Cog = 
 			{
@@ -1833,7 +2143,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-1.5, -8.5, -0.100000001],
+					Vec3 Translation = [-7.5, -4.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1843,7 +2153,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1886,6 +2196,377 @@ Level =
 				},
 				Transform = 
 				{
+					Vec3 Translation = [1.5, -4.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 46,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, -6.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 47,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-2.5, -6.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 48,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-6.5, -3.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 49,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, -5.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 50,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, -7.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 51,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-1.5, -8.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 52,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
 					Vec3 Translation = [5.5, -5.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
@@ -1896,7 +2577,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -1926,47 +2607,11 @@ Level =
 				{
 				},
 			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 46,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [7.5, -6.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 47,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [7.5, -7.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 48,
+					uint Id = 53,
 				},
 				Named = 
 				{
@@ -1978,7 +2623,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [-5.5, -4.5, -0.100000001],
+					Vec3 Translation = [7.5, -6.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -1988,7 +2633,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2015,12 +2660,125 @@ Level =
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
-					uint Id = 49,
+					uint Id = 54,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [7.5, -7.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 55,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-5.5, -4.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 56,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2028,17 +2786,52 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 57,
+				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
+				Archetyped = 
 				{
-					uint Id = 50,
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2046,135 +2839,37 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				Named = 
+				Sprite = 
 				{
-					string Name = "Squeak",
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
 				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
+				Squeaky = 
 				{
-					uint Id = 51,
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
 				},
-				Transform = 
+				BoxCollider = 
 				{
-					Vec3 Translation = [7.5, -8.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 52,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-8.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 53,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, -6.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 54,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [6.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 55,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-7.5, -6.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 56,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, -8.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
-				{
-					uint Id = 57,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-7.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "Squeak",
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
 			Cog = 
@@ -2193,7 +2888,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [8.5, -8.5, -0.100000001],
+					Vec3 Translation = [7.5, -8.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2203,7 +2898,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2246,6 +2941,377 @@ Level =
 				},
 				Transform = 
 				{
+					Vec3 Translation = [-8.5, -5.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 60,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [5.5, -6.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 61,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [6.5, -5.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 62,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-7.5, -6.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 63,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [2.5, -8.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 64,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-7.5, -3.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 65,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [8.5, -8.5, -0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 66,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
+				},
+				Transform = 
+				{
 					Vec3 Translation = [8.5, -7.5, -0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
@@ -2256,7 +3322,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2290,7 +3356,7 @@ Level =
 			{
 				LinkId = 
 				{
-					uint Id = 60,
+					uint Id = 67,
 				},
 				Named = 
 				{
@@ -2312,7 +3378,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2339,12 +3405,19 @@ Level =
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
-					uint Id = 61,
+					uint Id = 68,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2352,17 +3425,52 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 69,
+				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
+				Archetyped = 
 				{
-					uint Id = 62,
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2370,17 +3478,52 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 70,
+				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
+				Archetyped = 
 				{
-					uint Id = 63,
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2388,17 +3531,52 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 71,
+				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
+				Archetyped = 
 				{
-					uint Id = 64,
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2406,16 +3584,44 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
-				Named = 
+				Sprite = 
 				{
-					string Name = "Squeak",
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 65,
+					uint Id = 72,
 				},
 				Named = 
 				{
@@ -2437,7 +3643,7 @@ Level =
 					bool VisibilityCulling = true,
 					bool VisibilityEvents = true,
 					bool CastShadows = false,
-					Vec4 Color = [0.730000019, 0.730000019, 0.730000019, 1],
+					Vec4 Color = [1, 1, 1, 1],
 					BlendMode BlendMode = Alpha,
 					SpriteGeometryMode GeometryMode = ZPlane,
 					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2464,12 +3670,19 @@ Level =
 					Vec3 Size = [0.5, 0.5, 0.5],
 				},
 			},
-			ArchetypeInstance = 
+			Cog = 
 			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
 				LinkId = 
 				{
-					uint Id = 66,
+					uint Id = 73,
+				},
+				Named = 
+				{
+					string Name = "Squeak",
+				},
+				Archetyped = 
+				{
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2477,17 +3690,52 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 74,
+				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
+				Archetyped = 
 				{
-					uint Id = 67,
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2495,17 +3743,52 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 75,
+				},
 				Named = 
 				{
 					string Name = "Squeak",
 				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59ecbcb08d6afb8c:Squeak",
-				LinkId = 
+				Archetyped = 
 				{
-					uint Id = 68,
+					string Name = "59ecbcb08d6afb8c:Squeak",
 				},
 				Transform = 
 				{
@@ -2513,9 +3796,346 @@ Level =
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5963c8ce7606072f:wood floor light",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Squeaky = 
+				{
+					string Squeak = "4e1bd44008b4dc2a:DefaultCue",
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = true,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 76,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [9.49903774, -3.46582913, -0.0500000007],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "594f6531ed2f446d:cartoyi",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 77,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.39873171, -2.66306663, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "59ec2e7a3db1da23:window",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 78,
+		},
+		Named = 
+		{
+			string Name = "Sprite",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.5861249, -2.67225003, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "59ec2e7a3db1da23:window",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 79,
+		},
+		Named = 
+		{
+			string Name = "Spawner",
+		},
+		Archetyped = 
+		{
+			string Name = "594e0a7511022e31:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [4.58993626, -1.32920051, -0.00100040436],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Object = 
+		{
+			float DistanceSpawn = 0,
+			CogPath TargetPath = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float DetectDistance = 5,
+			float RespawnTime = 6,
+			string GhostType = "59d80a68fb185d9a:Ghost2",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.0500000007, 0.0500000007, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 80,
+		},
+		Named = 
+		{
+			string Name = "Spawner",
+		},
+		Archetyped = 
+		{
+			string Name = "594e0a7511022e31:Spawner",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-4.64276791, -10.4311295, -0.00100040436],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Object = 
+		{
+			float DistanceSpawn = 0,
+			CogPath TargetPath = 
+			{
+				string Path = ":/Player",
+				bool ErrorOnResolveToNull = false,
+				bool ErrorOnPathCantCompute = false,
+				bool ErrorOnDirectLinkFail = false,
+				bool UpdateCogOnPathChange = true,
+				bool UpdatePathOnCogChange = true,
+				bool UpdateCogOnInitialize = true,
+				bool ResolvedNullErrorOccurred = false,
+				uint ResolvedCog = 3,
+				CogPathPreference PathPreference0 = CogRelative,
+				CogPathPreference PathPreference1 = SpaceRelative,
+				CogPathPreference PathPreference2 = Absolute,
+			},
+			float DetectDistance = 5,
+			float RespawnTime = 6,
+			string GhostType = "59d80a68fb185d9a:Ghost2",
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.0500000007, 0.0500000007, 0.5],
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 81,
+		},
+		Named = 
+		{
+			string Name = "Plant",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-5.5, -6.5, 0],
+			Vec3 Scale = [0.5, 0.5, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "59ec2a63978326ce:plant",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [1, 1, 0.5],
+		},
+		Illusion = 
+		{
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = true,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 82,
+				},
 				Named = 
 				{
-					string Name = "Squeak",
+					string Name = "Illusion",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0.00999999978],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "59ec2b9f926d4fb2:Scary_Plant",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					bool DontFadeKids = false,
+					float Time = 1.5,
+					bool Invis = false,
 				},
 			},
 		},

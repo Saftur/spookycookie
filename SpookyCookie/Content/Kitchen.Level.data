@@ -114,7 +114,7 @@ Level =
 		{
 			bool Hallway = false,
 			bool Menu = false,
-			string LevelText = "Kitchen",
+			int Room = 3,
 		},
 		LevelTransition = 
 		{
@@ -134,7 +134,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [1.79754174, 4.73511505, 47.9990005],
+			Vec3 Translation = [4.63946915, 5.88635921, 47.9990005],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
@@ -146,7 +146,7 @@ Level =
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 5.43656349,
+			float Size = 7.42737865,
 		},
 		EditorCameraController = 
 		{
@@ -154,7 +154,7 @@ Level =
 			float LookDistance = 50,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [1.79754174, 4.73511505, -2.00100017],
+			Vec3 LookTarget = [4.63946915, 5.88635921, -2.00100017],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -230,1788 +230,6 @@ Level =
 		},
 		Named = 
 		{
-			string Name = "Floor",
-		},
-		Transform = 
-		{
-			Vec3 Translation = [0, 0, -0.100000001],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
-		Hierarchy = 
-		{
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 6,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 7,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, 2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 8,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, 2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 9,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 10,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 11,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 12,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			Cog = 
-			{
-				LinkId = 
-				{
-					uint Id = 13,
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-				Archetyped = 
-				{
-					string Name = "59d8dfa8393d9518:wood_floor",
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Sprite = 
-				{
-					bool Visible = true,
-					bool VisibilityCulling = true,
-					bool VisibilityEvents = true,
-					bool CastShadows = false,
-					Vec4 Color = [1, 1, 1, 0.999899983],
-					BlendMode BlendMode = Alpha,
-					SpriteGeometryMode GeometryMode = ZPlane,
-					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
-					string SpriteSource = "5963c8cf71ef8c66:carpet floor light",
-					bool RenderMask = false,
-					bool FlipX = false,
-					bool FlipY = false,
-					bool AnimationActive = true,
-					float AnimationSpeed = 1,
-					uint StartFrame = 0,
-				},
-				Lightup = 
-				{
-				},
-				BoxCollider = 
-				{
-					bool Ghost = true,
-					bool SendsMessages = true,
-					bool Seamless = true,
-					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
-					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
-					Vec3 Offset = [0, 0, 0],
-					Vec3 Size = [0.5, 0.5, 0.5],
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 14,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 15,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, -0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 16,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 17,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 18,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 19,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 20,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 21,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 22,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 23,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 24,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 25,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, 4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 26,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 27,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 28,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 29,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 30,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 31,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, -0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 32,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 33,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 34,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 35,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 36,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 37,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 38,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 39,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 40,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 41,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 42,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 43,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 44,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 45,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 46,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, 4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 47,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, 4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 48,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, 2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 49,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 50,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 51,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 52,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 53,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, 2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 54,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 55,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 56,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, -0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 57,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 58,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, -0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 59,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 60,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 61,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, 2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 62,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 63,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, 2.5, 0],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 64,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, 4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 65,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 66,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 67,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 68,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 69,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 70,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 71,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 72,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 73,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 74,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 75,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 76,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 77,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 78,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 79,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, 4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 80,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, -0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 81,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, -3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 82,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 83,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, 4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 84,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 85,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [0.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 86,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, 3.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 87,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 88,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-0.5, -2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 89,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, 4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 90,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [1.5, -1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 91,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, 4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 92,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [2.5, 0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 93,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, 2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 94,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 95,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, -4.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 96,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, -0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 97,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, -5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 98,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [5.5, 5.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 99,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [4.5, 1.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 100,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [-1.5, -0.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-			ArchetypeInstance = 
-			{
-				string Name = "59d8dfa8393d9518:wood_floor",
-				LinkId = 
-				{
-					uint Id = 101,
-				},
-				Transform = 
-				{
-					Vec3 Translation = [3.5, 2.5, -0.100000001],
-					Vec3 Scale = [1, 1, 1],
-					Quat Rotation = [0, 0, 0, 1],
-				},
-				Named = 
-				{
-					string Name = "wood_floor",
-				},
-			},
-		},
-	},
-	Cog = 
-	{
-		LinkId = 
-		{
-			uint Id = 102,
-		},
-		Named = 
-		{
 			string Name = "TileMap",
 		},
 		Transform = 
@@ -2043,7 +261,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 103,
+			uint Id = 6,
 		},
 		Named = 
 		{
@@ -2095,7 +313,7 @@ Level =
 		string Name = "5963e2025d14442a:LoadScreen2",
 		LinkId = 
 		{
-			uint Id = 104,
+			uint Id = 7,
 		},
 		Transform = 
 		{
@@ -2112,7 +330,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 105,
+			uint Id = 8,
 		},
 		Named = 
 		{
@@ -2147,7 +365,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 106,
+			uint Id = 9,
 		},
 		Named = 
 		{
@@ -2223,7 +441,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 107,
+			uint Id = 10,
 		},
 		Named = 
 		{
@@ -2269,22 +487,137 @@ Level =
 			Vec3 Size = [0.5, 0.5, 0.5],
 		},
 	},
-	ArchetypeInstance = 
+	Cog = 
 	{
-		string Name = "597f7321ff137541:Player",
 		LinkId = 
 		{
 			uint Id = 3,
 		},
-		Transform = 
-		{
-			Vec3 Translation = [0.5, -5.5, 0],
-			Vec3 Scale = [1, 1, 1],
-			Quat Rotation = [0, 0, 0, 1],
-		},
 		Named = 
 		{
 			string Name = "Player",
+		},
+		Archetyped = 
+		{
+			string Name = "597f7321ff137541:Player",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5.5, -5.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 1],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "5963e3b9be1fd58d:Character_Left_Side",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = false,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		RigidBody = 
+		{
+			bool Static = false,
+			bool Asleep = false,
+			bool Kinematic = false,
+			bool RotationLocked = false,
+			bool Mode2D = true,
+			bool AllowSleep = true,
+			bool Inherit2DMode = true,
+			Vec3 Velocity = [0, 0, 0],
+			Vec3 AngularVelocity = [0, 0, 0],
+		},
+		BoxCollider = 
+		{
+			bool Ghost = true,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [0.5, 0.5, 0.5],
+		},
+		PlayerMovement = 
+		{
+			float StepSize = 1,
+			float Speed = 3,
+		},
+		IgnoreSpaceEffects = 
+		{
+			bool Drag = true,
+			bool Flow = false,
+			bool Force = false,
+			bool Gravity = false,
+			bool Thrust = false,
+			bool Vortex = false,
+			bool Wind = false,
+			bool Invalid = false,
+			bool Torque = false,
+			bool PointGravity = false,
+			bool PointForce = false,
+			bool Buoyancy = false,
+			bool Custom = false,
+		},
+		FearManager = 
+		{
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 11,
+				},
+				Named = 
+				{
+					string Name = "Beam",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [-3, 0, 0],
+					Vec3 Scale = [5, 0.899999976, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 0.5],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5275aa4d802dd6dc:Square",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				BoxCollider = 
+				{
+					bool Ghost = true,
+					bool SendsMessages = false,
+					bool Seamless = true,
+					string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+					string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+					Vec3 Offset = [0, 0, 0],
+					Vec3 Size = [0.5, 0.5, 0.5],
+				},
+			},
 		},
 	},
 	ArchetypeInstance = 
@@ -2292,13 +625,13 @@ Level =
 		string Name = "59ff7408b7c51027:Sense",
 		LinkId = 
 		{
-			uint Id = 108,
+			uint Id = 12,
 		},
 		Transform = 
 		{
 			Vec3 Translation = [37.6723671, -2.0264535, 0],
 			Vec3 Scale = [1.5, 1.5, 1],
-			Quat Rotation = [0, 0, 0.707106829, 0.707106829],
+			Quat Rotation = [-0, 0, 1, -4.37113883e-08],
 		},
 		Named = 
 		{
@@ -2309,7 +642,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 109,
+			uint Id = 13,
 		},
 		Named = 
 		{
@@ -2327,7 +660,7 @@ Level =
 			bool VisibilityCulling = true,
 			bool VisibilityEvents = true,
 			bool CastShadows = false,
-			Vec4 Color = [1, 1, 1, 1],
+			Vec4 Color = [1, 1, 1, 0],
 			BlendMode BlendMode = Alpha,
 			SpriteGeometryMode GeometryMode = ZPlane,
 			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
@@ -2339,15 +672,6 @@ Level =
 			float AnimationSpeed = 1,
 			uint StartFrame = 0,
 		},
-		Illusion = 
-		{
-		},
-		Fade = 
-		{
-			bool DontFadeKids = true,
-			float Time = 1.5,
-			bool Invis = false,
-		},
 		BoxCollider = 
 		{
 			bool Ghost = false,
@@ -2358,13 +682,22 @@ Level =
 			Vec3 Offset = [0, 0, 0],
 			Vec3 Size = [1, 0.5, 0.5],
 		},
+		Illusion = 
+		{
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = true,
+		},
 		Hierarchy = 
 		{
 			Cog = 
 			{
 				LinkId = 
 				{
-					uint Id = 110,
+					uint Id = 14,
 				},
 				Named = 
 				{
@@ -2372,7 +705,7 @@ Level =
 				},
 				Transform = 
 				{
-					Vec3 Translation = [0, 0, 0],
+					Vec3 Translation = [0, 0, 0.100000001],
 					Vec3 Scale = [1, 1, 1],
 					Quat Rotation = [0, 0, 0, 1],
 				},
@@ -2397,7 +730,203 @@ Level =
 				Fade = 
 				{
 					bool DontFadeKids = false,
-					float Time = 1,
+					float Time = 1.5,
+					bool Invis = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Named = 
+		{
+			string Name = "WaffleCounter",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [5, 5.5, 0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "594f6570f0d0508a:bar island thing (1)",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [1, 0.5, 0.5],
+		},
+		Illusion = 
+		{
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = true,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 16,
+				},
+				Named = 
+				{
+					string Name = "Illusion",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5950a54385db4c87:bar_island_thing_clone",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					bool DontFadeKids = false,
+					float Time = 1.5,
+					bool Invis = false,
+				},
+			},
+		},
+	},
+	Cog = 
+	{
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Named = 
+		{
+			string Name = "WaffleCounter",
+		},
+		Transform = 
+		{
+			Vec3 Translation = [3, 5.5, 0],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Sprite = 
+		{
+			bool Visible = true,
+			bool VisibilityCulling = true,
+			bool VisibilityEvents = true,
+			bool CastShadows = false,
+			Vec4 Color = [1, 1, 1, 0],
+			BlendMode BlendMode = Alpha,
+			SpriteGeometryMode GeometryMode = ZPlane,
+			string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+			string SpriteSource = "594f6570f0d0508a:bar island thing (1)",
+			bool RenderMask = false,
+			bool FlipX = false,
+			bool FlipY = false,
+			bool AnimationActive = true,
+			float AnimationSpeed = 1,
+			uint StartFrame = 0,
+		},
+		BoxCollider = 
+		{
+			bool Ghost = false,
+			bool SendsMessages = true,
+			bool Seamless = true,
+			string MaterialName = "4de020863e872da8:DefaultPhysicsMaterial",
+			string SerializedGroupName = "4e740859314e5515:DefaultGroup",
+			Vec3 Offset = [0, 0, 0],
+			Vec3 Size = [1, 0.5, 0.5],
+		},
+		Illusion = 
+		{
+		},
+		Fade = 
+		{
+			bool DontFadeKids = true,
+			float Time = 1.5,
+			bool Invis = true,
+		},
+		Hierarchy = 
+		{
+			Cog = 
+			{
+				LinkId = 
+				{
+					uint Id = 18,
+				},
+				Named = 
+				{
+					string Name = "Illusion",
+				},
+				Transform = 
+				{
+					Vec3 Translation = [0, 0, 0.100000001],
+					Vec3 Scale = [1, 1, 1],
+					Quat Rotation = [0, 0, 0, 1],
+				},
+				Sprite = 
+				{
+					bool Visible = true,
+					bool VisibilityCulling = true,
+					bool VisibilityEvents = true,
+					bool CastShadows = false,
+					Vec4 Color = [1, 1, 1, 1],
+					BlendMode BlendMode = Alpha,
+					SpriteGeometryMode GeometryMode = ZPlane,
+					string SpriteLayer = "52ad5fa30d7fcd50:DefaultSpriteLayer",
+					string SpriteSource = "5950a54385db4c87:bar_island_thing_clone",
+					bool RenderMask = false,
+					bool FlipX = false,
+					bool FlipY = false,
+					bool AnimationActive = true,
+					float AnimationSpeed = 1,
+					uint StartFrame = 0,
+				},
+				Fade = 
+				{
+					bool DontFadeKids = false,
+					float Time = 1.5,
 					bool Invis = false,
 				},
 			},

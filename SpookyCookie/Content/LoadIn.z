@@ -8,6 +8,9 @@ class LoadIn : ZilchComponent
     var Menu : Boolean = false;
     var Linger : Real = 1;
     
+    [Property]
+    var Room : Integer = 0;
+    
     //var LevelText : String = "";
     var LevelTitle : Cog = null;
     var LoadScreen : Cog = null;
@@ -17,7 +20,12 @@ class LoadIn : ZilchComponent
         this.LoadScreen = this.Space.FindObjectByName("LoadScreen2");
         if(!this.Menu)
         {
-            this.LevelTitle = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.LevelTitleA;
+            if(this.Room == 1)
+                this.LevelTitle = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.LevelTitleA;
+            else if(this.Room == 2)
+                this.LevelTitle = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.LevelTitleB;
+            else if(this.Room == 3)
+                this.LevelTitle = this.Space.LevelSettings.HUDCreator.HUDSpace.LevelSettings.HUDReferences.LevelTitleC;
             //this.LevelTitle.SpriteText.Text = this.LevelText;
             this.LevelTitle.Fade.Time = 0.5;
             this.LevelTitle.Fade.StartFade = true;

@@ -176,7 +176,7 @@ class PlayerMovement : ZilchComponent
         //Diagonal
         if ((this.Dir.X != 0) && (this.Dir.Y != 0))
         {
-            this.Beam.Transform.Scale = Real3(len, 1, 1);
+            this.Beam.Transform.Scale = Real3(len, 0.9, 1);
             this.Beam.Transform.Translation = Real3(Real2(Math.Sqrt(len*len/2)/2 + 0.5,Math.Sqrt(len*len/2)/2 + 0.5) * this.Dir, 0);
             
             var angle = Math.Pi/4;
@@ -189,13 +189,13 @@ class PlayerMovement : ZilchComponent
             var ss = this.Owner.Sprite.SpriteSource;
             if((ss == SpriteSource.Character_Left_Side) || (ss == SpriteSource.Character_Right_Side_1))
             {
-                this.Beam.Transform.Scale = Real3(len, 1, 1);
+                this.Beam.Transform.Scale = Real3(len, 0.9, 1);
                 this.Beam.Transform.Translation = Real3((0.5 + len/2)*this.Dir.X, 0, 0);
                 this.Beam.Transform.SetEulerAnglesXYZ(0,0,0);
             }
             else if((ss == SpriteSource.Character_Up) || (ss == SpriteSource.Character_Front_2))
             {
-                this.Beam.Transform.Scale = Real3(1, len, 1);
+                this.Beam.Transform.Scale = Real3(0.9, len, 1);
                 this.Beam.Transform.Translation = Real3(0, (0.5 + len/2)*this.Dir.Y, 0);
                 this.Beam.Transform.SetEulerAnglesXYZ(0,0,0);
             }
