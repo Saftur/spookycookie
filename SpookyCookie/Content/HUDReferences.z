@@ -14,7 +14,7 @@ class HUDReferences : ZilchComponent
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
         this.FearBar = this.Space.FindObjectByName("FearBar");
         this.BatteryLife = this.Space.FindObjectByName("BatteryLife");
-        this.VictoryText = this.Space.FindObjectByName("VictoryText");
+        this.VictoryText = this.Space.FindObjectByName("VictoryTitle");
         this.LockedText = this.Space.FindObjectByName("LockedText");
         this.LevelTitle = this.Space.FindObjectByName("LevelTitle");
     }

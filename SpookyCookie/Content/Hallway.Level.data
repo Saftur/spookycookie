@@ -12,7 +12,7 @@ Level =
 		},
 		GravityEffect = 
 		{
-			bool Active = true,
+			bool Active = false,
 			bool WakeUpOnChange = false,
 			bool LocalSpaceDirection = true,
 			float Strength = 10,
@@ -50,7 +50,7 @@ Level =
 			},
 			CogPath Camera = 
 			{
-				string Path = "",
+				string Path = ":/Camera",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -58,7 +58,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
+				uint ResolvedCog = 2,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -81,7 +81,7 @@ Level =
 			bool Active = true,
 			bool HalfCellOffset = false,
 			float CellSize = 1,
-			GridAxis Axis = YAxis,
+			GridAxis Axis = ZAxis,
 			int Lines = 100,
 			bool DrawAxisOrigins = true,
 			bool AlwaysDrawInEditor = true,
@@ -96,7 +96,7 @@ Level =
 			string HUDLevel = "596277398670a6d9:HUDLevel",
 			CogPath PlayerRef = 
 			{
-				string Path = "",
+				string Path = ":/Player",
 				bool ErrorOnResolveToNull = false,
 				bool ErrorOnPathCantCompute = false,
 				bool ErrorOnDirectLinkFail = false,
@@ -104,7 +104,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4294967293,
+				uint ResolvedCog = 3,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -112,9 +112,9 @@ Level =
 		},
 		LoadIn = 
 		{
-			bool Hallway = true,
+			bool Hallway = false,
 			bool Menu = false,
-			string LevelText = "Hallway",
+			string LevelText = "",
 		},
 		LevelTransition = 
 		{
@@ -126,7 +126,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 3,
+			uint Id = 4,
 		},
 		Named = 
 		{
@@ -138,27 +138,27 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [2.37000966, -4.46229458, 50],
+			Vec3 Translation = [0.5, -5, 50.094841],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [-0, -1.09278471e-08, 0, 1],
 		},
 		Camera = 
 		{
-			ProjectionMode ProjectionMode = Perspective,
+			ProjectionMode ProjectionMode = Orthographic,
 			Facing Facing = NegativeZ,
-			CameraTransparentSort TransparentSort = InheritFromSpace,
+			CameraTransparentSort TransparentSort = ZDepth,
 			float FieldOfView = 45,
 			float NearPlane = 0.5,
 			float FarPlane = 500,
-			float Size = 9.07180786,
+			float Size = 14.9568825,
 		},
 		EditorCameraController = 
 		{
 			ControlMode ControlMode = Orbit,
-			float LookDistance = 50,
+			float LookDistance = 10.0948391,
 			float VerticalAngle = 0,
 			float HorizontalAngle = 0,
-			Vec3 LookTarget = [2.37000966, -4.46229458, 0],
+			Vec3 LookTarget = [0.5, -5, 40],
 			float MoveSensitivity = 1,
 		},
 		EditorRenderer = 
@@ -182,7 +182,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [0, 0, 40],
+			Vec3 Translation = [0.5, -5, 40],
 			Vec3 Scale = [1, 1, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -218,7 +218,7 @@ Level =
 				bool UpdatePathOnCogChange = true,
 				bool UpdateCogOnInitialize = true,
 				bool ResolvedNullErrorOccurred = false,
-				uint ResolvedCog = 4,
+				uint ResolvedCog = 3,
 				CogPathPreference PathPreference0 = CogRelative,
 				CogPathPreference PathPreference1 = SpaceRelative,
 				CogPathPreference PathPreference2 = Absolute,
@@ -230,7 +230,7 @@ Level =
 	{
 		LinkId = 
 		{
-			uint Id = 4,
+			uint Id = 3,
 		},
 		Named = 
 		{
@@ -403,7 +403,7 @@ Level =
 		},
 		Transform = 
 		{
-			Vec3 Translation = [-5, -51.5, 10],
+			Vec3 Translation = [0, -50.5, 10],
 			Vec3 Scale = [50, 50, 1],
 			Quat Rotation = [0, 0, 0, 1],
 		},
@@ -446,6 +446,222 @@ Level =
 		Named = 
 		{
 			string Name = "Sense",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 10,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.5, -3.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 11,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.5, -3.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 12,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.5, -8.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 13,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.5, -8.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 14,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.5, -7.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 15,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.5, -7.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 16,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.5, -6.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 17,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.5, -6.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 18,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.5, -5.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 19,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.5, -5.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 20,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-2.5, -4.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
+		},
+	},
+	ArchetypeInstance = 
+	{
+		string Name = "59ecbcb08d6afb8c:Squeak",
+		LinkId = 
+		{
+			uint Id = 21,
+		},
+		Transform = 
+		{
+			Vec3 Translation = [-3.5, -4.5, -0.100000001],
+			Vec3 Scale = [1, 1, 1],
+			Quat Rotation = [0, 0, 0, 1],
+		},
+		Named = 
+		{
+			string Name = "Squeak",
 		},
 	},
 },
