@@ -29,7 +29,10 @@ class KeyitemController : ZilchComponent
             {
                 this.GameSession.GameVars.HasBone = true;
             }
-
+            if(this.KeyItem == 3)
+            {
+                this.GameSession.GameVars.HasStool = true;
+            }
             this.Space.SoundSpace.PlayCue(this.ImportantSound);
             this.Owner.Destroy();
         }

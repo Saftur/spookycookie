@@ -8,7 +8,9 @@ class HUDReferences : ZilchComponent
     var BatteryLife : Cog = null;
     var VictoryText : Cog = null;
     var LockedText : Cog = null;
-    var LevelTitle : Cog = null;
+    var LevelTitleA : Cog = null;
+    var LevelTitleB : Cog = null;
+    var LevelTitleC : Cog = null;
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -16,6 +18,8 @@ class HUDReferences : ZilchComponent
         this.BatteryLife = this.Space.FindObjectByName("BatteryLife");
         this.VictoryText = this.Space.FindObjectByName("VictoryTitle");
         this.LockedText = this.Space.FindObjectByName("LockedText");
-        this.LevelTitle = this.Space.FindObjectByName("LevelTitle");
+        this.LevelTitleA = this.Space.FindObjectByName("LevelTitleA");
+        this.LevelTitleB = this.Space.FindObjectByName("LevelTitleB");
+        this.LevelTitleC = this.Space.FindObjectByName("LevelTitleC");
     }
 }

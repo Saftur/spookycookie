@@ -25,6 +25,11 @@ class InventoryController : ZilchComponent
                 var item2 = this.Owner.FindChildByName("IBone");
                 item2.Sprite.Visible = ! item2.Sprite.Visible;
             }
+            if(this.GameSession.GameVars.HasStool)
+            {
+                var item3 = this.Owner.FindChildByName("IStool");
+                item3.Sprite.Visible = ! item3.Sprite.Visible;
+            }
         }
     }
 }
