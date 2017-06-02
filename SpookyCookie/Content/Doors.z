@@ -33,7 +33,7 @@ class Doors : ZilchComponent
         {
             if(this.Linger == -1)
             {
-                this.HUD.LevelSettings.HUDReferences.LockedText.FadeText.StartFade = true;
+                this.HUD.LevelSettings.HUDReferences.LockedText.Fade.StartFade = true;
                 this.Linger = 0;
             }
         }
@@ -46,7 +46,7 @@ class Doors : ZilchComponent
             if(this.Linger > 1.25)
             {
                 this.Linger = -1;
-                this.HUD.LevelSettings.HUDReferences.LockedText.FadeText.StartFade = true;
+                this.HUD.LevelSettings.HUDReferences.LockedText.Fade.StartFade = true;
             }
         }
         else if(this.Linger <= -2)
