@@ -4,6 +4,8 @@ class InventoryController : ZilchComponent
 {
     [Property]
     var InventoryKey: Keys = Keys.I;
+    
+    var Open : Boolean = false;
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -12,26 +14,40 @@ class InventoryController : ZilchComponent
     
     function OnKeyDown(event : KeyboardEvent)
     {
+        Console.WriteLine("`this.Owner.Parent`");
+        /*
         if(!this.Owner.Parent.PlayerMovement.Active)
-            return;
+            return;*/
         if(event.Key == this.InventoryKey)
         {
-            this.Owner.Sprite.Visible = !this.Owner.Sprite.Visible;
-            if(this.GameSession.GameVars.HasMap)
-            {
-                var item1 = this.Owner.FindChildByName("IMap");
-                item1.Sprite.Visible = ! item1.Sprite.Visible;
-            }
-            if(this.GameSession.GameVars.HasBone)
-            {
-                var item2 = this.Owner.FindChildByName("IBone");
-                item2.Sprite.Visible = ! item2.Sprite.Visible;
-            }
-            if(this.GameSession.GameVars.HasStool)
-            {
-                var item3 = this.Owner.FindChildByName("IStool");
-                item3.Sprite.Visible = ! item3.Sprite.Visible;
-            }
+            this.OpenUp();
+        }
+        if(this.Open && this.GameSession.GameVars.HasMap && (event.Key == Keys.M))                      //Map
+        {
+            var map = this.Owner.FindChildByName("MapScreen");
+            map.Sprite.Visible = !map.Sprite.Visible;
+        }
+    }
+    
+    function OpenUp()
+    {
+        this.Open = !this.Open;
+        this.Space.LevelSettings.HUDReferences.MainSpaceRef.TimeSpace.TogglePause();
+        this.Owner.Sprite.Visible = !this.Owner.Sprite.Visible;
+        if(this.GameSession.GameVars.HasMap)
+        {
+            var item1 = this.Owner.FindChildByName("IMap");
+            item1.Sprite.Visible = ! item1.Sprite.Visible;
+        }
+        if(this.GameSession.GameVars.HasBone)
+        {
+            var item2 = this.Owner.FindChildByName("IBone");
+            item2.Sprite.Visible = ! item2.Sprite.Visible;
+        }
+        if(this.GameSession.GameVars.HasStool)
+        {
+            var item3 = this.Owner.FindChildByName("IStool");
+            item3.Sprite.Visible = ! item3.Sprite.Visible;
         }
     }
 }
