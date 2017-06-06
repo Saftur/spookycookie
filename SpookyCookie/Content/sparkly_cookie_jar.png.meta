@@ -1,0 +1,20 @@
+ImageContent = 
+{
+	SpriteSourceBuilder = 
+	{
+		string Name = "sparkly_cookie_jar",
+		uint64 ResourceId = 5955e956f14be5dc,
+		uint64 AtlasId = 5274cf95e4a661fd,
+		uint FrameSizeX = 256,
+		uint FrameSizeY = 256,
+		uint FrameCount = 2,
+		float FrameDelay = 0.100000001,
+		float OriginX = 128,
+		float OriginY = 128,
+		float PixelsPerUnit = 256,
+		bool Smoothing = false,
+		bool Looping = true,
+		Vec4 Slices = [0, 0, 0, 0],
+		SpriteFill Fill = Stretch,
+	},
+},
