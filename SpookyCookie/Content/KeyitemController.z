@@ -21,7 +21,6 @@ class KeyitemController : ZilchComponent
     {
         if(event.OtherObject.Name == "Player")
         {
-            this.Space.LevelSettings.HUDCreator.HUDSpace.FindObjectByName("Inventoryframe").InventoryController.OpenUp();
             if(this.KeyItem == 1)
             {
                 this.GameSession.GameVars.HasMap = true;
@@ -34,7 +33,7 @@ class KeyitemController : ZilchComponent
             {
                 this.GameSession.GameVars.HasStool = true;
             }
-            this.Space.SoundSpace.PlayCue(this.ImportantSound);
+            this.Space.LevelSettings.HUDCreator.HUDSpace.FindObjectByName("Inventoryframe").InventoryController.OpenUp(this.ImportantSound);
             this.Owner.Destroy();
         }
     }

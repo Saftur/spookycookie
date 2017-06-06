@@ -32,8 +32,8 @@ class FearManager : ZilchComponent
             }
             return;
         }
-        //this.BatteryBar.Bar.Decrease(event.Dt/this.BatteryLife);
-        //this.GameSession.GameVars.BatteryLife -= (event.Dt/this.BatteryLife);
+        this.BatteryBar.Bar.Decrease(event.Dt/this.BatteryLife);
+        this.GameSession.GameVars.BatteryLife -= (event.Dt/this.BatteryLife);
         if(this.BatteryBar.Transform.Scale.X == 0.0001 || this.FearBar.Transform.Scale.Y >= this.FearBar.Bar.MaxSize)
         {
             this.Spooked = true;
@@ -43,6 +43,8 @@ class FearManager : ZilchComponent
             this.Space.FindObjectByName("Background").Transform.Translation += Real3(0,0,10);
             this.Owner.RigidBody.Velocity = Real3(0,0,0);
             this.Owner.Sprite.SpriteSource = SpriteSource.Character_Scream;
+            this.Space.SoundSpace.StopAllSounds();
+            this.Space.SoundSpace.PlayCue(SoundCue.Scream);
         }
     }
     function OnCollisionStarted(event : CollisionEvent)

@@ -5,7 +5,10 @@ class InventoryController : ZilchComponent
     [Property]
     var InventoryKey: Keys = Keys.I;
     
+    var Scared : Boolean = false;
     var Open : Boolean = false;
+    var MapOpen : Boolean = false;
+    
     function Initialize(init : CogInitializer)
     {
         //Zero.Connect(this.Space, Events.LogicUpdate, this.OnLogicUpdate);
@@ -18,26 +21,51 @@ class InventoryController : ZilchComponent
         /*
         if(!this.Owner.Parent.PlayerMovement.Active)
             return;*/
-        if(event.Key == this.InventoryKey)
+        if(!this.MapOpen && event.Key == this.InventoryKey)
         {
-            this.OpenUp();
+            this.OpenUp(null);
         }
         if(this.Open && this.GameSession.GameVars.HasMap && (event.Key == Keys.M))                      //Map
         {
+            this.MapOpen = !this.MapOpen;
             var map = this.Owner.FindChildByName("MapScreen");
             map.Sprite.Visible = !map.Sprite.Visible;
         }
     }
     
-    function OpenUp()
+    function OpenUp(sound : SoundCue)
     {
+        var shake = this.Space.LevelSettings.HUDReferences.FearBar;
+        
+        if(this.Open)
+        {
+            if(this.Scared)
+            {
+                shake.Shake.StartShake = true;
+            }
+            this.Scared = false;
+        }
+        else if(shake.Shake.StartShake)
+        {
+            shake.Shake.StartShake = false;
+            this.Scared = true;
+        }
+        
+        if(sound != null)
+            this.Space.SoundSpace.PlayCue(sound);
+        
         this.Open = !this.Open;
         this.Space.LevelSettings.HUDReferences.MainSpaceRef.TimeSpace.TogglePause();
         this.Owner.Sprite.Visible = !this.Owner.Sprite.Visible;
         if(this.GameSession.GameVars.HasMap)
         {
             var item1 = this.Owner.FindChildByName("IMap");
+            var text1 = this.Owner.FindChildByName("PressM");
             item1.Sprite.Visible = ! item1.Sprite.Visible;
+            foreach(var c in text1.Children)
+            {
+                c.Sprite.Visible = !c.Sprite.Visible;
+            }
         }
         if(this.GameSession.GameVars.HasBone)
         {
