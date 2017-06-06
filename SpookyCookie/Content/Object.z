@@ -61,7 +61,7 @@ class Object : ZilchComponent
                 this.Time = this.RespawnTime;
                 return;
             }
-            if(dist < this.DetectDistance && !this.HasSpawned)
+            if(dist < this.DetectDistance && dist > 2 && !this.HasSpawned)
             {
                 this.Ghost = this.Space.CreateAtPosition(this.GhostType,this.Owner.Transform.Translation);
                 this.Ghost.MonsterAI.Target = this.Target;
