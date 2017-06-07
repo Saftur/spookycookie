@@ -44,7 +44,7 @@ class FearManager : ZilchComponent
             this.Owner.RigidBody.Velocity = Real3(0,0,0);
             this.Owner.Sprite.SpriteSource = SpriteSource.Character_Scream;
             this.Space.SoundSpace.StopAllSounds();
-            this.Space.SoundSpace.PlayCue(SoundCue.Scream);
+            //this.Space.SoundSpace.PlayCue(SoundCue.Scream);
         }
     }
     function OnCollisionStarted(event : CollisionEvent)
